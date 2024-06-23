@@ -1,0 +1,10 @@
+{
+  "accentColor": "#451e9f",
+  "cssTheme": "AnuPpuccin",
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "custom-rainbow-colors",
+    "Table-centre",
+    "small-settings"
+  ]
+}

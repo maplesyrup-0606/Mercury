@@ -1,0 +1,7 @@
+- [x] Inspect DB files
+	- I understand the methods, but not sure yet why we need" `total_request_count`
+- [ ] Inspect Utilities files
+	- [x] API https://ubcgrades.com/api-reference/v3
+	- [x] course : creates course object
+	- [ ] pdf
+	- [ ] transcript
