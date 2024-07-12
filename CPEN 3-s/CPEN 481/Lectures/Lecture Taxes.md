@@ -226,3 +226,6 @@ $t$: taxation rate, $d$: CCA rate, $i$: after-tax interest rate.
 - The value of depreciation deductions are diminished by inflation.
 - Inflation reduces the real after-tax rate of return, even if the benefit increase at the same rate as the inflation.
 - These considerations can also impact investment decisions.
+
+
+## Next Lecture [[Lecture Project Management]]

@@ -229,3 +229,5 @@ Activities on the critical path have $S=0$.
 
 
 $$\text{Crash cost per unit time} = \frac{\text{crash cost- normal cost}}{\text{normal time - crash time}}$$
+
+## Next Lecture [[Lecture Asset Replacement]]
