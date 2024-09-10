@@ -11,9 +11,11 @@
             "id": "557ef49498f62b5a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "CPEN 3-s/MATH 317/HW/HW2-MATH317.pdf"
+                "file": "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CPEN 3-s/MATH 317/HW/HW2-MATH317.pdf",
+                "file": "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CPEN 3-s/MATH 317/HW/HW2-MATH317.pdf",
+                "file": "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CPEN 3-s/MATH 317/HW/HW2-MATH317.pdf"
+                "file": "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md"
               }
             }
           },
@@ -153,20 +155,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "557ef49498f62b5a",
+  "active": "8dc15c3e8cf32109",
   "lastOpenFiles": [
-    "CPEN 3-s/MATH 317/Lectures/Lecture 1.pdf",
+    "CPEN/CPEN 3-s/CPEN 481/Assignments/Assignment+1+-+for+release.pdf",
+    "CPEN/CPEN 3-s/CPEN 481/Assignments/Assignment+3+-+for+release.pdf",
+    "CPEN/CPEN 3-s/CPEN 481/Assignments/Assignment+4+-+for+release.pdf",
+    "CPEN/CPEN 3-s/CPEN 481/Assignments/Assignment+5+-+for+release.pdf",
+    "CPEN/CPEN 3-s/CPEN 481/Assignments/Assignment+6+-+for+release.pdf",
+    "CPEN/CPEN 3-s/CPEN 481/Assignments/Assignment+7+-+for+release.pdf",
+    "CPEN/CPEN 3-s/CPEN 481/Assignments/Assignment+8+-+for+release.pdf",
+    "CPEN/CPEN 3-s/CPEN 481/Assignments/Assignment+9+-+for+release.pdf",
+    "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 1 & 2.md",
+    "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
+    "Pasted image 20240909194453.png",
+    "Pasted image 20240909194427.png",
+    "images/Pasted image 20240909194045.png",
+    "images/Pasted image 20240909192910.png",
+    "images/Pasted image 20240909131323.png",
+    "images/Pasted image 20240909192631.png",
+    "images/Pasted image 20240909131306.png",
+    "images/Pasted image 20240909130640.png",
+    "images/Pasted image 20240909125643.png",
+    "CPEN/CPEN 4-1/CPEN 411/Lectures",
+    "CPEN/CPEN 4-1/CPEN 411",
+    "CPEN",
+    "CPEN 3-s/MATH 300/Lecture Notes (너무 귀찮아).md",
     "LeetCode/Neetcode 150/15. 3Sum.md",
-    "CPEN 3-s/MATH 317/Lectures/Lecture 13.pdf.sb-20584f6e-4SNZ58",
-    "CPEN 3-s/MATH 317/Lectures/Lecture 12.pdf.sb-20584f6e-Y2unSe",
-    "CPEN 3-s/MATH 317/Lectures/Lecture 11.pdf.sb-20584f6e-YalyEw",
-    "CPEN 3-s/MATH 317/Lectures/Lecture 10.pdf.sb-20584f6e-9NbEDw",
-    "CPEN 3-s/MATH 317/Lectures/Lecture 9.pdf.sb-20584f6e-LG6vJ9",
-    "CPEN 3-s/MATH 317/Lectures/Lecture 8.pdf.sb-20584f6e-kpw8SN",
-    "CPEN 3-s/MATH 317/Lectures/Lecture 7.pdf.sb-20584f6e-E39PXy",
-    "CPEN 3-s/MATH 317/Lectures/Lecture 6.pdf.sb-20584f6e-BHIueE",
-    "CPEN 3-s/MATH 317/Lectures/Lecture 5.pdf.sb-20584f6e-tqFVll",
-    "CPEN 3-s/MATH 317/Lectures/Lecture 4.pdf.sb-20584f6e-Kn7qJJ",
     "LeetCode/Neetcode 150/167. Two Sum II - Input Array Is Sorted.md",
     "LeetCode/Neetcode 150/125. Valid Palindrome.md",
     "LeetCode/Neetcode 150/128. Longest Consecutive Sequence.md",
@@ -176,31 +190,19 @@
     "LeetCode/Neetcode 150/49. Group Anagrams.md",
     "LeetCode/Neetcode 150/217. Contains Duplicate.md",
     "LeetCode/Neetcode 150/242. Valid Anagram.md",
-    "CPEN 3-s/CPEN 481/Assignments/Final 85594505 Mercury Mcindoe.md",
-    "CPEN 3-s/CPEN 481/Lectures/Lecture Taxes.md",
-    "CPEN 3-s/CPEN 481/Lectures/Lecture 12.md",
-    "CPEN 3-s/CPEN 481/Lectures/Lecture Accounting.md",
-    "CPEN 3-s/CPEN 481/Lectures/Lecture Asset Replacement.md",
-    "CPEN 3-s/CPEN 481/Lectures/Lecture Depreciation.md",
-    "CPEN 3-s/CPEN 481/Lectures/Lecture Project Management.md",
-    "CPEN 3-s/CPEN 481/Lectures/Lecture 3.md",
-    "CPEN 3-s/CPEN 481/Assignments/Assignment 6 Mercury Mcindoe 85594505.md",
-    "CPEN 3-s/CPEN 481/Assignments/Assignment 3 Mercury Mcindoe 85594505.md",
-    "CPEN 3-s/CPEN 481/Lectures/Lecture 11.md",
-    "CPEN 3-s/CPEN 481/Assignments/Assignment 4 Mercury Mcindoe 85594505.md",
-    "CPEN 3-s/CPEN 481/Assignments/Assignment 5 Mercury Mcindoe 85594505.md",
-    "CPEN 3-s/CPEN 481/Assignments/Assignment 7 Mercury Mcindoe 85594505.md",
-    "CPEN 3-s/CPEN 481/Lectures/Lecture 2.md",
+    "CPEN/CPEN 3-s/CPEN 481/Assignments/Final 85594505 Mercury Mcindoe.md",
+    "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture Taxes.md",
+    "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture 12.md",
+    "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture Accounting.md",
+    "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture Asset Replacement.md",
+    "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture Depreciation.md",
+    "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture Project Management.md",
+    "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture 3.md",
+    "CPEN/CPEN 3-s/CPEN 481/Assignments/Assignment 6 Mercury Mcindoe 85594505.md",
+    "CPEN/CPEN 3-s/CPEN 481/Assignments/Assignment 3 Mercury Mcindoe 85594505.md",
+    "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture 11.md",
+    "CPEN/CPEN 3-s/CPEN 481/Assignments/Assignment 4 Mercury Mcindoe 85594505.md",
     "images/Screenshot 2024-06-22 at 2.48.05 PM.png",
-    "images/Pasted image 20240621164157.png",
-    "images/Pasted image 20240621164104.png",
-    "images/Screenshot 2024-06-21 at 12.54.35 AM.png",
-    "images/Screenshot 2024-06-21 at 12.37.07 AM.png",
-    "images/Pasted image 20240620205359.png",
-    "images/Pasted image 20240620205421.png",
-    "images/Screenshot 2024-05-15 at 7.57.25 PM.png",
-    "images/Screenshot 2024-05-15 at 7.57.32 PM.png",
-    "images/Screenshot 2024-05-15 at 8.19.55 PM.png",
     "images/Untitled.canvas",
     "images/cashflow_img.canvas"
   ]
