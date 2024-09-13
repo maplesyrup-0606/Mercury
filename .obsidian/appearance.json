@@ -5,6 +5,7 @@
   "enabledCssSnippets": [
     "custom-rainbow-colors",
     "Table-centre",
-    "small-settings"
+    "small-settings",
+    "extended-colorschemes"
   ]
 }

@@ -1,4 +1,0 @@
-- [ ] Job apps
-- [ ] 481 submission
-- [ ] Leet code
-- [ ] UTG stuff
