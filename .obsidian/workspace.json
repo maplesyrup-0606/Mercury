@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "7710ff65a1f7e0bb",
+        "id": "ab607f6cdd5b40c1",
         "type": "tabs",
         "children": [
           {
-            "id": "557ef49498f62b5a",
+            "id": "625ac212a022ee50",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 218
   },
   "right": {
     "id": "d3aeb83127b6d472",
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,21 +118,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
-            }
-          },
-          {
-            "id": "01b770a7acdad5c9",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
               "state": {}
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -152,15 +136,39 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "vscode-editor:Create Code File": false
     }
   },
-  "active": "557ef49498f62b5a",
+  "active": "8dc15c3e8cf32109",
   "lastOpenFiles": [
-    "To-do.md",
-    "README.md",
+    "images/Screenshot 2024-09-18 at 2.28.43 PM.png",
+    "images/Screenshot 2024-09-18 at 2.33.51 PM.png",
+    "CPEN/CPEN 4-1/CPEN 411/Assignments/Assignment_1.pdf",
+    "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 4.md",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/dog.jpg",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/box_speckle.png",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/box_gauss.png",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/4b_plane.bmp",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/4a_bird.bmp",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/3b_submarine.bmp",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/3a_fish.bmp",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/2b_marilyn.bmp",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/2a_einstein.bmp",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images",
+    "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 5.md",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/filtering_script.py",
     "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
+    "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture 4.md",
     "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 1 & 2.md",
+    "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture 5.md",
+    "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture 3.md",
+    "CPEN/CPEN 4-1/CPSC 425/Untitled.md",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/hw1",
+    "hw1",
+    "CPEN/CPEN 4-1/CPEN 411/Assignments",
+    "README.md",
+    "To-do.md",
     "CPEN/CPEN 4-1/PHYS 200/special-relativity-helliwell_compress.pdf",
     "UTG.md",
     "Coding/Julia_Practice/Practice.jl",
@@ -180,29 +188,6 @@
     "Coding/LeetCode/Leetcode 75/Sliding Window/1004. Max Consecutive Ones III.md",
     "Coding/LeetCode/Leetcode 75/Queue/933. Number of Recent Calls.md",
     "Coding/LeetCode/Leetcode 75/Queue/649. Dota2 Senate.md",
-    "Coding/LeetCode/Leetcode 75/Prefix Sum/724. Find Pivot Index.md",
-    "Coding/LeetCode/Leetcode 75/Prefix Sum/1732. Find the Highest Altitude.md",
-    "Coding/LeetCode/Leetcode 75/LinkedList/328. Odd Even Linked List.md",
-    "Coding/LeetCode/Leetcode 75/LinkedList/2130. Maximum Twin Sum of a Linked List.md",
-    "Coding/LeetCode/Leetcode 75/LinkedList/2095. Delete the Middle Node of a Linked List.md",
-    "Coding/LeetCode/Leetcode 75/LinkedList/206. Reverse Linked List.md",
-    "Coding/LeetCode/Leetcode 75/Heap Priority Queue/2336. Smallest Number in Infinite Set.md",
-    "Coding/LeetCode/Leetcode 75/Two Pointers",
-    "Coding/LeetCode/Leetcode 75/Trie",
-    "Coding/LeetCode/Leetcode 75/Stack",
-    "Coding/LeetCode/Leetcode 75/Sliding Window",
-    "Coding/LeetCode/Leetcode 75/Queue",
-    "Coding/LeetCode/Leetcode 75/Prefix Sum",
-    "Pasted image 20240909194453.png",
-    "Pasted image 20240909194427.png",
-    "images/Pasted image 20240909194045.png",
-    "images/Pasted image 20240909192910.png",
-    "images/Pasted image 20240909131323.png",
-    "images/Pasted image 20240909192631.png",
-    "images/Pasted image 20240909131306.png",
-    "images/Pasted image 20240909130640.png",
-    "images/Pasted image 20240909125643.png",
-    "images/Screenshot 2024-06-22 at 2.48.05 PM.png",
     "images/Untitled.canvas",
     "images/cashflow_img.canvas"
   ]

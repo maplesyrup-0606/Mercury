@@ -96,3 +96,4 @@ $$\text{Average CPI} = \frac{\sum{\text{CPI}_i}}{n}$$
 $$\text{Average IPC} = \frac{n}{\sum\text{CPI}_i} = \frac{n}{\sum\frac{1}{\text{IPC}_i}} = \text{Harmonic Mean of IPC}$$
 
 
+#### Next Lecture [[CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 4|Lecture 4]]

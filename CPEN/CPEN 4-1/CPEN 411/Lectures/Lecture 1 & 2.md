@@ -86,3 +86,7 @@ $$\text{Power}_{\text{static}} = \text{Current}_{\text{Static}}\times\text{Volta
 - Leakage current increases in processors with smaller transistor sizes.
 - Increasing the number of transistors increases power even if they are turned off.
 - Very low power systems even **gate voltage** to inactive modules.
+
+
+#### Next Lecture [[CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 3|Lecture 3]]
+
