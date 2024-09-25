@@ -4,5 +4,9 @@
   "obsidian-smart-typography",
   "code-styler",
   "obsidian-pandoc",
-  "vscode-editor"
+  "vscode-editor",
+  "obsidian-tasks-plugin",
+  "quickadd",
+  "obsidian-latex-suite",
+  "obsidian-functionplot"
 ]

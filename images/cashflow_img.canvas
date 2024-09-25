@@ -3,7 +3,7 @@
 		{"id":"2b9d881325e1db22","type":"text","text":"","x":-145,"y":-160,"width":250,"height":60},
 		{"id":"f89c9b914dfe5fc6","type":"file","file":"images/Screenshot 2024-05-15 at 7.57.25 PM.png","x":-420,"y":-160,"width":399,"height":224},
 		{"id":"fce728c27531fa1e","type":"file","file":"images/Screenshot 2024-05-15 at 7.57.32 PM.png","x":-20,"y":-160,"width":444,"height":224},
-		{"id":"a6e1eef42a51cf24","type":"text","text":"[[Lecture 2]]","x":-105,"y":-279,"width":250,"height":60}
+		{"id":"a6e1eef42a51cf24","type":"text","text":"[[CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture 2]]","x":-105,"y":-279,"width":250,"height":60}
 	],
 	"edges":[]
 }

@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "ab607f6cdd5b40c1",
+        "id": "23cc03359083d583",
         "type": "tabs",
         "children": [
           {
-            "id": "625ac212a022ee50",
+            "id": "d8b2c2f4ad3b5a0a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "CPEN/CPEN 4-1/MATH 307/Lecture Notes/Lecture 1.md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "CPEN/CPEN 4-1/MATH 307/Lecture Notes/Lecture 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "CPEN/CPEN 4-1/MATH 307/Lecture Notes/Lecture 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "CPEN/CPEN 4-1/MATH 307/Lecture Notes/Lecture 1.md"
+              }
             }
           }
         ],
@@ -140,24 +148,38 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "8dc15c3e8cf32109",
+  "active": "d8b2c2f4ad3b5a0a",
   "lastOpenFiles": [
-    "images/Screenshot 2024-09-18 at 2.28.43 PM.png",
-    "images/Screenshot 2024-09-18 at 2.33.51 PM.png",
+    "CPEN/CPEN 4-1/MATH 307/Lecture Notes/Lecture 2.md",
+    "CPEN/CPEN 4-1/MATH 307/Lecture Notes/Lecture 1.md",
+    "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 7.md",
+    "CPEN/CPEN 4-1/CPEN 411/Lectures/Untitled.md",
+    "Screenshot 2024-09-25 at 11.31.54 AM.png",
+    "images/Screenshot 2024-09-25 at 11.05.50 AM.png",
+    "images/Screenshot 2024-09-25 at 11.21.06 AM.png",
+    "images/Screenshot 2024-09-25 at 11.06.10 AM.png",
+    "images/Screenshot 2024-09-25 at 10.30.44 AM.png",
+    "images/Pasted image 20240925103433.png",
+    "images/Screenshot 2024-09-25 at 10.56.41 AM.png",
+    "images/Screenshot 2024-09-25 at 10.52.03 AM.png",
+    "images/Pasted image 20240925104925.png",
+    "images/Screenshot 2024-09-25 at 10.47.37 AM.png",
+    "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 6.md",
+    "CPEN/CPEN 4-1/MATH 307/Lecture Notes/following way.md",
+    "Task List.md",
+    "CPEN/CPEN 4-1/MATH 307/Lecture Notes",
+    "CPEN/CPEN 4-1/Untitled",
     "CPEN/CPEN 4-1/CPEN 411/Assignments/Assignment_1.pdf",
-    "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 4.md",
-    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/dog.jpg",
-    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/box_speckle.png",
-    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/box_gauss.png",
-    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/4b_plane.bmp",
-    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/4a_bird.bmp",
-    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/3b_submarine.bmp",
-    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/3a_fish.bmp",
-    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/2b_marilyn.bmp",
-    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images/2a_einstein.bmp",
-    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images",
+    "Untitled",
     "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 5.md",
+    "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture 6.md",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/Untitled.tex",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/CPSC425_asst1_85594505.pdf",
+    "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 4.md",
     "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/filtering_script.py",
+    "README.md",
+    "CPEN/CPEN 4-1/PHYS 200/PS2_Part2_mercurymcindoe_85594505.pdf",
+    "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/images",
     "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
     "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture 4.md",
     "CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 1 & 2.md",
@@ -165,29 +187,14 @@
     "CPEN/CPEN 3-s/CPEN 481/Lectures/Lecture 3.md",
     "CPEN/CPEN 4-1/CPSC 425/Untitled.md",
     "CPEN/CPEN 4-1/CPSC 425/Assignments/Assignment 1/hw1",
-    "hw1",
-    "CPEN/CPEN 4-1/CPEN 411/Assignments",
-    "README.md",
     "To-do.md",
-    "CPEN/CPEN 4-1/PHYS 200/special-relativity-helliwell_compress.pdf",
     "UTG.md",
-    "Coding/Julia_Practice/Practice.jl",
-    "Coding/Julia_Practice/Practice.ipynb",
-    "Coding/Julia_Practice/Practice.ipybn",
     "Coding/LeetCode/Leetcode 75/Two Pointers/392. Is Subsequence.md",
     "Coding/LeetCode/Leetcode 75/Two Pointers/283. Move Zeroes.md",
     "Coding/LeetCode/Leetcode 75/Two Pointers/1679. Max Number of K-Sum Pairs.md",
     "Coding/LeetCode/Leetcode 75/Two Pointers/11. Container With Most Water.md",
     "Coding/LeetCode/Leetcode 75/Trie/208. Implement Trie (Prefix Tree).md",
     "Coding/LeetCode/Leetcode 75/Trie/1268. Search Suggestions System.md",
-    "Coding/LeetCode/Leetcode 75/Stack/735. Asteroid Collision.md",
-    "Coding/LeetCode/Leetcode 75/Stack/2390. Removing Stars From a String.md",
-    "Coding/LeetCode/Leetcode 75/Sliding Window/643. Maximum Average Subarray I.md",
-    "Coding/LeetCode/Leetcode 75/Sliding Window/1493. Longest Subarray of 1's After Deleting One Element.md",
-    "Coding/LeetCode/Leetcode 75/Sliding Window/1456. Maximum Number of Vowels in a Substring of Given Length.md",
-    "Coding/LeetCode/Leetcode 75/Sliding Window/1004. Max Consecutive Ones III.md",
-    "Coding/LeetCode/Leetcode 75/Queue/933. Number of Recent Calls.md",
-    "Coding/LeetCode/Leetcode 75/Queue/649. Dota2 Senate.md",
     "images/Untitled.canvas",
     "images/cashflow_img.canvas"
   ]

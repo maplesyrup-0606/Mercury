@@ -1,0 +1,6 @@
+- [ ] ⏫ PHYS 200 Midterm Prep
+- [ ] ⏫ CPSC 425 Notes
+- [ ] 🔼 CPEN 411 Quiz Prep
+- [ ] ⏫ Julia Onboarding Task Prep
+- [x] 🔽 MATH 307 Lecture Notes ✅ 2024-09-24
+- [ ] 

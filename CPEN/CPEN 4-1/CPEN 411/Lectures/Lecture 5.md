@@ -62,3 +62,5 @@ So we can see that the average latency reduces for more accesses.
 		- We assume that we have to access a different wordline.
 		- Would be inefficient if we had subsequent address accesses.
 	- Scheduling becomes important!
+
+#### Next Lecture [[CPEN/CPEN 4-1/CPEN 411/Lectures/Lecture 6|Lecture 6]]
