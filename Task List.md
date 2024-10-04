@@ -3,4 +3,5 @@
 - [ ] 🔼 CPEN 411 Quiz Prep
 - [ ] ⏫ Julia Onboarding Task Prep
 - [x] 🔽 MATH 307 Lecture Notes ✅ 2024-09-24
+- [ ] UAS: figure out how to use “i don't know how to use sitl so can you set that up with mavproxy? mavproxy can remotely download logs from flight controller””
 - [ ] 

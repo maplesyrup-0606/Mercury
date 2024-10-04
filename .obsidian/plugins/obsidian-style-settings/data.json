@@ -65,5 +65,7 @@
   "anuppuccin-theme-settings@@anp-list-toggle": true,
   "anuppuccin-theme-settings-extended@@anp-theme-ext-dark": true,
   "anuppuccin-theme-settings-extended@@catppuccin-theme-dark-extended": "ctp-royal-velvet",
-  "anuppuccin-theme-settings-extended@@anp-theme-ext-amoled": false
+  "anuppuccin-theme-settings-extended@@anp-theme-ext-amoled": false,
+  "anuppuccin-theme-settings@@anp-h5-divider": true,
+  "anuppuccin-theme-settings@@anp-h6-divider": true
 }

@@ -7,5 +7,6 @@
     "Table-centre",
     "small-settings",
     "extended-colorschemes"
-  ]
+  ],
+  "interfaceFontFamily": "Inter"
 }
