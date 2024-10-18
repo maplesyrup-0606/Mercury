@@ -141,4 +141,151 @@ If access pattern is AAAABC,
 - set size < # accesses that map to given set.
 - access wouldn’t be a miss if cache were fully associative.
 
+## Victim Caches
+There were some problems of fully associative caches,
+- Lots of associativity is good, but expensive.
+- Some sets require more associativity.
+
+![[Pasted image 20241014153312.png]]
+
+The **idea** was to have a “small fully associative cache” the stores recently evicted lines.
+- On evict, place it in victim $.
+- On hit in victim $, bring it to normal $.
+- Managed with LRU (for instance) just like a normal cache.
+- Effectively extra associativity for some lines.
+	- Can’t make it large, but placed near to L1 $.
+	- Tries to improve reuse.
+
+
+### Writes that hit in the Cache
+Say for the instruction `sw R1, 0(R2)` which stores a word (hence a write).
+
+#### Write-Through Cache
+On hit, updates cache and memory at the same time. 
+
+Pros:
+- Simple to implement.
+- Memory is always valid, no need to write extra to the memory.
+
+Cons:
+- Performance cost is high.
+
+#### Write-Back Cache
+Data in the cache is managed by a modified (dirty) bit. When this cache line is evicted the memory is updated.
+
+Hence, the cache contains the latest data. Has best design performance.
+
+#### Write-Evict Cache
+The Cache always remains clean (no dirty lines exist). There is no modified bit. 
+When a write operation occurs, it is written straight to memory, and if the data is present in the cache, it is evicted (invalidated).
+
+### Writes that miss in the Cache
+
+#### Write-Allocate
+When writing to memory locations not in cache, we allocate a cache block for the location and write the data to the cache.
+
+#### Write-No-Allocate
+If a cache miss occurs, we directly write to the memory (No dirty line exists).
+
+Only store in cache for reads since no memory updated is needed.
+
+### Evictions in a Cache Hierarchy
+
+#### Inclusive
+![[Pasted image 20241014154630.png]]
+
+If data is in L1 Cache, it also exists in LLC (or lower) cache. If invalidated in L1$ also evicted in LLC (or lower) $.
+
+Capacity: $max(x,y)$ where $x,y$ denote the size of LLC / L1 $.
+
+It is efficient since, if we know that the data does not exist in higher level cache, there is no need to go to lower level caches. Also, if data exists in Lower Level Cache, we can go to higher level cache and reduce latency since it would exist in higher level caches for sure. So other cores can get an advantage of going to upper level caches to save latency.
+
+#### Exclusive
+![[Pasted image 20241014154902.png]]
+
+If data exists in L1$, does not exist in LLC (or lower level) $. When L1 cache evict happens, data is spilled to other level caches to ensure that data is still accessible.
+
+Capacity: $x+y$ where $x,y$ is size of caches.
+
+#### Non-Inclusive 
+Somewhere in between the above, don’t know whether some data would be included in L1 or LLC or both at the same time. Evicting is independent. Capacity is also somewhere in between.
+
+
+##### Two points about reads and writes
+**Considering a load access to a cache: can this a memory write?**
+→ Yes, if dirty / modified data is evicted, then we have to write that to memory to keep the memory valid.
+
+**Considering a store access to cache, can this cause a memory read?**
+→ Yes, if cache is write-allocate, we have to fetch and read from memory after evicting the memory that was inside the cache.
+
+## Lockup-free Caches
+The problem now is that there is only one outstanding cache miss → and this might take 100s of cycles.
+
+The **idea** is MSHRs (miss status handling registers)
+- Contain block address and offset.
+- Dst tag (or reg) for a load, value for a store.
+- CPU *continues executing*.
+- Broadcast value of CDB after miss serviced.
+- Can **merge multiple requests to same address** (must be careful in order).
+
+
+##### Ex.
+Consider a FA cache, eight 16 Byte blocks, empty $ MSHRs, all empty memory access are very long (100s of cycles).
+
+The load sequence: 0, 8, 16, 4, 12, 20, 24, 32, 128, 96, 64
+
+```
+MSHR0 - 0 8 4 12 
+MSHR1 - 16 20 24 
+MSHR2 - 32
+MSHR3 - 128
+```
+
+So 96 will be stall since there is no space for 96 to go into the MSHR.
+
+### Pre-fetching
+
+The access pattern might be predictable, e.g., `x[0],x[8],x[16],x[24] ..` .
+→ For this example, with 8 Byte values and 64 Byte blocks: we will keep getting cold misses.
+
+But since we know the pattern in advance, we can just **prefetch**!
+
+Tradeoffs:
+- Effective only if *accurate* and *timely*.
+- If not, wastes valuable memory bandwidth.
+- Real prefetchers turn off if ineffective.
+
+#### Stream buffer
+The idea is to “buffer sequential access stream”.
+→ Maybe several buffers for multiple streams.
+
+If we get a hit in the stream buffer, move to the $ (only the hit), prefetch next.
+
+The problem is if the access is not in a stream if might not work (e.g. jump accesses).
+
+#### Stride Prefetcher
+The accesses as mentioned above, might not be adjacent. We can multiple access streams with different strides.
+
+The **idea** is to track the previous address, stride and correctness. → If predictions are confirmed, keep prefetching.
+
+
+![[Pasted image 20241014160936.png]]
+
+##### Ex
+Let’s consider the access sequence: 4, 8, 12, 16, 10, 20, 30, 40
+
+```
+prev | stride | state | prefetch
+0      0		    init    -
+4      4        trans   -
+8      4        steady  12
+12     4        steady  16
+16     4        steady  20
+10     4        init    -
+20     10       steady  30
+30     10       steady  40
+40     10       steady  50
+```
+
 #### Next Lecture [[UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 8|Lecture 8]]
+

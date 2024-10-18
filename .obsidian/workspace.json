@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "c89e2626988e3375",
+        "id": "7618891e670a2803",
         "type": "tabs",
         "children": [
           {
-            "id": "b697f9be7cccd4f4",
+            "id": "c55ee50c28fa76be",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 8.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e413f53a1bfeceb1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7.md",
-                "mode": "preview",
+                "file": "UBC/CPEN 4-1/CPSC 425/Midterm Review.md",
+                "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218,
-    "collapsed": true
+    "width": 218
   },
   "right": {
     "id": "d3aeb83127b6d472",
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7.md",
+                "file": "UBC/CPEN 4-1/CPSC 425/Midterm Review.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7.md",
+                "file": "UBC/CPEN 4-1/CPSC 425/Midterm Review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7.md"
+                "file": "UBC/CPEN 4-1/CPSC 425/Midterm Review.md"
               }
             }
           }
@@ -162,53 +148,53 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "e413f53a1bfeceb1",
+  "active": "c55ee50c28fa76be",
   "lastOpenFiles": [
+    "images/Screenshot 2024-10-17 at 4.45.17 PM.png",
+    "images/Screenshot 2024-10-17 at 4.06.33 PM.png",
+    "README.md",
+    "UBC/CPEN 4-1/CPSC 425/Midterm Review.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 5.md",
+    "UBC/CPEN 4-1/CPSC 425/Exam Related",
+    "images/Screenshot 2024-10-17 at 4.45.02 PM.png",
+    "images/Screenshot 2024-10-17 at 4.44.30 PM.png",
+    "images/Screenshot 2024-10-17 at 4.43.03 PM.png",
+    "images/Screenshot 2024-10-17 at 4.42.19 PM.png",
+    "images/Screenshot 2024-10-17 at 4.40.39 PM.png",
+    "images/Screenshot 2024-10-17 at 4.33.47 PM.png",
+    "images/Screenshot 2024-10-17 at 4.33.43 PM.png",
+    "images/Screenshot 2024-10-17 at 4.31.29 PM.png",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 4.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 3.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 2.md",
+    "Task List.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 8.md",
+    "UBC/CPEN 4-1/CPEN 411/Assignments/Assignment_2.pdf",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 9.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
+    "UBC/CPEN 4-1/PHYS 200/PHYS200__Notes_on_Quantum-4.pdf",
+    "My code file.ts",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
+    "UBC/CPEN 4-1/CPEN 411/Quizzes/Quiz 1.md",
+    "UBC/CPEN 4-1/CPEN 411/Quizzes",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 1 & 2.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 6.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 5.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 4.md",
+    "UBC/CPEN 4-1/MATH 307/Exercises/Midterm/Midterm 1 Exercises.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 5.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 4.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 3.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 2.md",
-    "images/Screenshot 2024-09-29 at 8.33.37 PM.png",
-    "UBC/CPEN 4-1/MATH 307/Exercises/Midterm/Midterm 1 Exercises.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 7.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 1.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 6.md",
-    "images/Pasted image 20240930155622.png",
-    "CPEN/CPEN 4-1/MATH 307/Exercises/Midterm/Untitled.md",
     "UBC/CPEN 4-1/MATH 307/Exercises/Midterm",
     "UBC/CPEN 4-1/MATH 307/Exercises",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
-    "images/Screenshot 2024-09-29 at 8.34.02 PM.png",
-    "images/Screenshot 2024-09-29 at 8.27.14 PM.png",
-    "images/Screenshot 2024-09-29 at 8.16.23 PM.png",
-    "CPEN/CPEN 4-1/CPSC 425/Lectures/Untitled.md",
-    "CPEN/CPEN 4-1/CPSC 425/Lectures/Untitled 1.md",
-    "images/Screenshot 2024-09-29 at 8.21.04 PM.png",
-    "images/Screenshot 2024-09-29 at 8.17.25 PM.png",
     "UBC/CPEN 4-1/CPSC 425/Lectures",
-    "CPEN/CPEN 4-1/CPEN 411/Lectures/Untitled.md",
-    "images/Pasted image 20240929182219.png",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 9.md",
-    "images/Pasted image 20240929184912.png",
-    "images/Pasted image 20240929184148.png",
-    "README.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 8.md",
-    "UBC/CPEN 3-s/CPEN 481/Lectures/Lecture 8.md",
-    "Task List.md",
     "UBC/CPEN 4-1/CPEN 411/Assignments/Assignment_1.pdf",
     "UBC/CPEN 4-1/PHYS 200/Assignments/PS2_Part2_mercurymcindoe_85594505.pdf",
-    "CPEN/CPEN 4-1/PHYS 200/Lectures/Lecture 1.md",
-    "UBC/CPEN 4-1/PHYS 200/Assignments",
-    "CPEN/CPEN 4-1/PHYS 200/Lectures",
-    "UBC/CPEN 4-1/CPSC 425/Assignments/Assignment 1/CPSC425_Asst1_85594505_Part_1.tex",
-    "UBC/CPEN 4-1/MATH 307/Coding Assignments/MATH307_Asst1_85594505.ipynb",
-    "MATH307_Asst1_85594505.ipynb",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 6.md",
-    "CPEN/CPEN 4-1/MATH 307/Lecture Notes/following way.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 5.md",
-    "UBC/CPEN 3-s/CPEN 481/Lectures/Lecture 6.md",
     "images/Untitled.canvas",
     "images/cashflow_img.canvas"
   ]

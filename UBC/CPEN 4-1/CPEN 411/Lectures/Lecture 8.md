@@ -120,4 +120,121 @@ $$\text{Total size}_{\text{new}} = 19 \times 2^{52} = 1\text{Billion Bytes / pro
 		- access is very slow. (but must be done up to 2x per instr)
 		- per-process tables still take up lots of memory.
 
+### Efficient Page Table Storage
+Each process needs its own page table & page tables are sparse (few programs use the entire address space) 
+=> There exists a substantial memory overhead to store all page tables.
+
+The solution was to use **multi-level PTs**
+- Top-level table in RAM.
+- Next level is either in RAM or paged out to disk
+
+```
+[P1 Index | P1 Index | Page offset]
+```
+
+![[Pasted image 20241015192214.png]]
+
+This way if the page is not used it is the second level PT is not allocated.
+Hence, memory is not used for not allocated pages (or unused pages).
+=> Effective size of Page Table is remained small.
+
+However, there still exists a disadvantage. That is there exists a delay due to look up latency.
+
+#### Translation-related Exceptions
+**Page Fault**:
+- Page is accessible, but it is sitting on the disk.
+- *Not a program error*.
+- Resume to instruction once the page is placed in the RAM (need to recover from disk).
+
+**Segmentation Fault / General Protection Fault**:
+- Page is not user-accessible (maybe not accessible for that specific user).
+- Page is R/O but tried to write / exec.
+- Program is terminated (unless caught).
+- Meltdown avoided this by miss-peculating.
+
+
+#### Translation Lookaside Buffer (TLB)
+The TLB acts as a cache for the page table. It is a small structure, so can be FA.
+![[Pasted image 20241015192544.png]]
+If translation is valid / present → read out the physical address from the TLB. (One TLB for each core)
+
+We have valid bits to represent if the translation is valid, and hence can be used. While there could also be permission bits (read-only, execute), sharing info and etc.
+
+#### Instruction Cache access with Address Translation
+Let’s say we wanted to run an instruction.
+
+1. Look up the ITLB to see if a valid translation exists.
+	1. If hit, proceed with that physical address.
+	2. If miss, proceed with translation and get physical address.
+2. Translate VA to PA (as mentioned above).
+3. Access Instruction Cache.
+	1. Check the Tag from physical address and compare with the tag from the cache.
+		1. If hit, W.
+		2. If miss, welp gonna take a while to get it.
+
+![[Pasted image 20241015193251.png]]
+
+What is the problem here? Let’s consider the situation where looking up the TLB takes 2 cycles and the looking up the cache takes 5 cycles. (assuming they’re both hits)
+
+**Physically Addressed Cache**
+![[Pasted image 20241015193405.png]]
+If the TLB look up and Cache look up take 2 and 5 cycles each. 40\% of the time is being used in the TLB look up and delaying cache access. → The Ogs did not like this happening.
+
+
+**Virtually Addressed Cache**:
+![[Pasted image 20241015194032.png]]
+Now the L1$ has no access latency, but most VA start at 0 so for certain addresses contention can happen. Also, during a context switch numerous cache-lines are flushed and brought back. There also exists more complex management since the nature of how VA is used (it is not unique).
+
+**Overlap Cache access with VA translation**:
+![[Pasted image 20241015194225.png]]
+This is using the crucial fact that *not all portions of the virtual address is being translated*.
+We know that only the first 20 bits (for example) are being translated while the other bits are used for page offset etc. 
+
+For instance,
+```
+VA - [Translated Portion 20 bits | Not Translated Portion 12 bits]
+												/        \
+											Index bits	Cache line bits
+```
+
+We run both L1$ look up and TLB look up in parallel, assuming we get hits, during the TLB look up we can use the left over non-translated bits to index into the cache.
+
+1. TLB look up & Cache Look up
+	1. In Cache Look up,
+		1. Cache Controller uses index bits to select sets in the $n$ ways.
+		2. Byte Select bits are used to get the data at that certain Byte offset.
+2. Once Cache Look up is done,
+	1. Compare all the tags and fetch if it is a hit.
+	2. This tag is obtained at translation (in parallel)
+
+![[Pasted image 20241015195059.png]]
+
+##### Virtually addressed, Physically tagged Cache
+The problem is that some address bits can **change**, that is we may have a overlap in bits that use address translation and cache indexing.
+
+Consider the following case,
+```
+[                       |  $idx (7 bits) | offset (6 bits)]
+[    virtual page number (20 bits) | page offset (12bits) ]
+```
+In this case, if we have two programs with the same last 12 bits but different 13th bit, we are fine.
+
+But if we also have the same 13th bit, we might end up in the same place for two different programs.
+
+
+**Possible Solutions**:
+- Bigger Page Size → In the above case, if we use 8KB pages we can solve the problem.
+- OS guarantees `VA[13]==PA[13]` in this case. Having a unique bit per program.
+- bite the bullet and deal with the **synonym problem**.
+
+#### Synonym Problem
+The synonym problem is when several VA’s map to the same PA.
+
+Consider the example,
+- 64KB DM $, 16B blocks.
+	- 4 bits for block offset: `addr[3:0]`
+	- 12 bits for cache index: `addr[15:4]`
+- 4KB Pages.
+	- 12 bits for page offset: `addr[11:0]`
+
 #### Next Lecture [[Lecture 9]]

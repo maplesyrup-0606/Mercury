@@ -1,7 +1,26 @@
-- [ ] ⏫ PHYS 200 Midterm Prep
-- [ ] ⏫ CPSC 425 Notes
-- [ ] 🔼 CPEN 411 Quiz Prep
-- [ ] ⏫ Julia Onboarding Task Prep
-- [x] 🔽 MATH 307 Lecture Notes ✅ 2024-09-24
-- [ ] UAS: figure out how to use “i don't know how to use sitl so can you set that up with mavproxy? mavproxy can remotely download logs from flight controller””
-- [ ] 
+- [x] ⏫ CPEN 411 Lecture Catch Up ✅ 2024-10-16
+- [ ] ⏫ CPEN 411 Notes 
+	- [ ] Lecture 8
+	- [ ] Lecture 9
+	- [ ] Lecture 10 
+	- [ ] Lecture 11
+- [ ] ⏫ CPSC 425 Lecture Notes (Maybe recordings as well)
+	- [x] Lecture 1 ✅ 2024-10-15
+	- [x] Lecture 2 ✅ 2024-10-15
+	- [x] Lecture 3 ✅ 2024-10-15
+	- [x] Lecture 4 ✅ 2024-10-15
+	- [ ] Lecture 5
+	- [ ] Lecture 6
+	- [ ] Lecture 7
+	- [ ] Lecture 8
+	- [ ] Lecture 9
+	- [ ] Lecture 10
+	- [ ] Lecture 11
+- [ ] 🔼 CPEN 411 Assignment 2
+- [x] 🔼 CPSC 425 Assignment 2 ✅ 2024-10-16
+- [x] ⏫ CPSC 425 Office hours ✅ 2024-10-15
+- [x] 🔽 PHYS 200 Reading Quiz ✅ 2024-10-15
+- [ ] 🔽 PHYS 200 Assignment
+	- [ ] Review Kinematics
+	- [ ] Do part 1
+- [ ] 🔼 APSC 450 Written Assignment

@@ -3658,6 +3658,7 @@ input.slider,
 /* Inline title visibility */
 .inline-title {
   display: var(--anp-inline-title-vis, block);
+  color: #F26363;
 }
 
 /* Search page hover item fix */
