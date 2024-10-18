@@ -22,10 +22,18 @@ Of course, real lenses are much more complicated. There are multiple stages of l
 
 Some real phenomenas,
 - Spherical Aberration. - Blur happens.
+	- Lenses are not perfect, refraction will change as you get off the center.
+	- Have to place where the blur is minimized.
 - Vignetting. - Some light is missed when multiple lenses are used.
 - Chromatic Aberration. - Different wavelengths of light follow different paths and blurring across some colors happen.
 - Scattering.
 - Distortion.
+
+##### Human eye
+The Human eye acts much like a pinhole camera.
+- pupil = pinhole.
+	- Change of pupil → changes focal length.
+- retina = imaging plane / sensor.
 
 ## Image as a 2D Function
 ![[Screenshot 2024-10-14 at 11.07.39 PM.png]]

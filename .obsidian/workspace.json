@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c55ee50c28fa76be",
+            "id": "5b8b4650a3e9fa16",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Midterm Review.md",
+                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Midterm Review.md",
+                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Midterm Review.md",
+                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Midterm Review.md"
+                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md"
               }
             }
           }
@@ -148,30 +148,31 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "c55ee50c28fa76be",
+  "active": "8dc15c3e8cf32109",
   "lastOpenFiles": [
-    "images/Screenshot 2024-10-17 at 4.45.17 PM.png",
-    "images/Screenshot 2024-10-17 at 4.06.33 PM.png",
-    "README.md",
-    "UBC/CPEN 4-1/CPSC 425/Midterm Review.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 5.md",
-    "UBC/CPEN 4-1/CPSC 425/Exam Related",
-    "images/Screenshot 2024-10-17 at 4.45.02 PM.png",
-    "images/Screenshot 2024-10-17 at 4.44.30 PM.png",
-    "images/Screenshot 2024-10-17 at 4.43.03 PM.png",
-    "images/Screenshot 2024-10-17 at 4.42.19 PM.png",
-    "images/Screenshot 2024-10-17 at 4.40.39 PM.png",
-    "images/Screenshot 2024-10-17 at 4.33.47 PM.png",
-    "images/Screenshot 2024-10-17 at 4.33.43 PM.png",
-    "images/Screenshot 2024-10-17 at 4.31.29 PM.png",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 4.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 3.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 2.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 5.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
+    "images/Screenshot 2024-10-18 at 1.18.35 AM.png",
+    "images/Screenshot 2024-10-17 at 9.32.36 PM.png",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 6.md",
+    "images/Screenshot 2024-10-17 at 10.14.49 PM.png",
+    "images/Screenshot 2024-10-17 at 10.12.37 PM.png",
+    "images/Screenshot 2024-10-17 at 10.09.05 PM.png",
+    "images/Screenshot 2024-10-17 at 10.05.15 PM.png",
+    "images/Screenshot 2024-10-17 at 10.05.02 PM.png",
+    "images/Screenshot 2024-10-17 at 10.02.12 PM.png",
+    "images/Screenshot 2024-10-17 at 9.35.13 PM.png",
+    "images/Screenshot 2024-10-17 at 9.33.02 PM.png",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 3.md",
+    "UBC/CPEN 4-1/CPSC 425/Midterm Review.md",
+    "README.md",
+    "UBC/CPEN 4-1/CPSC 425/Exam Related",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 4.md",
     "Task List.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 8.md",
     "UBC/CPEN 4-1/CPEN 411/Assignments/Assignment_2.pdf",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 9.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
     "UBC/CPEN 4-1/PHYS 200/PHYS200__Notes_on_Quantum-4.pdf",
     "My code file.ts",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
@@ -189,7 +190,6 @@
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 2.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 7.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 1.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 6.md",
     "UBC/CPEN 4-1/MATH 307/Exercises/Midterm",
     "UBC/CPEN 4-1/MATH 307/Exercises",
     "UBC/CPEN 4-1/CPSC 425/Lectures",

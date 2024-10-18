@@ -29,18 +29,27 @@ Light has a property such called a wave-particle duality.
 
 #### Graphics
 Surface reflection depends on both the **viewing $(\theta_{v},\phi_{v})$** and **illumination** $(\theta_{i},\phi_{i})$ direction with,
-Bidirectional Reflection Distribution Function: $\text{BDRF}(\theta_{i},\phi_{i},\theta_{v},\phi_{v})$.
+- Bidirectional Reflection Distribution Function: $\text{BRDF}(\theta_{i},\phi_{i},\theta_{v},\phi_{v})$.
+	- This governs surface reflection.
 ![[Screenshot 2024-09-29 at 8.27.14 PM.png]]
  
 For a **Lambertian Surface**:
 $$\text{BDRF}(\theta_{i},\phi_{i},\theta_{v},\phi_{v}) = \frac{\rho_{d}}{\pi}$$
 And this constant, $\rho_{d}$ is called ‘albedo’.
-It refers to the fraction of light getting reflected. The $\pi$ is to make sure no light is added.
+- It refers to the fraction of light getting reflected. 
+The $\pi$ is to make sure no light is added. 
+- Ensures that reflected light is less or equal to amount of incident light on the surface.
 
 $$L=\frac{\rho_{d}}{\pi}I(\vec{i}\cdot \vec{n})$$
+$L$ here refers to the actual light being reflected.
 - Amount and color of incident light $I$.
 - Fraction of light being reflected (material) $\rho_{d}$.
 - Angle between the light and the surface (geometry) $\vec{i}\cdot \vec{n}$.
+
+==A Lambertian surface appears equally bright in ALL directions and this brightness is a function of how close the incident light direction is to the normal of the surface.==
+
+For a **Mirror** surface,
+- All of the incident light is reflected in one direction where is reciprocal of the incident direction over the normal.
 
 
 #### Phong Illumination Model
@@ -81,6 +90,21 @@ For a fixed sensor size, focal length determines the field of view (fov).
 ![[Screenshot 2024-10-14 at 9.22.26 PM.png]]
 We can see that $\theta$ becomes wider the small the focal length $f$ hence having a wider fov.
 
+Consider this figure,
+![[Screenshot 2024-10-18 at 1.18.35 AM.png]]
+Then,
+$$\tan\left( \frac{\theta}{2} \right)=\frac{\left( \frac{w}{2} \right)}{f'}=\frac{w}{2f'}$$
+$$\implies \theta = 2\arctan\left( \frac{w}{2f'} \right)$$
+
+What is the fov of a full frame (35mm) camera with a 50mm lens, 100mm lens?
+$$FOV_{50}=2\arctan\left( \frac{35}{50\times 2} \right)$$
+$$FOV_{100}=2\arctan\left( \frac{35}{100 \times 2} \right)$$
+
+The **depth of field** is the distance between the nearest and furthest elements in a scene that appear to be sharp in the image. → How much of the scene in depth will be sharp.
+
+In terms of the pinhole camera, a.k.a a small aperture,
+- Will have a large depth of field, nearly everything in field of view would be in focus.
+
 ##### Perspective Effects
 We know that **far objects** appear **smaller** than close ones.
 ![[Screenshot 2024-10-14 at 9.25.23 PM.png]]
@@ -110,7 +134,7 @@ Parallel lines meet at a point which is so called a **vanishing point**.
 ![[Screenshot 2024-10-14 at 9.30.47 PM.png]]
 Given the above,
 The world point $P=\begin{bmatrix}x \\ y\\ z\end{bmatrix}$ projects to 2D image point $P'=\begin{bmatrix}x'\\y'\end{bmatrix}$ where $x'=f' \frac{x}{z},y'=f' \frac{y}{z}$.
-These project, that these points are inversely proportional to depth and proportional to the focal length.
+These project, that these points are inversely proportional to depth and proportional to the **focal length**.
 
 We can use the camera matrix,
 $$\mathbf{C}= \begin{bmatrix}
@@ -152,8 +176,9 @@ z
 x' \\
 y'
 \end{bmatrix}, \hspace{.3in} x'=mx,y'=my \hspace{.3in}m=\frac{f'}{z_{0}}$$
-
-Yet, we still get an inverted image.
+- Is accurate for flat scenes or scenes where relief of an object is relatively small w.r.p to the distance of the object from the camera.
+- $z_0$ here is the average distance of points on the object to the camera.
+- Yet, we still get an inverted image.
 ##### Orthographic Projection
 ![[Screenshot 2024-10-14 at 9.48.17 PM.png]]
 Just simply drop the depth component. We need a image plane big enough to compensate what we’re actually imaging. We don’t get any inverted image.
@@ -191,6 +216,8 @@ Generally, pinhole cameras are **dark**.
 Pinhole cameras are **slow**.
 → Only a fraction of the light from a scene point hits the image plane per unit time.
 
+==That’s why we need lens, so that it can still capture more photons and make them still project to the focus point.==
+
 #### Reason for Lenses
 A real camera must have as finite aperture:
 - **That captures more light.**
@@ -213,9 +240,11 @@ The one problem is that light will actual get refracted twice, since there are t
 $$\frac{1}{z'}-\frac{1}{z}=\frac{1}{f}$$
 - $f$ is focal length, distance where image is going to be in focus.
 - $z$ is the position of the object.
-- $z’$ is how far the image plane is for the image to be in focus.
+- $z’$ is distance from lens to the imaging plane.
 
 If we know our focal length and where the object is in the world → we can figure where to place our image plane to be in focus. Where pinhole would be focus anywhere.
+==Only objects at particular depth from the camera will be in focus on the imaging plane.==
+==Any where else further or closer than z’ will be blurred since they form a circle of confusion on the image plane.==
 
 If we have light rays that are parallel (objects really far away and the rays become nearly parallel),
 $$\lim_{ z \to \infty } \frac{1}{z'}-\frac{1}{z}=\frac{1}{z'}=\frac{1}{f}$$
@@ -227,4 +256,21 @@ For closer objects, the image plane exists before the light is focus and hence b
 
 ![[Screenshot 2024-10-14 at 10.10.57 PM.png]]
 
+*Distance towards the actual object is negative, distance towards the image plane is positive.*
+
+
+##### Exercise
+Consider a scenario with a lens who’s focal length is 50mm = 0.05m, where an object being imaged is 5m away. Where should we place the image plane to ensure the object is in focus?
+
+$$\frac{1}{f'}=\frac{1}{z'}-\frac{1}{z}$$
+$$\to \frac{1}{0.05m}=\frac{1}{z'}-\frac{1}{-5m}$$
+$$\frac{1}{z'}=\frac{1}{0.05m}+\frac{1}{5m} \implies z' \approx 0.05m$$
+
+**Why is the optimal placement so close to the focal length?**
+→ Because the object is very far away.
+
+##### Exercise
+Consider a scenario with a lens who’s focal length is 5m, where an object being imaged is 5m away. Where should we place the image plane to ensure the object is in focus?
+
+$$\frac{1}{z'}=\frac{1}{f'}+\frac{1}{z}=\frac{1}{5m}+\frac{1}{-5m}\implies z'\approx \infty$$
 #### Next Lecture [[UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 2|Lecture 2]]
