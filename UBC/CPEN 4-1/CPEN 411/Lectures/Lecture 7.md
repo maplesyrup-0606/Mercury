@@ -16,7 +16,7 @@ Look up at the tag, if the tag matches and based on the offset within the data w
 		On the other hand, a fully associative cache will have a higher hit rate. → The cost is way too high due to how complex it is to design.
 		*The biggest bump comes from moving from a DM to a 2-way set associative cache.*
 
-
+==FA is expensive since they are no more index bits meaning they can be placed any where in the cache, and due to this and long tags, it becomes way too expensive to implement.==
 
 ==People realized that we don’t need a FA, we might rather have a 4-way or a 8-way set associative cache.==
 
@@ -28,6 +28,7 @@ We have 1024 rows, so index is $\log_{2}{1024}= 10$ bits are used for the index 
 ## Problem: Conflicts!
 ![[Pasted image 20240925104925.png]]
 It doesn’t matter how large the cache is, they just end up evicting each other out!
+Unlike a FA cache, a block of memory will get mapped to a specific cache line. This will cause conflicts when accessing the cache.
 
 ### Solution: Set-associative Cache
 ![[Screenshot 2024-09-25 at 10.52.03 AM.png]]
@@ -96,10 +97,10 @@ Select victim uniformly at random.
 - pros: Don’t need to remember anything.
 - But how well does it work?
 
-	Consider the access pattern $\text{AAAABAAAACAAAAD...}$,
-	- With a 32-entry FA cache & random RP
-		- What is the miss rate if we always evict A?
-		- What is the lowest possible hit rate of $(\text{AAAAx})^n$
+	Consider the access pattern $\text{AAAABAAAACAAAAD...}=(\text{AAAAx})^n$,
+	- What is the miss rate if we always evict A?
+	- What is the lowest possible hit rate of $(\text{AAAAx})^n$?
+	- With a 32-entry FA cache & random RP?
 
 #### LRU
 Keep a timestamp per each cache block.
@@ -194,7 +195,7 @@ Only store in cache for reads since no memory updated is needed.
 #### Inclusive
 ![[Pasted image 20241014154630.png]]
 
-If data is in L1 Cache, it also exists in LLC (or lower) cache. If invalidated in L1$ also evicted in LLC (or lower) $.
+If data is in L1 Cache, it also exists in LLC (or lower) cache. If invalidated in L1$ also evicted in LLC (or lower).
 
 Capacity: $max(x,y)$ where $x,y$ denote the size of LLC / L1 $.
 

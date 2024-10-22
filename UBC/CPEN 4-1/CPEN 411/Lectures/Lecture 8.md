@@ -33,7 +33,7 @@ How do we know the address specified for a specific memory is contiguous, secure
 7. User edits doc, wants more memory.
 
 **Total is more than physical memory!**
-- Also possible in memory with more than 1 user sharing memory.\
+- Also possible in memory with more than 1 user sharing memory.
 
 ### Fragmentation
 Now from the previous example, say that the user exited word.
@@ -60,7 +60,7 @@ Notice that, some pages are going to the disk (cold pages), the virtual address 
 
 It is also possible to not have contiguous physical addresses. 
 
-Also moving pages from / to the hard disk or pages expiring is possible → making other programs being able to use the free space.
+Also moving pages from/to the hard disk or pages expiring is possible → making other programs being able to use the free space.
 - **Caveat**: We need a mechanism for address translation while maintaining user security.
 
 **Program View (Virtual Space):**
@@ -237,4 +237,7 @@ Consider the example,
 - 4KB Pages.
 	- 12 bits for page offset: `addr[11:0]`
 
-#### Next Lecture [[Lecture 9]]
+Basically, the problem arises from the fact that the bits used from cache indexing overlap with the address translation. The same physical address can be mapped to different locations in the cache, hence leading to a coherence problem.
+#### Next Lecture [[UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 9|Lecture 9]]
+
+

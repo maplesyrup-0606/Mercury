@@ -25,7 +25,7 @@ Convolution in a Fast Fourier Transform space:
 - Cost of convolution: $O(n^2)$. ← ==Not a function of filter size anymore!==
 
 ### Low-pass / High-pass Filtering
-Any filter that smooths out the image is at the end a low-filter.
+Any filter that smooths out the image is at the end a low-pass filter.
 
 ![[Screenshot 2024-10-17 at 2.48.14 PM.png]]
 - Low pass filter filters out all of the high frequency content of the image → only low frequencies remain.
@@ -39,7 +39,7 @@ So these filters tend do smooth out the image → Less detail in images → Low-
 #### Linear Filter Properties
 Let $\otimes$ denote convolution, let $I(X,Y)$ be a digital image. Let $F$ and $G$ be digital filters,
 - Convolution is **associative**. $$G\otimes(F \otimes I(X,Y)) = (G \otimes F)\otimes I(X,Y)$$
-- Convolution is symmetric.$$(G\otimes F)\otimes I(X,Y)= (F\otimes G)\otimes I(X,Y)$$
+- Convolution is **symmetric**.$$(G\otimes F)\otimes I(X,Y)= (F\otimes G)\otimes I(X,Y)$$
 Convolving $I(X,Y)$ with filter $F$ and then convolving the result with filter $G$ can be achieved in a single step, namely convolving $I(X,Y)$ with filter $G\otimes F=F \otimes G$. (Pre-convolution)
 
 ==Correlation, in general, is not associative!==

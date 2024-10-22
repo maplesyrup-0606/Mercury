@@ -98,6 +98,7 @@ $$\cos \theta=\frac{a \cdot b}{\sqrt{ (a \cdot a)(b \cdot b) }} = \frac{a}{\lver
 3. Compute the dot product by correlation of image $(a)$ with normalized filter $(b)$.
 4. Compute the normalized correlation by dividing element-wise result in step 3 by result in step 2.
 
+==Here normalization, is based on the 2-norm.==
 ##### Why might template matching fail?
 
 - Different Scales
@@ -173,6 +174,7 @@ The laplacian image stores the difference between the image at the level and the
 
 Why can we do this?
 - According to the Nyquist sampling theorem, when blurred at a certain rate sub-sampling doesn’t lose any information.
+	- The **Nyquist theorem** ensures that, during upsampling, you correctly **interpolate** between the sampled points without introducing artifacts, as long as the original signal (image) was band-limited during downsampling.
 - However, this blurring process itself causes a loss of information.
 - So, we can track the difference when reconstructing later on.
 
@@ -211,3 +213,4 @@ until original resolution reached
 
 ![[Screenshot 2024-10-17 at 10.14.49 PM.png]]
 
+#### Next Lecture [[UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 7|Lecture 7]]

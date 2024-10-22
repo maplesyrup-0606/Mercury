@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7618891e670a2803",
+        "id": "ade21a7bc2448c6d",
         "type": "tabs",
         "children": [
           {
-            "id": "5b8b4650a3e9fa16",
+            "id": "2bcc8a01444182c2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
-                "mode": "source",
+                "file": "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 3.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
+                "file": "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
+                "file": "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md"
+                "file": "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 3.md"
               }
             }
           }
@@ -148,53 +148,54 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "8dc15c3e8cf32109",
+  "active": "2bcc8a01444182c2",
   "lastOpenFiles": [
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 2.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 5.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
-    "images/Screenshot 2024-10-18 at 1.18.35 AM.png",
-    "images/Screenshot 2024-10-17 at 9.32.36 PM.png",
+    "UBC/CPEN 4-1/CPEN 411/Midterm Review.md",
+    "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 3.md",
+    "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 2.md",
+    "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 1.md",
+    "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 4.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 10.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 9.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 8.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 7.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 6.md",
-    "images/Screenshot 2024-10-17 at 10.14.49 PM.png",
-    "images/Screenshot 2024-10-17 at 10.12.37 PM.png",
-    "images/Screenshot 2024-10-17 at 10.09.05 PM.png",
-    "images/Screenshot 2024-10-17 at 10.05.15 PM.png",
-    "images/Screenshot 2024-10-17 at 10.05.02 PM.png",
-    "images/Screenshot 2024-10-17 at 10.02.12 PM.png",
-    "images/Screenshot 2024-10-17 at 9.35.13 PM.png",
-    "images/Screenshot 2024-10-17 at 9.33.02 PM.png",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 3.md",
-    "UBC/CPEN 4-1/CPSC 425/Midterm Review.md",
-    "README.md",
-    "UBC/CPEN 4-1/CPSC 425/Exam Related",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 5.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 4.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 3.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 2.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
     "Task List.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 8.md",
-    "UBC/CPEN 4-1/CPEN 411/Assignments/Assignment_2.pdf",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 9.md",
-    "UBC/CPEN 4-1/PHYS 200/PHYS200__Notes_on_Quantum-4.pdf",
-    "My code file.ts",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
-    "UBC/CPEN 4-1/CPEN 411/Quizzes/Quiz 1.md",
-    "UBC/CPEN 4-1/CPEN 411/Quizzes",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 1 & 2.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 10.md",
+    "UBC/CPEN 4-1/CPSC 425/Practice Questiosn",
+    "UBC/CPEN 4-1/CPSC 425/Midterm Review.md",
+    "images/Pasted image 20241019184418.png",
+    "images/Pasted image 20241019185806.png",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 6.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 5.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 4.md",
-    "UBC/CPEN 4-1/MATH 307/Exercises/Midterm/Midterm 1 Exercises.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 5.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 4.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 3.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 2.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 7.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 1.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
+    "images/Pasted image 20241019191139.png",
+    "images/Pasted image 20241019190339.png",
+    "images/Pasted image 20241019190014.png",
+    "images/Pasted image 20241019171307.png",
+    "images/Pasted image 20241019183522.png",
+    "images/Pasted image 20241019183306.png",
+    "images/Pasted image 20241019182956.png",
+    "images/Pasted image 20241019180858.png",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 8.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 1 & 2.md",
+    "UBC/CPEN 4-1/CPSC 425/Exam Related",
+    "UBC/CPEN 4-1/CPEN 411/Assignments/Assignment_2.pdf",
+    "UBC/CPEN 4-1/PHYS 200/PHYS200__Notes_on_Quantum-4.pdf",
+    "My code file.ts",
+    "UBC/CPEN 4-1/CPEN 411/Quizzes",
     "UBC/CPEN 4-1/MATH 307/Exercises/Midterm",
     "UBC/CPEN 4-1/MATH 307/Exercises",
     "UBC/CPEN 4-1/CPSC 425/Lectures",
     "UBC/CPEN 4-1/CPEN 411/Assignments/Assignment_1.pdf",
-    "UBC/CPEN 4-1/PHYS 200/Assignments/PS2_Part2_mercurymcindoe_85594505.pdf",
     "images/Untitled.canvas",
     "images/cashflow_img.canvas"
   ]

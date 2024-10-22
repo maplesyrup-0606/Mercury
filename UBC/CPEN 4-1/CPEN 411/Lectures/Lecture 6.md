@@ -95,4 +95,6 @@ A fully associative cache are those with $n$ ways and 1 set. We need to access $
 It is completely the opposite, it has 1 way and $n$ sets.
 
 
-#### Next Lecture [[UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7]]
+#### Next Lecture [[UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7|Lecture 7]]
+
+

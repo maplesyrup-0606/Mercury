@@ -40,7 +40,10 @@ A shift invariant function would look like,
 Where a shift variant function would look like,
 ![[Screenshot 2024-10-15 at 11.56.09 AM.png]]
 
-An operation is **linear** if it satisfies both **superposition** and **scaling**. → Any linear, shift invariant operation can be expressed as convolution.
+An operation is **linear** if it satisfies both **superposition** and **scaling**. → ***Any linear, shift invariant operation can be expressed as convolution.***
+
+**Summary**
+==Any operation that satisfies superposition and scaling is linear. Any linear operation that is shift invariant can be expressed as a convolution (correlation as well). Convolution unlike correlation satisfies associativity and symmetry.==
 
 ## Smoothing
 Smoothing (or blurring):
@@ -90,7 +93,9 @@ $$\frac{1}{9}\begin{bmatrix}
 It is blurring in a rectangular matter, not representing the focus that well.
 The box filter will enhance the vertical / horizontal aspect rather than blurring irrespective of its orientation.
 
-#### Pinbox filter
+***The box filter is not rotationally invariant. (At least for angles not in 90 degrees).***
+
+#### Pillbox filter
 Smoothing with a circular pillbox is a better model for defocus (in geometric options).
 
 $$f(x,y)=\frac{1}{\pi r^2}
@@ -106,6 +111,9 @@ The scaling constant ensures that the area of the filter is one.
 ![[Screenshot 2024-10-15 at 3.20.15 PM.png]]
 It smooths out in all directions equally.
 
+***Pillbox is rotationally symmetric, but not separable. And does model geometric out-of-focus blurring well.***
+
+Even though the function is normalized to 1, in the continuous domain, sampling and evaluating a discrete set of points corresponding to the filter will not produce an array that sums up to 1. → Need to normalize the filter.
 ## Gaussian Filter
 The **Gaussian** is a good general smoothing model.
 - For phenomena.
@@ -136,11 +144,13 @@ What is the problem of this filter?
   ![[Screenshot 2024-10-15 at 3.29.20 PM.png]]
 
 So it needs to be **normalized** and capture $\pm 2\sigma$ to reliable.
-In general, we want the Gaussian filter to capture $3\pm \sigma$, for $\sigma=1 \implies 7\times {7} \text{ filter}$.
+In general, we want the Gaussian filter to capture $\pm 3\sigma$, for $\sigma=1 \implies 7\times {7} \text{ filter}$.
 
 
 For instance, with $\sigma = 5$ what filter size would be appropriate?
 We want $5\times 3$ on both top bottom and left right → $31\times 31$.
+
+Trick, if $\sigma$ is given the filter would be $6 \times \sigma$ rounded up to the next odd integer.
 
 ## Efficiency
 A 2D function of $x$ and $y$ is **separable** if it can be written as the product of two functions, one a function only of $x$ and the other a function of only $y$.
@@ -151,12 +161,12 @@ Both can be implemented as two 1D convolutions:
 - First, convolve each row with a 1D filter.
 - Then, convolve each column with a 1D filter.
 
-==2D Gaussian is the only (non trivial) 2D function that is both separable and rotationally invariant.==
+==2D Gaussian is the only (non trivial) 2D function that is both separable and rotationally invariant. Also, convolving two Gaussians would result in another Gaussian.==
 
 ![[Screenshot 2024-10-15 at 3.36.00 PM.png]]
 
 ##### How to know separability
-If a 2D filter can be expressed as an outer product of two 1D filters → it is separable.
+If a 2D filter can be expressed as an outer product of two 1D filters → it is separable. Alternatively, if the rank of the filter is 1, then the filter is separable.
 ![[Screenshot 2024-10-15 at 3.38.06 PM.png]]
 
 #### Separability of Gaussian Filter
@@ -167,14 +177,14 @@ Can be expressed of two functions, respectively in $x$ and $y$.
 
 Ex)
 $$\frac{1}{16}\begin{bmatrix}
-1 & 4 & 6 & 4 & 1
-\end{bmatrix}\otimes \frac{1}{16}\begin{bmatrix}
 1 \\
 4 \\
 6 \\
 4 \\
 1
-\end{bmatrix}=\frac{1}{256}\begin{bmatrix}
+\end{bmatrix} \otimes  \frac{1}{16}\begin{bmatrix}
+1 & 4 & 6 & 4 & 1
+\end{bmatrix} =\frac{1}{256}\begin{bmatrix}
 1 & 4 & 6 & 4 & 1 \\
 4 & 16 & 24 & 16 & 4 \\
 6 & 24 & 36 & 24 & 6 \\

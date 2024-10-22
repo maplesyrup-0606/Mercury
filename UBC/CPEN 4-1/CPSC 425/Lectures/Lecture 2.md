@@ -25,7 +25,9 @@ Some real phenomenas,
 	- Lenses are not perfect, refraction will change as you get off the center.
 	- Have to place where the blur is minimized.
 - Vignetting. - Some light is missed when multiple lenses are used.
+	- Darkening on the edges.
 - Chromatic Aberration. - Different wavelengths of light follow different paths and blurring across some colors happen.
+	- Not all colours can be equal in focus.
 - Scattering.
 - Distortion.
 
@@ -74,7 +76,7 @@ Let $I(X,Y)$ be an $n \times n$ image, and the filter (kernel) be another $m \ti
 Let $k = \left\lfloor  \frac{m}{2}  \right\rfloor$, compute the new image $I’(X,Y)$ as follows:
 $$I'(X,Y)=\sum_{j=-k}^{k}\sum_{i=-k}^k F(i,j)I(X+i,Y+j)$$
 For a given $X$ and $Y$, superimpose the filter on the image centered at $(X,Y)$.
-Computer the new pixel value $I’(X,Y)$ as the sum of the product original value and filter values.
+Compute the new pixel value $I’(X,Y)$ as the sum of the product original value and filter values.
 
 ![[Screenshot 2024-10-14 at 11.36.28 PM.png]]
 
@@ -85,6 +87,7 @@ $$\therefore O(n^2m^2)$$
 2. **Pad the image with zeros**: Return zero whenever a value of $I$ is required at some position outside the defined limits of $X$ and $Y$. → Boundary becomes darker.
 3. **Assume periodicity**: The top row wraps around to the bottom row; the leftmost column wraps around to the rightmost column.
 4. **Reflect Boarder**: Copy rows/columns locally by reflecting over the edge.
+	1. Some pixels in the border neighborhood will contribute 2x as much to the weighted sum.
 
 ### Linear Filters: Correlation vs. Convolution.
 
@@ -116,5 +119,15 @@ So it turns out that we are applying a filter that is rotated by 180 degrees.
 If,
 $$F(X,Y)=F(-X,-Y)$$
 then correlation = convolution.
+
+###### Exercise
+$$I'(X,Y)=\frac{1}{4}\begin{bmatrix}
+1 & 2 & 1
+\end{bmatrix}\otimes \begin{bmatrix}
+9 & 5 & 2 & 1 & 3 & 4 & 6 & 2 & 4
+\end{bmatrix}$$
+$$\frac{1}{4} \begin{bmatrix}
+. & 12 & 10 & 7 & 11 & 17 & 18 & 14 & .
+\end{bmatrix}$$
 #### Next Lecture [[UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 3|Lecture 3]]
 

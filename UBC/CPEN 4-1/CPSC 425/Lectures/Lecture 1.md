@@ -41,7 +41,7 @@ The $\pi$ is to make sure no light is added.
 - Ensures that reflected light is less or equal to amount of incident light on the surface.
 
 $$L=\frac{\rho_{d}}{\pi}I(\vec{i}\cdot \vec{n})$$
-$L$ here refers to the actual light being reflected.
+$L$ here refers to the actual light being reflected. (For lambertian)
 - Amount and color of incident light $I$.
 - Fraction of light being reflected (material) $\rho_{d}$.
 - Angle between the light and the surface (geometry) $\vec{i}\cdot \vec{n}$.
@@ -81,6 +81,7 @@ A pinhole camera is a box with a small hall (aperture) in it.
 ![[Screenshot 2024-10-14 at 9.18.39 PM.png]]
 
 $f'$ is the focal length of the camera. And this is the distance between the centre of a lens and its focus. By changing the focal length, this will change the size of the resulting image.
+Irrespective of focal length, the image is sharp → just depends on where image plane is placed. 
 
 ![[Screenshot 2024-10-14 at 9.20.00 PM.png]]
 It is quite convenient to think of the **image plane** which is in front of the pinhole.
@@ -247,7 +248,7 @@ If we know our focal length and where the object is in the world → we can figu
 ==Any where else further or closer than z’ will be blurred since they form a circle of confusion on the image plane.==
 
 If we have light rays that are parallel (objects really far away and the rays become nearly parallel),
-$$\lim_{ z \to \infty } \frac{1}{z'}-\frac{1}{z}=\frac{1}{z'}=\frac{1}{f}$$
+$$\lim_{ z \to -\infty } \frac{1}{z'}-\frac{1}{z}=\frac{1}{z'}=\frac{1}{f}$$
 Where everything is going to be focused a focal length.
 
 But say if we had an object, that is relatively closer than infinity, then the light would focus closer than the image plane and get blurred.
@@ -273,4 +274,12 @@ $$\frac{1}{z'}=\frac{1}{0.05m}+\frac{1}{5m} \implies z' \approx 0.05m$$
 Consider a scenario with a lens who’s focal length is 5m, where an object being imaged is 5m away. Where should we place the image plane to ensure the object is in focus?
 
 $$\frac{1}{z'}=\frac{1}{f'}+\frac{1}{z}=\frac{1}{5m}+\frac{1}{-5m}\implies z'\approx \infty$$
+
+##### Note ⭐⭐⭐
+When combining the thin lens equation and a pinhole camera. Effectively in the camera, $z'=f'$, hence we have to use the relation,
+$$x'=z' \frac{x}{z},\hspace{.1in}y'=z' \frac{y}{z},\hspace{.1in} \frac{1}{z'}- \frac{1}{z} = \frac{1}{f}$$
+So if we place an object at 2 x focal length.
+$$\frac{1}{z'} - \frac{1}{-2f} = \frac{1}{f} \implies z' = 2f$$
+$$x'=2f \frac{x}{-2f} = -x,\hspace{.1in}y'= 2f \frac{y}{-2f} = -y$$
+So the object is equal in size but inverted in the projection.
 #### Next Lecture [[UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 2|Lecture 2]]

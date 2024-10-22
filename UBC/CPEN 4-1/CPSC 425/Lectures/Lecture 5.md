@@ -112,6 +112,8 @@ We blur with the Gaussian kernel, then we select every 2nd pixel (maybe $n$ th, 
 
 **For a band-limited signal, what if we over sample? (higher than Nyquist rate)**
 => *It’s fine, samples are redundant and there are wasted bits.*
+==In oversampling, one samples than averages. In smoothing, one first averages and then samples.==
+
 
 **For a band-limited signal, what if we under sample?**
 => *We might have artifacts and we might miss details.*
@@ -137,7 +139,7 @@ The problem is that the CFA by itself has no way to distinguishing wavelengths o
 So we have different color filters that record only certain wavelengths of light at a given pixel. (They pass only certain range of wavelengths.)
 ![[Screenshot 2024-10-17 at 8.32.19 PM.png]]
 
-We have to design choices:
+We have two design choices:
 1. What is the sensitivity functions $f(\lambda)$ to use for each filter?
 2. How can we spatially arrange these filters?
 
@@ -147,7 +149,7 @@ There are of course, different patterns.
 
 The actual raw output from a camera is like the following,
 ![[Screenshot 2024-10-17 at 8.36.54 PM.png]]
-All we does it count the photons, we get a grey scale image. 
+All it does it count the photons, we get a grey scale image. 
 The distribution of the color is shown by the checker board grid.
 
 #### CFA Demosaicking
@@ -175,4 +177,8 @@ A simple white balancing algorithm is to assume the scene is grey on average.
 ##### Tone reproduction
 ![[Screenshot 2024-10-17 at 8.43.15 PM.png]]
 
+
+White balancing is to ensure that “white” or “grey” looks correct irrespective of the light source. This is done by finding the brightest pixels in the image along the three channels and then normalizing the other channels to make sure they have equal value.
+
+Tone mapping is the process of mapping camera observed color pallet to match the color pallet in the world. Often requires calibration with known colors.
 #### Next Lecture [[UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 6|Lecture 6]]

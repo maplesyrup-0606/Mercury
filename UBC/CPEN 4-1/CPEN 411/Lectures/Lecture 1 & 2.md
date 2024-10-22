@@ -24,7 +24,7 @@ Should we implement it?
 
 Let’s do the calculations,
 
-Execution Time (with) = 1.05 * 0.99 * 1.01 * Execution Time (w/o) = 1.05 * Execution Time (w/o)
+Execution Time (with) = 1.05 x 0.99 x 1.01 x Execution Time (w/o) = 1.05 x Execution Time (w/o)
 The speed up is 1 / 1.049895 = 0.95, so we do not want to implement it.
 
 
