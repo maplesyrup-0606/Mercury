@@ -4,7 +4,7 @@ What is computer vision? → Broadly speaking, it is a research field aimed to e
 
 ## Image Formation, Cameras and Lenses
 The **image formation process** that produces a particular image depends on:
-- Lightening Condition.
+- Lighting Condition.
 - Scene Geometry.
 - Surface Properties.
 - Camera optics and viewpoint.

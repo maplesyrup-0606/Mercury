@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 3.md",
+                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 3.md",
+                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 3.md",
+                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 3.md"
+                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md"
               }
             }
           }
@@ -150,8 +150,9 @@
   },
   "active": "2bcc8a01444182c2",
   "lastOpenFiles": [
-    "UBC/CPEN 4-1/CPEN 411/Midterm Review.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 2.md",
     "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 3.md",
+    "UBC/CPEN 4-1/CPEN 411/Midterm Review.md",
     "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 2.md",
     "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 1.md",
     "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 4.md",
@@ -163,7 +164,6 @@
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 5.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 4.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 3.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 2.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
     "Task List.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 9.md",
