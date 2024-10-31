@@ -89,6 +89,7 @@ $$\therefore O(n^2m^2)$$
 4. **Reflect Boarder**: Copy rows/columns locally by reflecting over the edge.
 	1. Some pixels in the border neighborhood will contribute 2x as much to the weighted sum.
 
+==When would padding be suboptimal? For instance, if we do edge detections we will create edges on the borders and this wouldn’t be optimal.==
 ### Linear Filters: Correlation vs. Convolution.
 
 **Correlation**:

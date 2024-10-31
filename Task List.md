@@ -1,40 +1,11 @@
-- [x] ⏫ CPEN 411 Lecture Catch Up ✅ 2024-10-16
-- [ ] ⏫ CPEN 411 Notes 
-	- [x] Lecture 8 ✅ 2024-10-19
-	- [x] Lecture 9 ✅ 2024-10-19
-	- [x] Lecture 10 ✅ 2024-10-19
-	- [x] Lecture 11 ✅ 2024-10-19
-	- [x] Finish notes on last two lectures (pipelining) ✅ 2024-10-20
-	- [x] Quizzes ✅ 2024-10-20
-	- [x] Tutorials ✅ 2024-10-20
-	- [x] Practice Midterms ✅ 2024-10-20
-		- [ ] Need to read thoroughly through notes.
-		- [ ] Need to re-do tutorials and quizzes.
-		- [ ] Figure out practice midterm.
-- [ ] ⏫ CPSC 425 Lecture Notes (Maybe recordings as well)
-	- [x] Lecture 1 ✅ 2024-10-15
-	- [x] Lecture 2 ✅ 2024-10-15
-	- [x] Lecture 3 ✅ 2024-10-15
-	- [x] Lecture 4 ✅ 2024-10-15
-	- [x] Lecture 5 ✅ 2024-10-19
-	- [x] Lecture 6 ✅ 2024-10-19
-	- [x] Lecture 7 ✅ 2024-10-19
-	- [x] Lecture 8 ✅ 2024-10-19
-	- [x] Lecture 9 ✅ 2024-10-19
-	- [x] Lecture 10 ✅ 2024-10-19
-	- [x] Lecture 11 ✅ 2024-10-19
-	- [x] Quizzes ✅ 2024-10-20
-	- [x] Practice ✅ 2024-10-20
-	- [x] Read-over ✅ 2024-10-20
+- [x] ⏫ CPSC 425 Assignment 3 ✅ 2024-10-27
 - [ ] 🔼 CPEN 411 Assignment 2
-- [x] 🔼 CPSC 425 Assignment 2 ✅ 2024-10-16
-- [x] ⏫ CPSC 425 Office hours ✅ 2024-10-15
-- [x] 🔽 PHYS 200 Reading Quiz ✅ 2024-10-15
-- [x] 🔽 PHYS 200 Assignment ✅ 2024-10-19
-	- [x] Review Kinematics ✅ 2024-10-19
-	- [x] Do part 1 ✅ 2024-10-19
-- [x] 🔼 APSC 450 Written Assignment ✅ 2024-10-20
-	- [x] Writing ✅ 2024-10-19
-	- [x] Citing ✅ 2024-10-20
-	- [x] Styling ✅ 2024-10-20
-	- [x] Checking turnitin ✅ 2024-10-20
+	- [ ] In progess.
+	- [ ] Need to run leftover traces and write report
+- [x] ⏫ PHYS 200 Assignment 6 ✅ 2024-10-25
+- [x] UAS design presentation ✅ 2024-10-25
+- [ ] MATH 307 follow up.
+- [ ] PHYS 200 follow up
+- [ ] CPSC 425 Assignment 4
+- [ ] PHYS 200 Assignment
+- [ ] 

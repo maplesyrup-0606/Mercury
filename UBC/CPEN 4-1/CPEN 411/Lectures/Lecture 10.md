@@ -93,7 +93,7 @@ For each register, track “**will be written to by in-flight instruction**” i
 	- Update GPR[RD], clear SB[RD]
 
 ##### However..
-Structural Hazards is not solved.
+Structural Hazards is not solved. (from scoreboards)
 ![[Pasted image 20241019191139.png]]
 
 In theory, only LD uses MEM on cycle 10, but definitely MUL.D and ADD.D and LD all want to use WB on cycle 11 → which causes a structural hazard.

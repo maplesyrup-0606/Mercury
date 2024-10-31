@@ -174,7 +174,7 @@ The laplacian image stores the difference between the image at the level and the
 
 Why can we do this?
 - According to the Nyquist sampling theorem, when blurred at a certain rate sub-sampling doesn’t lose any information.
-	- The **Nyquist theorem** ensures that, during upsampling, you correctly **interpolate** between the sampled points without introducing artifacts, as long as the original signal (image) was band-limited during downsampling.
+	- The **Nyquist theorem** ensures that, during upsampling, you correctly **interpolate** between the sampled points without introducing artifacts, as long as the original signal (image) was band-limited during downsampling.
 - However, this blurring process itself causes a loss of information.
 - So, we can track the difference when reconstructing later on.
 

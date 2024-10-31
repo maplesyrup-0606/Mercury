@@ -4,6 +4,10 @@
 - TN = True Negative
 - FN = False Negative
 
+###### Recall & Precision
+$$\text{Precision} = \frac{TP}{TP+ FP }$$
+$$\text{Recall} = \frac{TP}{TP + FN}$$
+
 Depending on where we set the threshold, we can trade off between True positives and False positives.
 ![[Screenshot 2024-10-18 at 10.55.13 AM.png]]
 

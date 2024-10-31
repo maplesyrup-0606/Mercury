@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ade21a7bc2448c6d",
+        "id": "6ba5e1eb14fdcfa6",
         "type": "tabs",
         "children": [
           {
-            "id": "2bcc8a01444182c2",
+            "id": "24d0b37bf4fc8796",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
-                "mode": "preview",
+                "file": "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 12.md",
+                "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Lecture 12"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +58,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,14 +68,17 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 218
+    "width": 218,
+    "collapsed": true
   },
   "right": {
     "id": "d3aeb83127b6d472",
@@ -85,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
+                "file": "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +102,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Lecture 12"
             }
           },
           {
@@ -102,10 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
+                "file": "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Lecture 12"
             }
           },
           {
@@ -116,7 +129,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -125,8 +140,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md"
-              }
+                "file": "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 12.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Lecture 12"
             }
           }
         ],
@@ -148,35 +165,37 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "2bcc8a01444182c2",
+  "active": "24d0b37bf4fc8796",
   "lastOpenFiles": [
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 2.md",
-    "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 3.md",
-    "UBC/CPEN 4-1/CPEN 411/Midterm Review.md",
-    "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 2.md",
-    "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 1.md",
-    "UBC/CPEN 4-1/CPSC 425/Practice Questiosn/Practice 4.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 10.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 12.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 11.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 8.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 9.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Untitled.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 7.md",
+    "Task List.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 10.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 9.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 8.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 6.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 5.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 4.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 1 & 2.md",
+    "README.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 3.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 10.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 9.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 8.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 7.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 6.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 5.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 4.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 3.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 1.md",
-    "Task List.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 9.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 10.md",
     "UBC/CPEN 4-1/CPSC 425/Practice Questiosn",
-    "UBC/CPEN 4-1/CPSC 425/Midterm Review.md",
     "images/Pasted image 20241019184418.png",
     "images/Pasted image 20241019185806.png",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 6.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 5.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 4.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
     "images/Pasted image 20241019191139.png",
     "images/Pasted image 20241019190339.png",
     "images/Pasted image 20241019190014.png",
@@ -185,8 +204,6 @@
     "images/Pasted image 20241019183306.png",
     "images/Pasted image 20241019182956.png",
     "images/Pasted image 20241019180858.png",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 8.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 1 & 2.md",
     "UBC/CPEN 4-1/CPSC 425/Exam Related",
     "UBC/CPEN 4-1/CPEN 411/Assignments/Assignment_2.pdf",
     "UBC/CPEN 4-1/PHYS 200/PHYS200__Notes_on_Quantum-4.pdf",
