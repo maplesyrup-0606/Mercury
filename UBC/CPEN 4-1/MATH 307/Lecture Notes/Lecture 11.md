@@ -31,7 +31,7 @@ If $\{ \mathbf{x}_{1},\cdots,\mathbf{x}_{m} \} \subseteq \mathbb{R}^n$ is an ort
 
 [Proof]
 To determine linear independence, we want to see if there exist non-zero $c_{1},\cdots,c_{m}$ such that $\mathbf{x}_{1}c_{1}+\cdots+\mathbf{x}_{m}c_{m}=\mathbf{0}$. Let us pick any $k \in \{ 1,\cdots,m \}$ and compute
-$$\langle c_{1}\mathbf{x}_{1}+\cdots+c_{m}\mathbf{x}c_{m},  \mathbf{x}_{k} \rangle = \langle 0, \mathbf{x}_{k} \rangle =0 $$
+$$\langle c_{1}\mathbf{x}_{1}+\cdots+c_{m}\mathbf{x}_{m},  \mathbf{x}_{k} \rangle = \langle 0, \mathbf{x}_{k} \rangle =0 $$
 Also, $$\langle c_{1}\mathbf{x}_{1}+\cdots+c_{m}\mathbf{x}c_{m},  \mathbf{x}_{k} \rangle = c_{1}\langle \mathbf{x}_{1},\mathbf{x}_{k} \rangle + c_{2}\langle \mathbf{x}_{2},\mathbf{x}_{k} \rangle + \cdots+  c_{k}\langle \mathbf{x}_{k},\mathbf{x}_{k} \rangle + \cdots +  c_{n}\langle \mathbf{x}_{n},\mathbf{x}_{k} \rangle $$
 $$=c_{k}\langle \mathbf{x}_{k},\mathbf{x}_{k} \rangle = c_{k}\lvert \lvert \mathbf{x}_{k} \rvert  \rvert  ^2$$
 
@@ -68,7 +68,8 @@ x\\y\\z
 Then,
 $$V=\{ \begin{bmatrix}
 x\\y\\z
-\end{bmatrix} : x+y+z=0 \} $$is orthogonal to $U$.
+\end{bmatrix} : x+y+z=0 \} $$
+is orthogonal to $U$.
 
 Further notice that any vector in $V$ is in the form, 
 $$\begin{bmatrix}
@@ -103,7 +104,7 @@ Let $U$ be a subspace, the orthogonal complement of $U$ is $$U^\perp=\{ \mathbf{
 To illustrate in words, it is the set that contains **all** the vectors $\mathbf{x}$ such that $\mathbf{x}$ is orthogonal to all vectors in $U$. 
 
 #### Theorem
-Let $\{ \mathbf{u}_{1},\cdots,\mathbf{u}_{m} \}$ be a basis of $U \subseteq \mathbb{R}^n$ and let $A=\begin{bmatrix}\mathbf{u}_{1}^T \\ \vdots \\ \mathbf{u}_{m}^T\end{bmatrix}$. Then, $\mathbf{U}^\perp=N(A)$.
+Let $\{ \mathbf{u}_{1},\cdots,\mathbf{u}_{m} \}$ be a basis of $U \subseteq \mathbb{R}^n$ and let $A=\begin{bmatrix}\mathbf{u}_{1}^T \\ \vdots \\ \mathbf{u}_{m}^T\end{bmatrix}$. Then, $U^\perp=N(A)$.
 
 [Proof]
 We use the definition of the basis to see how the infinitely many vectors of $U$ satisfy the above.

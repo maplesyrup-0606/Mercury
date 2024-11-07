@@ -105,3 +105,4 @@ If the bit $N$ is 1, then the WB stage will be busy $N+M$ cycles from now. (wher
 
 ==This was possible for processors in the 80s,90s. Now we have caches, we can’t really estimate how long a memory stage would take anymore!==
 
+#### Next Lecture [[UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 11|Lecture 11]]

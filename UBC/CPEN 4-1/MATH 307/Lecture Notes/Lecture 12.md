@@ -5,7 +5,7 @@ Let’s assume that there are two distinct decompositions,
 $$\mathbf{x}=\mathbf{u}+\mathbf{v}=\mathbf{u}'+\mathbf{v}':\mathbf{u},\mathbf{u}'\in U,\mathbf{v},\mathbf{v}'\in U^\perp$$
 
 By arrangement we get the equality,
-$$\mathbf{u}-\mathbf{u}'=\mathbf{v}-\mathbf{v}'$$
+$$\mathbf{u}-\mathbf{u}'=\mathbf{v}'-\mathbf{v}$$
 Since, $\mathbf{u}-\mathbf{u}'\in U$ and $\mathbf{v}-\mathbf{v}'\in U^\perp$, both sides are orthogonal to each other. In order for this to be satisfied, both sides have to be 0 :
 $$\mathbf{u}=\mathbf{u}',\mathbf{v}=\mathbf{v}'$$
 
@@ -21,6 +21,7 @@ $$N(A)\subseteq \mathbb{R}^n,R(A)\subseteq \mathbb{R}^m,R(A^T)\subseteq \mathbb{
 Given the matrix $A \in \mathbb{R}^{m\times n}$ we have that,
 $$N(A)=R(A^T)^\perp,R(A)=N(A^T)^\perp$$
 
+[Proof]
 Let us denote the rows of $A$ by using vectors $\{ \mathbf{u}_{1},\cdots,\mathbf{u}_{m} \}$ where $\mathbf{u}_{i}\in R^n$ for any $i = 1,\cdots,m$. Since $\mathbf{u}_{i}$ are column vectors by our convention, we have the representations
 $$A=\begin{bmatrix}
 \mathbf{u}_{1}^T \\
@@ -46,8 +47,15 @@ $$A\mathbf{x} =0 \iff \begin{bmatrix}
 \end{bmatrix}=0 \iff x \in \text{span}\{ \mathbf{u}_{1},\cdots,\mathbf{u}_{m} \}^\perp \iff x \in R(A^T)^\perp$$
 Also,
 $$N(A^T)=R(A)^\perp \iff N(A^T)^\perp=R(A)$$
+
+since $(V^\perp)^\perp = V$, the above is asserted.
 ###### Exercise
 Prove that $(V^\perp)^\perp = V$
+
+[Proof]
+Let $V=\text{span}\left\{ \mathbf{v}_{1}, \cdots, \mathbf{v}_{n} \right\}$. Then, $\forall \mathbf{v'} \in V^\perp, \forall \mathbf{v}\in V$ we have that $\langle \mathbf{v},\mathbf{v}' \rangle=0$.
+In other words, all vectors in $V$ are orthogonal to all vectors in $V^\perp$. 
+Thus, $(V^\perp)^\perp = V$.
 
 ###### Exercise
 Suppose that $A=LU$ such that
@@ -174,7 +182,7 @@ $$R(A^T)=\text{span}\left\{  \begin{bmatrix}
 
 #### Definition of projection
 The projection of $\mathbf{x}\in \mathbb{R}^n$ onto $\mathbf{u}\in \mathbb{R}^n$ is
-$$\text{proj}_{\mathbf{u}}(x)=\frac{\langle \mathbf{x},\mathbf{u} \rangle }{\langle \mathbf{u},\mathbf{u} \rangle }u$$
+$$\text{proj}_{\mathbf{u}}(x)=\frac{\langle \mathbf{x},\mathbf{u} \rangle }{\langle \mathbf{u},\mathbf{u} \rangle } \mathbf{u}$$
 
 1.  We have $\text{proj}_{\mathbf{u}}(\mathbf{x})=c \mathbf{u}$ for some $c \in \mathbb{R}$, that is the projection is the span of $\mathbf{u}$.
 2. We have that $\mathbf{x}-\text{proj}_{\mathbf{u}}(\mathbf{x})$ is orthogonal to $\mathbf{u}$. This results in $$\langle \mathbf{x}-c \mathbf{u},\mathbf{u} \rangle=0 \iff \langle \mathbf{x},\mathbf{u} \rangle - c \langle \mathbf{u},\mathbf{u} \rangle \iff c = \frac{\langle \mathbf{x},\mathbf{u} \rangle }{\langle \mathbf{u},\mathbf{u} \rangle }  $$
@@ -198,4 +206,47 @@ Let $P$ be as defined above, then we have,
 3. $\text{rank}(P)=1$
 
 ###### Exercise
-Prove the above definition.
+1.
+$$P^2=PP= \frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert^4 }\begin{bmatrix}
+(u_{1}^4+u_{1}^2u_{2}^2+\cdots+u_{1}^2u_{n}^2) & \cdots & (u_{1}^3u_{n}+u_{1}u_{2}^2u_{n}+\cdots+u_{1}u_{n}^3) \\
+\vdots &  & \vdots \\
+(u_{n}u_{1}^3+u_{1}u_{2}^2u_{n}+\cdots+u_{1}u_{n}^3) & \cdots & (u_{1}^2u_{n}^2+u_{2}^2u_{n}^2+\cdots+u_{n}^4)
+\end{bmatrix}$$
+$$=\frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert^4 }\begin{bmatrix}
+u_{1}^2\lvert \lvert \mathbf{u} \rvert  \rvert ^2 & \cdots & u_{1}u_{n}\lvert \lvert \mathbf{u} \rvert  \rvert ^2 \\
+\vdots &  & \vdots \\
+u_{1}u_{n}\lvert \lvert \mathbf{u} \rvert  \rvert ^2 & \cdots & u_{n}^2\lvert \lvert \mathbf{u} \rvert  \rvert ^2
+\end{bmatrix}=\frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert^2 }\begin{bmatrix}
+u_{1}^2 & u_{1}u_{2} & \cdots & u_{1}u_{n} \\
+u_{2}u_{1} & u_{2}^2 & \cdots & u_{2}u_{n} \\
+\vdots \\
+u_{n}u_{1} & u_{n}u_{2} & \cdots & u_{n}^2
+\end{bmatrix}=P$$
+
+2.
+$$P^T=\frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert^2 }\begin{bmatrix}
+u_{1}^2 & u_{1}u_{2} & \cdots & u_{1}u_{n} \\
+u_{2}u_{1} & u_{2}^2 & \cdots & u_{2}u_{n} \\
+\vdots \\
+u_{n}u_{1} & u_{n}u_{2} & \cdots & u_{n}^2
+\end{bmatrix}^T=P$$
+
+3.
+$$P=\frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert^2 }\begin{bmatrix}
+u_{1}^2 & u_{1}u_{2} & \cdots & u_{1}u_{n} \\
+u_{2}u_{1} & u_{2}^2 & \cdots & u_{2}u_{n} \\
+\vdots \\
+u_{n}u_{1} & u_{n}u_{2} & \cdots & u_{n}^2
+\end{bmatrix}$$
+
+If we subtract each row such as the following:
+$$R_{k} \leftarrow R_{k}-R_{1}\times \frac{u_{k}}{u_{1}}$$
+We have all zeros in all the rows below the first row.
+$$P'= \frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert ^2}\begin{bmatrix}
+u_{1}^2 & u_{1}u_{2} & \cdots & u_{1}u_{n} \\
+0 & 0 & \cdots & 0 \\
+\vdots & \vdots &  & \vdots \\
+0 & 0 & \cdots & 0
+\end{bmatrix}$$
+$$\therefore \text{rank}(P)=1$$
+#### Next Lecture [[Lecture 13]]

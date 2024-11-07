@@ -50,11 +50,11 @@ Since we have two vectors, $\text{dim}(R(A)) = 2$.
 Let $U \in \mathbb{R}^{m \times n }$ be the row echelon form of $A \in \mathbb{R}^{m \times n}$, where we use the following notation for their columns,
 $$U=\begin{bmatrix}
 \vert &  & \vert \\
-\mathbf{u}_{1} & \cdots & \mathbf{u}_{2} \\
+\mathbf{u}_{1} & \cdots & \mathbf{u}_{n} \\
 \vert &  & \vert
 \end{bmatrix}, \text{ and } A=\begin{bmatrix}
 \vert &  & \vert \\
-\mathbf{a}_{1} & \cdots & \mathbf{a}_{2} \\
+\mathbf{a}_{1} & \cdots & \mathbf{a}_{n} \\
 \vert &  & \vert
 \end{bmatrix}$$
 
@@ -96,7 +96,7 @@ Let us have a matrix $A$ such that $A \in \mathbb{R}^{m \times n}$. Then, we hav
 $$\text{rank}(A) = \text{number of nonzero rows in ref form}$$
 $$ = \text{ number of columns with pivot}$$
 $$= \text{ number of linearly independent columns in ref}$$
-$$=\text{dim}R(A)$$
+$$=\text{dim}(R(A))$$
 
 
 #### Theorem
@@ -147,7 +147,7 @@ Let $A$ be such that $A=LU$ where
 $$L=\begin{bmatrix}
 1 & 0 & 0 & 0 \\
 -1 & 1 & 0 & 0 \\
-2 & 1 & 0 & 0 \\
+2 & 1 & 1 & 0 \\
 1 & 0 & -1 & 1
 \end{bmatrix},U=\begin{bmatrix}
 1 & -2 & 0 & 5 & 1 \\
@@ -202,4 +202,7 @@ $$\left\{  \begin{bmatrix}
 
 Since we know that $\text{dim}(R(A)) = 3$ any 3 linearly independent columns of $A$ would form a basis of $R(A)$. We can use the linearly independent columns of $U$ to find the linearly independent columns of $A$. ← Because elementary row operations don’t change linear dependence / independence relations.
 
-#### Next Lecture [[Lecture 11]]
+#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 11|Lecture 11]]
+
+
+

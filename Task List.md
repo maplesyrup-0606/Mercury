@@ -1,11 +1,10 @@
-- [x] ⏫ CPSC 425 Assignment 3 ✅ 2024-10-27
-- [ ] 🔼 CPEN 411 Assignment 2
-	- [ ] In progess.
-	- [ ] Need to run leftover traces and write report
-- [x] ⏫ PHYS 200 Assignment 6 ✅ 2024-10-25
-- [x] UAS design presentation ✅ 2024-10-25
-- [ ] MATH 307 follow up.
-- [ ] PHYS 200 follow up
-- [ ] CPSC 425 Assignment 4
-- [ ] PHYS 200 Assignment
-- [ ] 
+- [x] PHYS 200 Notes ✅ 2024-11-05
+	- [x] Assignment part 1 ✅ 2024-11-05
+	- [ ] Assignment part 2 (done partially)
+- [ ] MATH 307 Follow up
+- [ ] CPSC 425 Assignment Finish [MUST DO TODAY]
+- [ ] PHYS 200 Midterm Prep
+	- [ ] Office hours (tomorrow)
+- [x] CPEN 411 Assignment ✅ 2024-11-05
+	- [x] Up to task 3 ✅ 2024-11-05
+- [x] PHYS 200 Reading Quiz ✅ 2024-11-05
