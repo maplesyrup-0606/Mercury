@@ -223,6 +223,9 @@ u_{2}u_{1} & u_{2}^2 & \cdots & u_{2}u_{n} \\
 u_{n}u_{1} & u_{n}u_{2} & \cdots & u_{n}^2
 \end{bmatrix}=P$$
 
+$$P^2=\left( \frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert ^2}\mathbf{u}\mathbf{u}^T \right)\left( \frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert ^2}\mathbf{u}\mathbf{u}^T \right)= \frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert ^4}\mathbf{u}\mathbf{u}^T\mathbf{u}\mathbf{u}^T = \frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert ^4}\mathbf{u}(\lvert \lvert \mathbf{u} \rvert  \rvert ^2)\mathbf{u}^T=\frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert^2 }\mathbf{u}\mathbf{u}^T=P$$
+
+
 2.
 $$P^T=\frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert^2 }\begin{bmatrix}
 u_{1}^2 & u_{1}u_{2} & \cdots & u_{1}u_{n} \\
@@ -230,6 +233,8 @@ u_{2}u_{1} & u_{2}^2 & \cdots & u_{2}u_{n} \\
 \vdots \\
 u_{n}u_{1} & u_{n}u_{2} & \cdots & u_{n}^2
 \end{bmatrix}^T=P$$
+
+$$P^T=\left ( \frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert ^2}\mathbf{u}\mathbf{u}^T\right )^T= \frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert ^2}\mathbf{u}\mathbf{u}^T=P$$
 
 3.
 $$P=\frac{1}{\lvert \lvert \mathbf{u} \rvert  \rvert^2 }\begin{bmatrix}

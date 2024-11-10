@@ -103,6 +103,14 @@ There are different kinds of subspaces that orthogonal to $U$. In $\mathbb{R}^3$
 Let $U$ be a subspace, the orthogonal complement of $U$ is $$U^\perp=\{ \mathbf{x}\in \mathbb{R}^n:\langle \mathbf{x},\mathbf{u} \rangle =0,\forall \mathbf{u}\in U \}$$
 To illustrate in words, it is the set that contains **all** the vectors $\mathbf{x}$ such that $\mathbf{x}$ is orthogonal to all vectors in $U$. 
 
+- if $U \subseteq \mathbb{R}^n$ is any subspace then $(U^\perp)^\perp=U$ and also $U \cap U^\perp=\{ 0 \}$.
+- $\{ 0 \}^\perp=\mathbb{R}^n$
+
+$U^\perp$ is also a subspace:
+$$1:\forall x \in U\to \langle 0,x \rangle =0 \to 0 \in U^\perp$$
+$$2:\forall y \in U \text{ and }x_{1},x_{2} \in U^\perp \to \langle y,x_{1} \rangle =\langle y,x_{2} \rangle=0\to \langle y,x_{1}+x_{2} =0\rangle \to x_{1}+x_{2} \in U^\perp$$
+$$3:c\in \mathbb{R},x \in U^\perp \to \langle cx,y \rangle=\langle x,y \rangle =0 ,\forall y\in U $$
+
 #### Theorem
 Let $\{ \mathbf{u}_{1},\cdots,\mathbf{u}_{m} \}$ be a basis of $U \subseteq \mathbb{R}^n$ and let $A=\begin{bmatrix}\mathbf{u}_{1}^T \\ \vdots \\ \mathbf{u}_{m}^T\end{bmatrix}$. Then, $U^\perp=N(A)$.
 
@@ -169,6 +177,10 @@ $$\text{dim}(U^\perp)+\text{dim}(U)=n$$
 
 ###### Exercise
 Show that $\text{rank}(A)=\text{rank}(A^T)$.
+
+Let $A \in \mathbb{R}^{m\times n}$,
+$$\text{rank}(A)=\text{dim}(R(A))= n -\text{dim}(N(A)) = n - (n - \text{dim}(N(A)^\perp))=\text{dim}(N(A)^\perp)$$
+$$=\text{dim}(R(A^T))=\text{rank}(A^T)$$
 
 #### Next Lecture [[Lecture 12]]
 
