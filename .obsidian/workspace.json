@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8ded994e05c2f191",
+        "id": "278f0067538a2b81",
         "type": "tabs",
         "children": [
           {
-            "id": "48a4c2a10b288988",
+            "id": "771ad05c01ea7f5f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UBC/CPEN 4-1/MATH 307/Exercises/Midterm/Midterm 2 Exercises.md",
+                "file": "Task List.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Midterm 2 Exercises"
-            }
-          },
-          {
-            "id": "83ba27b9aaeb117b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 15.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lecture 15"
+              "title": "Task List"
             }
           }
         ]
@@ -179,43 +165,43 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "48a4c2a10b288988",
+  "active": "771ad05c01ea7f5f",
   "lastOpenFiles": [
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 15.md",
-    "UBC/CPEN 4-1/MATH 307/Exercises/Midterm/Midterm 2 Exercises.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 14.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 13.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 12.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 11.md",
-    "UBC/CPEN 4-1/PHYS 200/Assignments/PS8_Part2_mercurymcindoe_85594505.pdf",
-    "UBC/CPEN 4-1/PHYS 200/Assignments/Task List.pdf",
+    "README.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 18.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 10.md",
-    "UBC/CPEN 4-1/CPSC 425/Assignments/Assignment 4/hw4/Assignment_4.pdf",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 17.md",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/cheatsheet_mt2.synctex(busy)",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex23915.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex23349.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex23314.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex23217.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex23163.fls",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 11.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 12.md",
     "Task List.md",
-    "UBC/CPEN 4-1/MATH 307/Coding Assignments/Asst2/https:files.is.tue.mpg.de:black:papers:ehumIJCV10web.pdf",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex21234.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex21166.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex21135.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex21089.fls",
+    "UBC/CPEN 4-1/MATH 307/Exercises/Midterm/Midterm 2 Exercises.md",
+    "UBC/CPEN 4-1/MATH 307/Exercises/Midterm/Untitled.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 19.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 13.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 17.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 16.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 15.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 14.md",
+    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 11.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 9.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 8.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 7.md",
-    "UBC/CPEN 4-1/CPEN 411/Assignments/Assignment3/Assignment_3.pdf",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 11.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 10.md",
-    "UBC/CPEN 4-1/MATH 307/Coding Assignments/Asst2/MATH307_Assignment_2_Mercury_Mcindoe_85594505.ipynb",
-    "UBC/CPEN 4-1/MATH 307/Coding Assignments/Asst1/MATH307_Asst1_85594505.ipynb",
-    "UBC/CPEN 4-1/MATH 307/Coding Assignments/Asst1",
-    "UBC/CPEN 4-1/MATH 307/Coding Assignments/Asst2",
-    "UBC/CPEN 4-1/MATH 307/Coding Assignments/MATH307_Assignment_2_Mercury_Mcindoe_85594505.ipynb",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 6.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Untitled.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 9.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 8.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 6.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 5.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 4.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 1 & 2.md",
     "images/Pasted image 20241019184418.png",
     "images/Pasted image 20241019185806.png",
     "images/Pasted image 20241019191139.png",

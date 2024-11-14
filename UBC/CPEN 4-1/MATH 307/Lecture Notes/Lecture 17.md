@@ -205,35 +205,34 @@ $$=\begin{bmatrix}
 27 \\ 12 \\ 17
 \end{bmatrix}$$
 
-#### Definition of least squares approximation
-Suppose $A \in \mathbb{R}^{m\times n}$ and $\text{rank}(A)=n$. Let $b \in \mathbb{R}^m$ has either a unique solution or no solution. What do we do?
-
-The least squares approximation of $Ax=b$ is $x \in \mathbb{R}^n$ which minimizes $\lvert \lvert Ax-b \rvert \rvert$ or equivalently, one that minimizes $\lvert \lvert Ax-b \rvert \rvert^2$.
-
-#### Theorem
-The least squares approximation is the solution to
-$$A^TAx=A^Tb$$
+###### Exercise
+Show that $N(A^T)=N(Q_{1}^T)$.
 
 [Proof]
-For any $x \in \mathbb{R}^n$, we have that $Ax \in R(A)$ by definition of range. So we want $b$ to be as close as possible to $R(A)$. 
-We know that $\lvert \lvert Ax-b \rvert \rvert=0$, that is minimum if $b \in R(A)$. If this is not possible, it is minimum when $Ax=\text{proj}_{R(A)}(b)$:
-$$b-Ax = b - \text{proj}_{R(A)}(b) \in R(A)^\perp = N(A^T) \iff A^T(b-Ax)=0 \iff A^TAx=A^Tb$$
-Since $\text{cond}(A^TA)=\text{cond}(A)^2$, bad condition numbers are amplified.
+$$A=\begin{bmatrix}
+Q_{1} & Q_{2}
+\end{bmatrix}\begin{bmatrix}
+R_{1} \\
+0
+\end{bmatrix}$$
+Then,
+$$A^T=\begin{bmatrix}
+R_{1}^T & 0
+\end{bmatrix}\begin{bmatrix}
+Q_{1}^T \\
+Q_{2}^T
+\end{bmatrix}$$
 
-#### Theorem
-Let $A=QR=Q_{1}R_{1}$. The least squares approximation is the solution of 
-$$R_{1}x=Q_{1}^Tb$$
+Assume (for now?) that $A=Q_{1}R_{1}$,
+Then,
+$$A^T = R_{1}^TQ_{1}^T $$
 
-[Proof]
-Note how
-$$\lvert \lvert Ax-b \rvert  \rvert =\lvert \lvert QRx-b \rvert  \rvert =\lvert \lvert Q(Rx-Q^Tb) \rvert  \rvert=\lvert \lvert Rx-Q^Tb \rvert  \rvert  $$
-by $QQ^T=I$ and $\lvert \lvert Qv \rvert \rvert=v$ for ant $v$.
+Let $x \in \mathbb{R}^m$ and assume $x \in N(A^T)$ a.k.a $A^Tx=0$
+We know that $R_{1}^T$ is invertible, hence $(R_{1}^T)^{-1}A^T=Q_{1}^T$.
+$$(R_{1}^T)^{-1}A^Tx=(R_{1}^T)^{-1}0=0=Q_{1}^Tx \to x \in N(Q_{1}^T)$$
 
-Consequently, we have
-$$\lvert \lvert Rx-Q^Tb \rvert  \rvert =\lvert \lvert \begin{bmatrix}
-R_{1}x-Q_{1}^Tb \\
--Q_{2}^Tb
-\end{bmatrix} \rvert  \rvert $$
-Hence, this shows us that $\lvert \lvert Ax-b \rvert \rvert$ is minimum when $R_{1}x=Q_{1}^Tb$ because the other term in the norm is independent of $x$. As a result, we need to solve this system. 
+Now assume that $x \in N(Q_{1}^T)$,
+$$A^Tx=R_{1}^TQ_{1}^Tx=R_{1}^TQ_{1}^Tx=0 \to x \in N(A^T)$$
 
-Recall that $R_{1}\in \mathbb{R}^{n\times n}$ and upper triangle with rank $n$, giving us a unique solution for $x$.
+$$\left( N(A^T) \subseteq N(Q_{1}^T)  \right)\cap \left(N(Q_{1}^T) \subseteq N(A^T)  \right) \to \hspace{.1in} \therefore N(A^T)=N(Q_{1}^T)$$
+#### Next Lecture [[Lecture 18]]

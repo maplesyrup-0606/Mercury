@@ -1,10 +1,5 @@
-- [x] PHYS 200 Notes ✅ 2024-11-05
-	- [x] Assignment part 1 ✅ 2024-11-05
-	- [ ] Assignment part 2 (done partially)
-- [ ] MATH 307 Follow up
-- [ ] CPSC 425 Assignment Finish [MUST DO TODAY]
-- [ ] PHYS 200 Midterm Prep
-	- [ ] Office hours (tomorrow)
-- [x] CPEN 411 Assignment ✅ 2024-11-05
-	- [x] Up to task 3 ✅ 2024-11-05
-- [x] PHYS 200 Reading Quiz ✅ 2024-11-05
+- [ ] PHYS 200 Game Plan
+	- [x] Notes / Slides ✅ 2024-11-13
+	- [ ] HW
+	- [ ] Practice Problems
+	- [x] Past Midterms ✅ 2024-11-13

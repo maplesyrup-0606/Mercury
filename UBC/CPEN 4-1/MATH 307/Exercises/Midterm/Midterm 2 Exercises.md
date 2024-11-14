@@ -631,4 +631,229 @@ $$\text{proj}_{U^\perp}(x)=P_{\perp}x=\begin{bmatrix}
 -\frac{1}{2}\\0\\ \frac{1}{2}
 \end{bmatrix} $$
 $$\therefore \lvert \lvert \text{proj}_{U^\perp}(x) \rvert  \rvert =\frac{1}{\sqrt{ 2 }}$$
-WAY TOO MUCH WORK
+==WAY TOO MUCH WORK!!!==
+
+#### Exercise 17
+Let $u \subset \mathbb{R}^n$ be a non-zero vector and let 
+$$H=I-\frac{2}{\lvert \lvert u \rvert  \rvert ^2}uu^T$$
+The matrix $H$ is called an elementary reflector. Determine whether the statement is **True** or **False**.
+
+- There is a unique unit vector $v$ such that $Hv=v$
+$$Hv=\left( I-\frac{2}{\lvert \lvert u \rvert  \rvert ^2}uu^T \right)v$$
+$$=v- \frac{2}{\lvert \lvert u \rvert  \rvert ^2}uu^Tv$$
+
+In order for the following relation to be established,
+$$v- \frac{2}{\lvert \lvert u \rvert  \rvert ^2}uu^Tv=v$$
+Then, we need that 
+$$\frac{2}{\lvert \lvert u \rvert  \rvert ^2}uu^Tv=0$$
+
+Since we know that $u$ is a non-zero vector, we need that $u^Tv=0$. That being said, there is not a **unique** vector that is orthogonal to $u$.
+
+**False**
+
+- $Hv=v$ for all $v \in \text{span}\left\{ u \right\}^\perp$
+As we said above, all $v$ is any vector orthogonal to $u$. Hence, $v \in \text{span}\left\{ u \right\}^\perp$.
+**True**
+
+#### Exercise 18
+Compute the QR decomposition of the matrix
+$$A=\begin{bmatrix}
+1 & 1 & 1 \\
+0 & 1 & 1 \\
+1 & 1 & 0
+\end{bmatrix}$$
+
+Let’s apply G-S to get the orthonormal basis of $R(A)$.
+
+$$v_{1}=a_{1}=\begin{bmatrix}
+1  \\
+0 \\
+1
+\end{bmatrix}\to w_{1}=\frac{1}{\sqrt{ 2 }} \begin{bmatrix}
+1 \\0\\1
+\end{bmatrix}$$
+$$v_{2}=a_{2} - \text{proj}_{v_{1}}(a_{2}) = \begin{bmatrix}
+1\\1\\1
+\end{bmatrix}-\frac{2}{2}\begin{bmatrix}
+1 \\
+0 \\
+1
+\end{bmatrix}=\begin{bmatrix}
+0 \\
+1 \\
+0
+\end{bmatrix}=w_{2}$$
+$$v_{3}=a_{3}-\text{proj}_{v_{1}}(a_{3})-\text{proj}_{v_{2}}(a_{3})$$
+$$=\begin{bmatrix}
+1\\1\\0
+\end{bmatrix}-\frac{1}{2}\begin{bmatrix}
+1\\0\\1
+\end{bmatrix}-\begin{bmatrix}
+0\\1\\0
+\end{bmatrix}=\begin{bmatrix}
+\frac{1}{2}\\0\\ -\frac{1}{2}
+\end{bmatrix}$$
+$$w_{3}=\begin{bmatrix}
+\frac{1}{\sqrt{ 2 }} \\ 0 \\ -\frac{1}{\sqrt{ 2 }}
+\end{bmatrix}$$
+
+Then, we construct $Q_{1}$,
+$$Q_{1}= \begin{bmatrix}
+\frac{1}{\sqrt{ 2 }} & 0 & \frac{1}{\sqrt{ 2 }} \\
+0 &  1 & 0 \\
+\frac{1}{\sqrt{ 2 }} & 0 & -\frac{1}{\sqrt{ 2 }}
+\end{bmatrix}$$
+Now $R_{1}$,
+$$R_{1}= \begin{bmatrix}
+\langle w_{1},a_{1} \rangle  & \langle w_{1},a_{2} \rangle  & \langle w_{1},a_{3} \rangle  \\
+0 & \langle w_{2},a_{2} \rangle  & \langle w_{2},a_{3} \rangle  \\
+0 & 0 & \langle w_{3},a_{3} \rangle 
+\end{bmatrix}$$
+$$=\begin{bmatrix}
+\sqrt{ 2 } & \sqrt{ 2 } & \frac{1}{\sqrt{ 2 }} \\ 
+0 & 1 & 1 \\
+0 & 0 & \frac{1}{\sqrt{ 2 }}
+\end{bmatrix}$$
+
+#### Exercise 19
+Compute the thin QR decomposition of the matrix 
+$$A=\begin{bmatrix}
+1  & 1 \\
+1 & -1  \\
+1 & 1 \\
+1 & 1
+\end{bmatrix}$$
+Let’s first get the orthonormal basis of $R(A)$.
+$$v_{1}=a_{1}=\begin{bmatrix}
+1\\1\\1\\1
+\end{bmatrix}\to w_{1}=\frac{1}{2} \begin{bmatrix}
+1\\1\\1\\1
+\end{bmatrix}$$
+$$v_{2}=a_{2}-\text{proj}_{v_{1}}(a_{2})=\begin{bmatrix}
+1\\-1\\1\\1
+\end{bmatrix}-\frac{2}{4}\begin{bmatrix}
+1\\1\\1\\1
+\end{bmatrix}=\begin{bmatrix}
+\frac{1}{2}  \\
+-\frac{3}{2}  \\
+\frac{1}{2} \\
+\frac{1}{2}
+\end{bmatrix}$$
+$$\to w_{2}= \begin{bmatrix}
+\frac{1}{2\sqrt{ 3 }} \\
+-\frac{\sqrt{ 3 }}{2} \\
+\frac{1}{2\sqrt{ 3 }} \\
+\frac{1}{2\sqrt{ 3 }}
+\end{bmatrix}=\begin{bmatrix}
+\frac{\sqrt{ 3 }}{6} \\
+\frac{-\sqrt{ 3 }}{2} \\
+\frac{\sqrt{ 3 }}{6} \\
+\frac{\sqrt{ 3 }}{6}
+\end{bmatrix}$$
+
+Also, we can get $\langle w_{1},a_{1} \rangle,\langle w_{1},a_{2} \rangle,\langle w_{2},a_{2} \rangle$.
+
+$$\langle w_{1},a_{1} \rangle =2$$
+$$\langle w_{1},a_{2} \rangle =1$$
+$$\langle w_{2},a_{2} \rangle = \sqrt{ 3 }$$
+$$A=Q_{1}R_{1}=\begin{bmatrix}
+\frac{1}{2} & \frac{\sqrt{ 3 }}{6} \\
+\frac{1}{2}  & -\frac{\sqrt{ 3 }}{2} \\
+\frac{1}{2} & \frac{\sqrt{ 3 }}{6} \\
+\frac{1}{2} & \frac{\sqrt{ 3 }}{6}
+\end{bmatrix}\begin{bmatrix}
+2 & 1 \\
+0 & \sqrt{ 3 }
+\end{bmatrix}$$
+
+
+#### Exercise 20
+Let $A=QR$ where
+$$Q=\begin{bmatrix}
+0 & 0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1
+\end{bmatrix},R=\begin{bmatrix}
+1 & 1 & 1 & 1 \\
+0 & 1 & 1 & 1 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0
+\end{bmatrix}$$
+
+Find the least squares approximation $Ax \approx b$ where
+$$b=\begin{bmatrix}
+-2 \\
+-1 \\
+0 \\
+1 \\
+2
+\end{bmatrix}$$
+
+We need to find the solution of $R_{1}x=Q_{1}^Tb$,
+$$R_{1}=\begin{bmatrix}
+1 & 1 & 1 & 1 \\
+0 & 1 & 1 & 1 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 1
+\end{bmatrix},Q_{1}=\begin{bmatrix}
+0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{bmatrix}$$
+
+$$\begin{bmatrix}
+1 & 1 & 1 & 1 \\
+0 & 1 & 1 & 1 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 1
+\end{bmatrix}x=\begin{bmatrix}
+0 & 0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0
+\end{bmatrix}\begin{bmatrix}
+-2 \\
+-1 \\
+0 \\
+1 \\
+2
+\end{bmatrix}=\begin{bmatrix}
+1 \\
+-1 \\
+0 \\
+-2
+\end{bmatrix}$$
+
+$$x=\begin{bmatrix}
+2 \\ -1 \\ 2 \\ -2
+\end{bmatrix}$$
+
+#### Exercise 21
+Set up (but do not solve) a linear system $Ac=y$ where the solution is the coefficient vector
+$$c=\begin{bmatrix}
+c_{0} \\
+c_{1} \\
+c_{2}
+\end{bmatrix}$$
+such that the function
+$$f(t)=c_{0}+c_{1}\cos(2\pi t)+c_{2}\sin(2\pi t)$$
+best fits the data $(0,1),\left( \frac{1}{4},3 \right), \left( \frac{1}{2},2 \right) ,\left( \frac{3}{4},-1 \right),(1,0)$
+
+$$A=\begin{bmatrix}
+1 & 1 & 1 \\ 
+1 & 0 & 1 \\  
+1 & -1 & 0 \\
+1 & 0 & -1 \\
+1 & 1 & 0
+\end{bmatrix},y=\begin{bmatrix}
+1 \\ 
+3 \\
+2 \\
+-1 \\
+0
+\end{bmatrix}$$
