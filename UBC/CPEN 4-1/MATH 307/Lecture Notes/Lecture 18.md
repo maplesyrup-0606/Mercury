@@ -132,5 +132,82 @@ $$\therefore x=\begin{bmatrix}
 \end{bmatrix} \to f(t)=\frac{7}{3}+\frac{3}{2}t$$
 ==Of course, this is quite off.==
 
+###### Exercise
+Use QR decomposition to solve the least squares approximation from the example above.
+
+First, let’s get the thin QR decomposition of $A$ where $$A= \begin{bmatrix}
+1 & -1 \\
+1 & 0 \\
+1 & 1
+\end{bmatrix}$$
+and $$\mathbf{x}=\begin{bmatrix}
+c_{0} \\
+c_{1}
+\end{bmatrix}, \mathbf{b}=\begin{bmatrix}
+1 \\
+2 \\
+4
+\end{bmatrix}$$
+
+Then,
+$$v_{1}=a_{1}=\begin{bmatrix}
+1 \\
+1 \\
+1
+\end{bmatrix} \to w_{1}=\begin{bmatrix}
+\frac{1}{\sqrt{ 3 }} \\
+\frac{1}{\sqrt{ 3 }}  \\
+\frac{1}{\sqrt{ 3 }}
+\end{bmatrix}$$
+$$v_{2}=a_{2}-\text{proj}_{v_{1}}(a_{2})=\begin{bmatrix}
+-1 \\
+0 \\
+1
+\end{bmatrix}- \frac{0}{3} \begin{bmatrix}
+1 \\
+1 \\
+1
+\end{bmatrix}=\begin{bmatrix}
+-1 \\
+0 \\
+1
+\end{bmatrix} \to w_{2}=\begin{bmatrix}
+-\frac{1}{\sqrt{ 2 }} \\
+0 \\
+\frac{1}{\sqrt{ 2 }}
+\end{bmatrix}$$
+Giving us,
+$$Q_{1}=\begin{bmatrix}
+\frac{1}{\sqrt{ 3 }} & -\frac{1}{\sqrt{ 2 }} \\
+\frac{1}{\sqrt{ 3 }} & 0 \\
+\frac{1}{\sqrt{ 3 }} & \frac{1}{\sqrt{ 2 }}
+\end{bmatrix}$$
+$$R_{1}=\begin{bmatrix}
+\langle w_{1},a_{1} \rangle  & \langle w_{1},a_{2} \rangle \\
+0 & \langle w_{2},a_{2} \rangle  
+\end{bmatrix}= \begin{bmatrix}
+\sqrt{ 3 } & 0 \\
+0 & \sqrt{ 2 }
+\end{bmatrix}$$
+
+Then we want to make $R_{1}\mathbf{x} =Q_{1}^T \mathbf{b}$,
+$$R_{1}=\begin{bmatrix}
+\sqrt{ 3 } & 0 \\
+0 & \sqrt{ 2 }
+\end{bmatrix}$$
+$$Q_{1}^T\mathbf{b}=\begin{bmatrix}
+\frac{1}{\sqrt{ 3 }} & \frac{1}{\sqrt{ 3 }} & \frac{1}{\sqrt{ 3 }} \\
+-\frac{1}{\sqrt{ 2 }} & 0 & \frac{1}{\sqrt{ 2 }}
+\end{bmatrix}\begin{bmatrix}
+1 \\
+2 \\
+4
+\end{bmatrix} = \begin{bmatrix}
+\frac{7}{\sqrt{ 3 }} \\
+\frac{3}{\sqrt{ 2 }}
+\end{bmatrix}$$
+$$\therefore c_{0}=\frac{7}{3}, c_{1}=\frac{3}{2}$$
+$$\to f(t) =\frac{7}{3} + \frac{3}{2}t$$
+
 #### Next Lecture [[Lecture 19]]
 

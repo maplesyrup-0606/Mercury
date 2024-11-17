@@ -14,7 +14,6 @@ def cost_ssd(patch1, patch2):
 
     # START your code here
     # NOTE: You should remove the next line while coding
-
     patch1_flatten = patch1.flatten()
     patch2_flatten = patch2.flatten()
 
@@ -53,12 +52,10 @@ def cost_nc(patch1, patch2):
 
 
 def cost_function(patch1, patch2, alpha):
-    """Compute the cost between two input window patches given the disparity:
-
+    """Compute the cost between two input window patches:
     Args:
         patch1: input patch 1 as (m, m) numpy array
         patch2: input patch 2 as (m, m) numpy array
-        input_disparity: input disparity as an integer value        
         alpha: the weighting parameter for the cost function
     Returns:
         cost_val: the calculated cost value as a floating point value
@@ -117,15 +114,14 @@ def pad_image(input_img, window_size, padding_mode='symmetric'):
 
 def compute_disparity(padded_img_l, padded_img_r, max_disp, window_size, alpha):
     """Compute the disparity map by using the window-based matching:
-
     Args:
-        padded_img_l: The padded left-view input image as 2-dimensional (H,W) numpy array
-        padded_img_r: The padded right-view input image as 2-dimensional (H,W) numpy array
+        padded_img_l: The padded left-view input image as 2-dimensional numpy array (H,W) 
+        padded_img_r: The padded right-view input image as 2-dimensional numpy array (H,W)
         max_disp: the maximum disparity as a search range
         window_size: the patch size for window-based matching, odd number
         alpha: the weighting parameter for the cost function
     Returns:
-        disparity: numpy array (H,W) of the same type as image
+        disparity: numpy array (H + window - 1, W + window  - 1) of the same size as the input image without padding
     """
     assert padded_img_l.ndim == 2 
     assert padded_img_r.ndim == 2 
@@ -135,27 +131,26 @@ def compute_disparity(padded_img_l, padded_img_r, max_disp, window_size, alpha):
     # START your code here
     # HINT: in numpy, there is a function named argmin
     # NOTE: You should remove the next line while coding
-    H, W = padded_img_l.shape
+    H_padded, W_padded = padded_img_l.shape
     k = window_size // 2
+    H, W = H_padded - 2 * k, W_padded - 2 * k
+    disparity = np.zeros((H, W))
 
-    disparity = np.zeros((H, W),dtype=np.float32)
-    print(disparity.shape)
-    for y in range(k, H - k) :
-        for x in range(k, W - k) :
-            patch_L = padded_img_l[y - k : y + k + 1, x - k : x + k + 1]
+    for y in range(k, H_padded - k) :
+        for x in range(k, W_padded - k) :
+            patchL = np.expand_dims(padded_img_l[y - k : y + k + 1, x - k : x + k + 1], axis=-1)
             costs = []
-
-            for d in range(max_disp + 1) :
-                if y - d - k >= 0 and x - d - k >= 0:
-                    patch_R = padded_img_r[y - d - k : y - d + k + 1, x - d - k : x - d + k + 1]
-
-                    cost = cost_function(patch_L, patch_R, alpha)
-                    costs.append(cost)
+            for d in range(max_disp): 
+                if x - d - k >= 0 :
+                    patchR = np.expand_dims(padded_img_r[y - k : y + k + 1, (x - d) - k : (x - d) + k + 1],axis=-1)
+                    cur_cost = cost_ssd(patchL, patchR) + alpha * cost_nc(patchL, patchR)
+                    costs.append(cur_cost)
                 else :
                     costs.append(float('inf'))
-
-            best_disp = np.argmin(costs)
-            disparity[y, x] = best_disp
+            
+            index = np.argmin(costs)
+            disparity[y - k,x - k] = index
+    
     # END your code here
 
     assert disparity.ndim == 2

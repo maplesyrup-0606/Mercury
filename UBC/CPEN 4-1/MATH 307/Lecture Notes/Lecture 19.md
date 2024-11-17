@@ -31,6 +31,67 @@ We know that $\alpha_{1}+\cdots+\alpha_{k}=n$.
 - Geometric multiplicity of $\lambda_{i}$ is $d_{i}=\text{dim}(E_{\lambda})$. This is the number of linearly independent eigenvectors for $\lambda_{i}$.
 - An eigen value is defective if $d_{i}<\alpha_{i}$.
 
+###### Exercise
+Let, $$A=\begin{bmatrix}0&1&1 \\ 1&0&1 \\ 1&1&0\end{bmatrix}$$
+$$c_{A}(x)=\det(A-xI)=\det(\begin{bmatrix}
+-x & 1 & 1 \\
+1 & -x & 1 \\
+1 & 1 & -x
+\end{bmatrix})$$
+$$=-x(x^2-1)-(-x-1)+(1+x)=-x(x-1)(x+1)+2(x+1)$$
+$$=(x+1)(-x^2+x+2)=-(x+1)^2(x-2)$$
+giving us the eigenvalues
+$$\lambda_{1}=-1,\lambda_{2}=2$$
+with algebraic multiplicities
+$$\alpha_{1}=2,\alpha_{2}=1$$
+Now let’s find the eigenvectors, first for $\lambda_{1}$
+$$\mathbf{y} \in N(A+I) \iff \begin{bmatrix}
+1 & 1 & 1 \\
+1 & 1 & 1 \\
+1 & 1 & 1
+\end{bmatrix}\mathbf{y}=0$$
+$$\mathbf{y}=\begin{bmatrix}
+-1 \\
+0 \\
+1
+\end{bmatrix}t+\begin{bmatrix}
+-1 \\
+1 \\
+0
+\end{bmatrix}l$$
+$$E_{\lambda_{1}}= \text{span}\left\{ \begin{bmatrix}
+-1 \\
+0 \\
+1
+\end{bmatrix}, \begin{bmatrix}
+-1 \\
+1 \\
+0
+\end{bmatrix} \right\}$$
+Giving the eigenvectors,
+$$\mathbf{v}_{1}=\begin{bmatrix}
+-1 \\
+0 \\
+1
+\end{bmatrix},\mathbf{v}_{2}=\begin{bmatrix}
+-1 \\
+1 \\
+0 
+\end{bmatrix} \to d_{1}=\text{dim}(E_{\lambda_{1}})=2$$
+
+Next, for $\lambda_{2}=2$,
+$$\mathbf{y} \in N(A-2I) \iff \begin{bmatrix}
+-2 & 1 & 1 \\
+1 & -2 & 1 \\
+1 & 1 & -2
+\end{bmatrix}$$
+Giving us,
+$$\mathbf{v}_{3}=\begin{bmatrix}
+1 \\
+1 \\
+1
+\end{bmatrix} \to d_{2}=\text{dim}(E_{\lambda_{2}})=1$$
+
 ###### Example
 $$A=\begin{bmatrix}
 1 & 0 & 1 \\
@@ -46,7 +107,7 @@ We have $\lambda_{1}=1,\alpha_{1}=2$ and $\lambda_{2}=2,\alpha_{2}=1$.  Then, $\
 An $n\times n$ matrix is diagonizable if there exists invertible $P$ and diagonal $D$ such that $A=PDP^{-1}$. Even when $A$ is real, $P,D$ can be complex and not all matrices are diagonalizable.
 
 We have that,
-$$A=PDP^{-1} \iff PA=PD$$
+$$A=PDP^{-1} \iff AP=PD$$
 $$AP=A\begin{bmatrix}
 v_{1} & v_{2} & \cdots & v_{n}
 \end{bmatrix}=\begin{bmatrix}
@@ -65,14 +126,19 @@ v_{1} & v_{2} & \cdots & v_{n}
 \lambda_{1}v_{1} & \lambda_{2}v_{2} & \cdots & \lambda_{n}v_{n} 
 \end{bmatrix}$$
 
+Thus, we have that
+$$Av_{1}=\lambda_{1}v_{1}$$
+$$\vdots$$
+$$Av_{n}=\lambda_{n}v_{n}$$
+
 #### Theorem
-$A$ is diagonizable iff it has $n$ linearly independent vectors. This means no eigenvalue is defective. A matrix need not be invertible to be diagonizable/
+$A$ is diagonizable iff it has $n$ linearly independent vectors. This means no eigenvalue is defective. A matrix need not be invertible to be diagonizable.
 
 #### Theorem
 Let $A$ be symmetric and real and let $\lambda_{1},\lambda_{2}$ be distinct eigenvalues. Then corresponding eigenvectors are orthogonal. That is $E_{1} \perp E_{2}$.
 
 Let us check
-$$\langle Av_{1},v_{2} \rangle=\lambda \langle v_{1},v_{2} \rangle  $$
+$$\langle Av_{1},v_{2} \rangle=\lambda_{1} \langle v_{1},v_{2} \rangle  $$
 $$\langle Av_{1},v_{2} \rangle =\langle v_{1},A^Tv_{2} \rangle =\langle v_{1},Av_{2} \rangle =\lambda_{2}\langle v_{1},v_{2} \rangle $$
 
 For this to be equal
@@ -82,11 +148,18 @@ But since $\lambda_{1}\neq \lambda_{2}$, we have that $\langle v_{1},v_{2} \rang
 For symmetric and real $A$, the eigenvalues are real.
 
 #### Theorem (Spectral)
-Let $A$ be symmetric and real. Then there exists a real orthogonal matrix $P$ and real diagonal matrix $D$ such that $A=PDP^T$.
+Let $A \in \mathbb{R}^{n\times n}$ be symmetric and real. Then there exists a real orthogonal matrix $P \in \mathbb{R}^{n\times n}$ and real diagonal matrix $D \in \mathbb{R}^{n\times n}$ such that $A=PDP^T$.
 
-1. Eigenvalues are real.
-2. Matrix is diagonalizable (there are $n$ linearly independent eigenvectors of $A$ $\iff$ algebraic multiplicity is equal to geometric multiplicity for each eigenvalue).
-3. Eigenvectors for distinct eigenvalues are orthogonal.
+1. Eigenvalues are real, they for the diagonal entries of $D$. $$D=\begin{bmatrix}
+\lambda_{1} \\
+ & \lambda_{2}  \\
+ &  & \ddots \\
+ &  &  & \lambda_{n}
+\end{bmatrix}$$
+2. Matrix is diagonalizable (there are $n$ linearly independent eigenvectors of $A$ $\iff$ algebraic multiplicity is equal to geometric multiplicity for each eigenvalue). These eigenvectors form the columns of $P$. $$P=\begin{bmatrix}
+\mathbf{v}_{1} & \mathbf{v}_{2} & \cdots & \mathbf{v}_{n}
+\end{bmatrix}$$
+3. Eigenvectors for distinct eigenvalues are orthogonal. Assuming that the eigenvectors $\mathbf{v}_{1},\mathbf{v}_{2},\cdots,\mathbf{v}_{n}$ that are in the columns of $P$ are normalized, we have that $P$ is a matrix with orthonormal rows, hence it is orthogonal and hence $P^{-1}=P^T$, giving us the decomposition $$A=PDP^T=PDP^{-1}$$
 
 ###### Example
 Find $P$ and $D$ for $A=\begin{bmatrix}0&1&0 \\ 1&1&-1 \\ 0 & -1 & 0\end{bmatrix}$. 

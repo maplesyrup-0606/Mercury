@@ -107,6 +107,20 @@ since $w_{1},\cdots,w_{n}$ is an orthonormal basis of $U$.
 
 We can also show that $\text{proj}_{U^\perp}(x)=Q_{2}Q_{2}^Tx$
 
+$$Q_{2}Q_{2}^Tx=\begin{bmatrix}
+w_{n+1} & w_{n+2} & \cdots & w_{m}
+\end{bmatrix}\begin{bmatrix}
+w_{n+1}^T \\
+\vdots \\
+w_{m}^T
+\end{bmatrix}x=\begin{bmatrix}
+w_{n+1} & w_{n+2} & \cdots & w_{m}
+\end{bmatrix}\begin{bmatrix}
+ \langle w_{n+1}^T,x \rangle  \\
+\vdots \\
+\langle w_{m}^T,x \rangle 
+\end{bmatrix}=\text{proj}_{U^\perp}(x)$$
+
 ###### Example
 Let
 $$A=\begin{bmatrix}

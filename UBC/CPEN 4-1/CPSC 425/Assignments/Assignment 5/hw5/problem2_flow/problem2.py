@@ -19,9 +19,11 @@ def compute_derivatives(im1, im2):
     # START your code here
     # HINT: You can use the conv2d defined in Line 5 for convolution operations
     # NOTE: You should remove the next three lines while coding
-    Ix = np.empty_like(im1)
-    Iy = np.empty_like(im1)
-    It = np.empty_like(im1)
+    diff_x = np.array([[-1, 0, 1]])
+    diff_y = np.array([[-1],[0],[1]])
+    Ix = conv2d(im1, diff_x) 
+    Iy = conv2d(im2, diff_y)
+    It = im2 - im1
     # END your code here
 
     assert Ix.shape == im1.shape and \
@@ -51,8 +53,17 @@ def compute_motion(Ix, Iy, It, patch_size=15, aggregate="const", sigma=2):
     # START your code here
     # HINT: You can use the conv2d defined in Line 5 for convolution operations
     # NOTE: You should remove the next two lines while coding
-    u = np.empty_like(Ix)
-    v = np.empty_like(Iy)
+    Ix_flat = Ix.flatten()
+    Iy_flat = Iy.flatten()
+    matrix = np.column_stack((Ix_flat, Iy_flat))
+    It_flat = It.flatten()
+
+    uv = np.linalg.inv((matrix.T @ matrix)) @ (matrix.T) @ It_flat
+    print(uv)
+
+    
+    # u = 
+    # v =
     # END your code here
 
     assert u.shape == Ix.shape and \

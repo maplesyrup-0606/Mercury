@@ -1,5 +1,0 @@
-- [ ] PHYS 200 Game Plan
-	- [x] Notes / Slides ✅ 2024-11-13
-	- [ ] HW
-	- [ ] Practice Problems
-	- [x] Past Midterms ✅ 2024-11-13
