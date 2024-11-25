@@ -130,7 +130,6 @@ Let $U \subseteq \mathbb{R}^n$ be a subspace. A set of vectors $\{ u_{1}, \cdots
 The dimension of $U$, denoted as $\text{dim}(U)$, is the number of vectors in a basis.
 
 ==There are infinitely many choices for a basis for a non-zero subspace but they all have the same number of vectors.==
-→ **Please prove**
 
 ###### Example
 Find a basis and the dimension of,

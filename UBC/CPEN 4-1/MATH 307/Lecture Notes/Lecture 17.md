@@ -85,6 +85,7 @@ R_{1} \\
 #### Theorem
 Let $U=R(A)\subseteq \mathbb{R}^m$ where $A\in \mathbb{R}^{m\times n}$ and $\text{rank}(A)=n$. Let $A=Q_{1}R_{1}$ be the thin QR decomposition. Then,
 $$\text{proj}_{R(A)}(x)=Q_{1}Q_{1}^Tx$$
+$$\text{proj}_{R(A)^\perp}(x)=Q_{2}Q_{2}^Tx$$
 for any $x \in \mathbb{R}^m$.
 
 [Proof]

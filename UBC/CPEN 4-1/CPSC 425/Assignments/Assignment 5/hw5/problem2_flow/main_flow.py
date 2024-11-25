@@ -30,7 +30,6 @@ def problem2(image1, image2, aggregate="const", sigma=2):
     rgb_image = flow_to_color(of, clip_flow=5)
     # display
     show_two(im1, rgb_image)
-
     # warping 1st image to the second
     im1_warped = part2.warp(im1, u, v)
     cost = part2.compute_cost(im1_warped, im2)

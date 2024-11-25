@@ -96,15 +96,16 @@ $$\text{rank}(P)=\text{dim}(U)=m$$
 
 considering the orthonormal basis of $U$ as the same set above.
 
-$$P=\begin{bmatrix}
-\mathbf{u}_{1}  & \cdots  & \mathbf{u}_{m}
-\end{bmatrix}\begin{bmatrix}
-\mathbf{u}_{1}^T \\ \vdots \\ \mathbf{u}_{m}^T
-\end{bmatrix} = \mathbf{u}_{1}\mathbf{u}_{1}^T+\cdots+\mathbf{u}_{m}\mathbf{u}_{m}^T
-$$
-$$=P_{1} + \cdots+P_{m}$$
+Let’s show that $R(P)= U$, first let $y \in R(P), Px=y$
+$$Px=y= \sum_{i=1}^m \frac{\langle u_{i},x \rangle }{\langle u_{i},u_{i} \rangle } u_{i}  \in U \to y \in U$$
+Now let $y \in U$,
+$$y=\sum_{i=1}^m c_{i}u_{i}$$
+Then let $Px=\sum_{i=1}^m c_{i}u_{i}$, we can see that
+$$Px=\sum _{i=1}^m c_{i}u_{i}=y \in R(P)$$
+Hence,
+$$\therefore R(P)=U$$
+$$\text{rank}(P)=\text{dim}(R(P))=\text{dim}(U) = m$$
 
-$$\text{rank}(P)=\text{rank}\left( \sum_{i=1}^m P_{i}\right)$$
 #### Theorem
 Let $U \subseteq \mathbb{R}^n$ be a subspace and $P$ be the projection matrix onto $U$. Then,
 $$\mathbf{x}-\text{proj}_{U}(\mathbf{x})\in U^\perp$$

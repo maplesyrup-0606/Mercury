@@ -41,7 +41,8 @@ $$u_{1}=\begin{bmatrix}
 3\\-11\\6\\-10
 \end{bmatrix}$$
 
-We can see that $u_{3} =2u_{1}+u_{2}$ and $u_{4}=4u_{1}+u_{2}$. Thus, $u_{3},u_{4}$ are linear combinations of $u_{1},u_{2}$and hence the spans are equal.
+$u_{1},u_{2},u_{4}$ are linearly independent, but $u_{3}=2u_{1}+u_{2}$ so $\text{span}\left\{ u_{1},u_{2} \right\}\neq \text{span}\left\{ u_{3},u_{4} \right\}$
+
 
 #### Exercise 3
 Let $U=\text{span}\left\{ u_{1},u_{2},u_{3},u_{4} \right\} \subseteq \mathbb{R}^4$ where
@@ -149,7 +150,14 @@ $$\text{dim}(R(A)^T)=\text{dim}(N(A)^\perp)=4-\text{dim}(N(A))=4-1=3$$
 Determine whether the statement is **True** or **False**.
 
 - Let $U\subseteq \mathbb{R}^n$ be a subspace. If $u\in \mathbb{R}^n$ such that $u\neq {0}$ then either $u \in U$ or $u \in U^\perp$.
-**False**, consider $R^2$ and let $U:x=0$ and $U^\perp:y=0$ and $u=\begin{bmatrix}1\\1\end{bmatrix}$ then $u$ is in neither $U,U^\perp$.
+**False**, let
+$$U=\text{span}\left\{ \begin{bmatrix}
+1\\ 0
+\end{bmatrix} \right\},U^\perp=\text{span}\left\{ \begin{bmatrix}
+0 \\
+1
+\end{bmatrix} \right\}$$
+Then $u=\begin{bmatrix}1\\1\end{bmatrix}$ is neither in $U$ nor $U^\perp$.
 
 - Let $L_{1} \subset \mathbb{R}^2$ be a line through the origin. There is a unique line $L_{2} \subset \mathbb{R}^2$ through the origin such that $L_{1} \perp L_{2}$.
 
@@ -857,3 +865,268 @@ $$A=\begin{bmatrix}
 -1 \\
 0
 \end{bmatrix}$$
+
+#### Exercise 22
+Determine whether the statement is **True** or **False**.
+
+- Let $v_{1},v_{2} \in \mathbb{R}^2$ be linearly independent vectors. Let $\lambda_{1},\lambda_{2}$ be real numbers. There exists a unique $2\times {2}$ matrix $A$ with eigenvalues $\lambda_{1},\lambda_{2}$ and corresponding vectors $v_{1},v_{2}$.
+
+$$A=\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix},v_{1}=\begin{bmatrix}
+x_{1} \\
+y_{1}
+\end{bmatrix},v_{2}=\begin{bmatrix}
+x_{2} \\
+y_{2} 
+\end{bmatrix}$$
+We need to satisfy $Av_{1}=\lambda_{1}v_{1}$ and $Av_{2}=\lambda_{2}v_{2}$. Therefore,
+$$Av_{1}=\begin{bmatrix}
+ax_{1}+by_{1} \\
+cx_{1}+dy_{1}
+\end{bmatrix}=\begin{bmatrix}
+\lambda_{1}x_{1} \\
+\lambda_{2}y_{1}
+\end{bmatrix}$$
+
+$$Av_{2}=\begin{bmatrix}
+ax_{2}+by_{2} \\
+cx_{2}+dy_{2}
+\end{bmatrix}=\begin{bmatrix}
+\lambda_{2}x_{2} \\
+\lambda_{2}y_{2}
+\end{bmatrix}$$
+
+Then we have four unknowns $a,b,c,d$ and four equations. Thus, it is unique. **True**.
+
+
+ - Suppose $A$ and $B$ are symmetric $n\times n$ matrices. the eigenvectors of $AB$ corresponding to distinct eigenvalues are orthogonal.
+
+Let $v_{i},u_{j}$ be the eigenvectors for $\lambda_{i},\lambda_{j}$ 
+$$ABv_{i}=\lambda_iv_{i}$$
+$$ABu_{j}=\lambda_{j}u_{j}$$
+Then,
+$$\langle \lambda_{i}v_{i},u_{j} \rangle =\langle ABv_{i},u_{j} \rangle $$
+$$=\langle v_{i},B^TA^Tu_{j} \rangle $$
+$$\langle v_{i},\lambda_{j}u_{j} \rangle = \langle v_{i},ABu_{j} \rangle  $$
+ $$\to (\lambda_{i}-\lambda_{j})\langle v_{i},u_{j} \rangle = \langle v_{i},(AB-B^TA^T)u_{j} \rangle  =\langle v_{i},(AB - BA)u_{j} \rangle$$
+Only if $AB=BA$, then this would be true. **False**.
+
+#### Exercise 23
+Let $A$ be a $m\times n$ matrix. Determine whether the statement is **True** or **False**.
+- If $\lambda$ is an eigenvalue of $AA^T$ then $\lambda \in \mathbb{R}$.
+$$(AA^T)^T=AA^T$$
+so $AA^T$ is symmetric, hence the eigenvalues are real numbers. **True**.
+
+- If $v_{1},v_{2}$ are eigenvectors of $AA^T$ for distinct eigenvalues $\lambda_{1},\lambda_{2}$ then $\langle v_{1},v_{2} \rangle=0$.
+$$\lambda_{1}\langle v_{1},v_{2} \rangle =\langle \lambda_{1}v_{1},v_{2} \rangle = \langle AA^Tv_{1},v_{2} \rangle  = \langle v_{1},AA^Tv_{2} \rangle =\langle v_{1},\lambda_{2}v_{2} \rangle $$
+$$(\lambda_{1}-\lambda_{2})\langle v_{1},v_{2} \rangle= 0 $$
+
+And since $\lambda_{1} \neq \lambda_{2}$, thus $\langle v_{1},v_{2} \rangle=0$. **True**.
+#### Exercise 24
+Let $U \subset \mathbb{R}^n$ be a subspace with $\text{dim}(U)=m$ such that $0 < m < n$ and let $P$ be the orthogonal projection matrix onto $U$. Determine the characteristic polynomial of $P$.
+
+$$c_{P}(x)=\det(P-xI)$$
+Let’s consider $x=0$,
+$$P - 0I=P \to \text{rank}(P)=\text{dim}(U)=n-\text{dim}(N(P)) =m$$
+$$\text{dim}(N(P)) = n-m$$
+
+for $x=1$,
+$$P-I=-P_{\perp} \to \text{rank}(P_{\perp}) = \text{dim}(U^\perp)= n-m = n - \text{dim}(N(P_{\perp}))$$
+$$\text{dim}(N(P_{\perp}))=m$$
+
+Thus,
+$$\therefore c_{P}(x)= \pm x^{n-m}(x-1)^m$$
+
+#### Exercise 25
+Let $u \in \mathbb{R}^n$ be a nonzero vector and let 
+$$H=I- \frac{2}{\lvert \lvert u \rvert  \rvert ^2}uu^T$$
+be the corresponding elementary reflector. Determine the characteristic polynomial of $H$.
+
+$$H = I - 2P , c_{H}(x)=\det(I-2P-x I)$$
+
+Let’s consider $x = 1$,
+$$\det(-2P)=-2\det (P)=0 \text{ since } \text{rank}(P)=1$$
+Then when $x=-1$,
+$$\det(I-2P+I) =\det(2I-2P)=2\det(P_{\perp})= 0$$
+$$\text{rank}(P_{\perp})=n-1$$
+Thus,
+$$\therefore c_{H}(x) = \pm (x-1)(x+1)^{n-1}$$
+
+#### Exercise 26
+Let $\lambda$ be an eigenvalue of an invertible matrix $A$. Determine whether the statement is **True** or **False**.
+
+- $\lambda^{-1}$ is an eigenvalue of $A^{-1}$.
+$$Av=\lambda v \to v = A^{-1}\lambda v \to \frac{1}{\lambda}v=A^{-1}v$$
+**True**
+
+- $\lambda$ is an eigenvalue of $A^T$.
+$$\det((A-\lambda I)^T)=\det(A^T-\lambda I)=\det(A-\lambda I)$$
+**True**
+
+- $\lambda^2$ is an eigenvalue of $AA^T$.
+$$\det(AA^T-\lambda^2I)=\det((A+\lambda I)(A^T-\lambda I))=\det(AA^T+\lambda(A^T-A)-\lambda^2I)$$
+if and only if $A^T = A$. **False**.
+
+
+- $\lambda$ is an eigenvalue of $BAB^{-1}$ for any invertible matrix $B$.
+$$\det(BAB^{-1} - \lambda I) = \det(BAB^{-1} - \lambda BB^{-1})$$
+$$=\det(B(A-\lambda I)B^{-1})= \det(B)\det(A-\lambda I)\det(B^{-1})$$
+$$=\det(A - \lambda I)=0$$
+**True**
+
+#### Exercise 27
+Suppose $A$ is a symmetric $3 \times {3}$ matrix with distinct eigenvalues $\lambda_{1},\lambda_{2},\lambda_{3}$ and eigenvectors
+$$v_{1}=\begin{bmatrix}
+1 \\
+1 \\
+1
+\end{bmatrix},v_{2}=\begin{bmatrix}
+1 \\
+0 \\
+-1
+\end{bmatrix}$$
+
+Find an eigenvector $v_{3}$ for eigenvalue $\lambda_{3}$.
+
+If $A$ has distinct eigenvalues then $A$ is diagonalizable. Thus, $A=PDP^{-1}$. But $A$ is symmetric hence $P^{-1} = P^T$ making $P$ an orthogonal matrix.
+
+We just need to find $v_3$ such that $v_{1},v_{2},v_{3}$ are orthonormal.
+$$\therefore v_{3}=\begin{bmatrix}
+1 \\
+-2 \\
+1
+\end{bmatrix}$$
+
+#### Exercise 28
+Let $A$ and $B$ be $n\times n$ matrices. Then $R(BA)=R(A)$. **True** or **False**.
+
+For instance, let
+$$B=\begin{bmatrix}
+0 & 0 \\
+0 & 0
+\end{bmatrix},A=\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}$$
+
+Then,
+$$BA=\begin{bmatrix}
+0 & 0 \\
+0 & 0
+\end{bmatrix}$$
+
+Thus, $R(BA)= 0,R(A)=\mathbb{R}^2$. **False**.
+
+#### Exercise 29
+Let $U$ and $V$ be two subspaces of $\mathbb{R}^n$. Their union is also a subspace of $\mathbb{R}^n$.
+Let,
+$$U=\left \{ t\begin{bmatrix}
+1 \\
+0 \\
+0 \\
+\vdots \\
+0
+\end{bmatrix} : t\in \mathbb{R} \right \},V= \left \{ s\begin{bmatrix}
+1 \\
+1 \\
+1 \\
+\vdots \\
+1
+\end{bmatrix}:s \in \mathbb{R} \right \}$$
+
+and also let,
+$$u=\begin{bmatrix}
+1 \\
+0 \\
+0 \\
+\vdots \\
+0
+\end{bmatrix},v=\begin{bmatrix}
+1 \\
+1 \\
+1 \\
+\vdots \\
+1
+\end{bmatrix} \to u +v = \begin{bmatrix}
+2 \\
+1 \\
+1 \\
+\vdots \\
+1
+\end{bmatrix} \not\in U \cup V$$
+Hence, it is not a subset. It is not closed under addition.
+
+#### Exercise 30
+Let $A$ be a non-zero $n \times n$ **orthogonal projection matrix**. If $y$ is a non-zero vector in $R(A)$, then $y$ is not in $N(A)$.
+
+Let $y \in R(A)$ and $y\neq {0}$, then $Au=y$ for some $u\in \mathbb{R}^n$. 
+$$Au=y \to A^2u=Ay \to u = Ay$$
+but we know that $u\neq {0}$,
+$$\therefore y \not\in N(A)$$
+
+OR,
+$$y\in R(A)=N(A^T)^\perp=N(A)^\perp$$
+and since $y \neq 0$, and $N(A) \cap N(A)^\perp = \{ 0 \}$ hence $y \not\in N(A)$.
+
+#### Exercise 31
+Let $A$ be an $n \times n$ matrix. If all eigenvalues of $A$ are positive real numbers, $\lvert \lvert A \rvert \rvert$ equals its largest eigenvalue.
+
+For instance, let $$A=\begin{bmatrix}
+1 & 2024 \\
+0 & 2
+\end{bmatrix}$$
+
+Then,
+$$\det(A-\lambda I)=(\lambda - 1)(\lambda - 2) \to \lambda_{1}=1,\lambda_{2}=2$$
+
+$$\lvert \lvert A \rvert  \rvert \geq \lvert\lvert A\begin{bmatrix}
+0 \\ 1
+\end{bmatrix} \rvert\rvert =\lvert\lvert \begin{bmatrix}
+1 & 2024 \\
+0 & 2
+\end{bmatrix}\begin{bmatrix}
+0 \\
+1
+\end{bmatrix}\rvert\rvert=\begin{bmatrix}
+2024 \\
+2
+\end{bmatrix} \rvert \rvert > \lambda_{2}=2$$
+**False!!**
+
+#### Exercise 32
+Let $U=\text{span}\left\{ \mathbf{x} \right\} \subseteq \mathbb{R}^3$ where $\mathbf{x}=\begin{bmatrix}1\\1\\-1\end{bmatrix}$.
+
+(a) Construct an orthogonal projection matrix which projects onto $U$.
+
+$$P= \frac{1}{\lvert \lvert \mathbf{x} \rvert  \rvert^2 }\mathbf{x}\mathbf{x}^T=\frac{1}{3}\begin{bmatrix}
+1 \\
+1 \\
+-1
+\end{bmatrix}\begin{bmatrix}
+1 & 1 & -1
+\end{bmatrix}= \frac{1}{3} \begin{bmatrix}
+1 & 1 & -1 \\
+1 & 1 & -1 \\
+-1 & -1 & 1
+\end{bmatrix}$$
+
+(b) Find an orthogonal projection matrix $P$ such that $N(P)=U$.
+
+$$N(P)=R(P^T)^\perp=R(P)^\perp=U^\perp$$
+$$P=I-P_{\perp}=\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}-\frac{1}{3} \begin{bmatrix}
+1 & 1 & -1 \\
+1 & 1 & -1 \\
+-1 & -1 & 1
+\end{bmatrix}= \frac{1}{3} \begin{bmatrix}
+2 & -1 & 1 \\
+-1 & 2 & 1 \\
+1 & 1 & 2
+\end{bmatrix}$$
+
+

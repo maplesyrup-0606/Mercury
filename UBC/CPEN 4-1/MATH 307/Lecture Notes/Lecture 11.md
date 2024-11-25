@@ -52,7 +52,7 @@ $$\{ \begin{bmatrix}
 \end{bmatrix} \}$$
 
 #### Definition of orthogonal subspaces
-Let $U_{1}\in \mathbb{R}^n$ and $U_{1}\in \mathbb{R}^n$ be a subspace. Then, $U_{1},U_{2}$ are orthogonal if $\langle \mathbf{u}_{1}, \mathbf{u}_{2} \rangle = 0$ for all $\mathbf{u}_{1}\in U_{1},\mathbf{u}_{2} \in U_{2}$.
+Let $U_{1}\in \mathbb{R}^n$ and $U_{2}\in \mathbb{R}^n$ be a subspace. Then, $U_{1},U_{2}$ are orthogonal if $\langle \mathbf{u}_{1}, \mathbf{u}_{2} \rangle = 0$ for all $\mathbf{u}_{1}\in U_{1},\mathbf{u}_{2} \in U_{2}$.
 
 We write that $U_{1} \perp U_{2}$ when $U_1$ and $U_2$ are orthogonal subspaces.
 
@@ -178,9 +178,9 @@ $$\text{dim}(U^\perp)+\text{dim}(U)=n$$
 ###### Exercise
 Show that $\text{rank}(A)=\text{rank}(A^T)$.
 
-Let $A \in \mathbb{R}^{m\times n}$,
-$$\text{rank}(A)=\text{dim}(R(A))= n -\text{dim}(N(A)) = n - (n - \text{dim}(N(A)^\perp))=\text{dim}(N(A)^\perp)$$
-$$=\text{dim}(R(A^T))=\text{rank}(A^T)$$
+We note that elementary row operations do not change the linear independence of the columns of $A$. And, $\text{rank}(A)$ is the number of pivots a.k.a linearly independent columns of $A$. In terms of $A^T$, where the columns of $A$ are the rows of $A^T$.  When we reduce to the row-echelon form of $A^T$ we are left with non-zero rows being the linearly independent columns of $A$.
+
+Hence, $\text{rank}(A)=\text{rank}(A^T)$.
 
 #### Next Lecture [[Lecture 12]]
 

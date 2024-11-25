@@ -164,3 +164,44 @@ Let $A \in \mathbb{R}^{n\times n}$ be symmetric and real. Then there exists a re
 ###### Example
 Find $P$ and $D$ for $A=\begin{bmatrix}0&1&0 \\ 1&1&-1 \\ 0 & -1 & 0\end{bmatrix}$. 
 
+$$\det(A-\lambda I)=\det(\begin{bmatrix}
+-\lambda & 1 & 0 \\
+1 & 1-\lambda & -1 \\
+0 & -1 & -\lambda
+\end{bmatrix})=-\lambda(\lambda^2-\lambda-1)+\lambda$$
+$$=-\lambda^3+\lambda^2+2\lambda=-\lambda(\lambda^2-\lambda-2)=-\lambda(\lambda+1)(\lambda-2)= 0$$
+$$\therefore \lambda_{1}=-1,\lambda_{2}=0,\lambda=2$$
+
+$$E_{\lambda_{1}} =N(A+I)=N  \left(   \begin{bmatrix}
+1 & 1 & 0 \\  
+1 & 2 & -1 \\
+0 & -1 & 1
+\end{bmatrix}  \right) = \text{span}\left\{ \begin{bmatrix}
+-1\\1\\1
+\end{bmatrix} \right\}$$
+$$E_{\lambda_{2}}=N(A)=N\left( \begin{bmatrix}
+0 & 1 & 0 \\
+1 & 1 & -1 \\
+0 & -1 & 0
+\end{bmatrix} \right) = \text{span}\left\{ \begin{bmatrix}
+1 \\ 0 \\ 1
+\end{bmatrix} \right\}$$
+$$E_{\lambda_{3}}=N(A-2I)=N\left( \begin{bmatrix}
+-2 & 1 & 0 \\
+1 & -1 & -1 \\
+0 & -1 & -2
+\end{bmatrix} \right) = \text{span}\left\{ \begin{bmatrix}
+-1 \\
+-2 \\
+1
+\end{bmatrix} \right\}$$
+
+$$\therefore P=\begin{bmatrix}
+-1 & 1 & -1 \\
+1 & 0 & -2 \\
+1 & 1 & 1
+\end{bmatrix},D=\begin{bmatrix}
+-1 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 2
+\end{bmatrix}$$

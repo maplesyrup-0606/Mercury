@@ -190,7 +190,7 @@ $$\left\{  \begin{bmatrix}
 5 \\
 0 \\
 \frac{1}{2} \\
-1 \\
+-1 \\
 0
 \end{bmatrix}  \right\}$$
 

@@ -41,10 +41,16 @@ def cost_nc(patch1, patch2):
     patch1_flatten = patch1.flatten()
     patch2_flatten = patch2.flatten()
 
-    size_1 = norm(patch1_flatten)
-    size_2 = norm(patch2_flatten)
+    patch1_mean = np.mean(patch1)
+    patch2_mean = np.mean(patch2)
 
-    cost_nc = patch1_flatten.T @ patch2_flatten / (size_1 * size_2)
+    patch1_new = patch1_flatten - patch1_mean
+    patch2_new = patch2_flatten - patch2_mean
+
+    size_1 = norm(patch1_new)
+    size_2 = norm(patch2_new)
+
+    cost_nc = patch1_new.T @ patch2_new / (size_1 * size_2)
     # END your code here
 
     assert np.isscalar(cost_nc)
@@ -189,5 +195,6 @@ def optimal_alpha():
     (w.r.t. other values)"""
 
     # TODO: You need to fix the alpha value
-    alpha = np.random.choice([-0.06, -0.01, 0.04, 0.1])
+    # alpha = np.random.choice([-0.06, -0.01, 0.04, 0.1])
+    alpha = -0.01
     return alpha
