@@ -209,5 +209,5 @@ $$Q_{1}^T\mathbf{b}=\begin{bmatrix}
 $$\therefore c_{0}=\frac{7}{3}, c_{1}=\frac{3}{2}$$
 $$\to f(t) =\frac{7}{3} + \frac{3}{2}t$$
 
-#### Next Lecture [[Lecture 19]]
+#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 19]]
 

@@ -159,3 +159,5 @@ Instead of lots of possible regions where we evaluate classifier → we have an 
 
 ![[Screenshot 2024-11-30 at 8.58.05 PM.png]]
 We can compute the classifier on these regions to reduce computation time.
+
+#### Next Lecture [[UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 18|Lecture 18]]

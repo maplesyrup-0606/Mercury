@@ -250,4 +250,4 @@ Now assume that $x \in N(Q_{1}^T)$,
 $$A^Tx=R_{1}^TQ_{1}^Tx=R_{1}^TQ_{1}^Tx=0 \to x \in N(A^T)$$
 
 $$\left( N(A^T) \subseteq N(Q_{1}^T)  \right)\cap \left(N(Q_{1}^T) \subseteq N(A^T)  \right) \to \hspace{.1in} \therefore N(A^T)=N(Q_{1}^T)$$
-#### Next Lecture [[Lecture 18]]
+#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 18]]
