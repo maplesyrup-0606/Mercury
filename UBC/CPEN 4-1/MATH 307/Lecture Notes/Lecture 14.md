@@ -131,4 +131,4 @@ $$P_{\perp}= \frac{1}{\mathbf{u}_{3}^T\mathbf{u}_{3}}\mathbf{u}_{3}\mathbf{u}_{3
 \end{bmatrix}$$
 which is the same as above.
 
-#### Next Lecture [[Lecture 15]]
+#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 15]]

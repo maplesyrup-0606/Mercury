@@ -131,4 +131,4 @@ $$\lvert \lvert \mathbf{x}-\mathbf{u} \rvert  \rvert ^2 =\lvert \lvert \mathbf{x
 
 But since, $\lvert \lvert \text{proj}_{U}(\mathbf{x})-\mathbf{u} \rvert  \rvert ^2  \geq 0$ the proof is complete.
 
-#### Next Lecture [[Lecture 16]]
+#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 16]]

@@ -205,3 +205,33 @@ $$\therefore P=\begin{bmatrix}
 0 & 0 & 0 \\
 0 & 0 & 2
 \end{bmatrix}$$
+
+#### Theorem
+Eigenvalues of real-symmetric matrices are real.
+
+[Proof]
+Let $u \in \mathbb{C}^n$, then by definition of the complex inner-product,
+$$\langle u,v \rangle =u^T \bar{v}=\begin{bmatrix}
+u_{1} & u_{2} & \cdots & u_{n}
+\end{bmatrix}\begin{bmatrix}
+\bar{v_{1}} \\
+\bar{v_{2}} \\
+\vdots \\
+\bar{v_{n}}
+\end{bmatrix}$$
+
+$$\langle v,Av \rangle =\langle v,\lambda v \rangle =v^T (\bar{\lambda v})=\bar{\lambda}v^T \bar{v}=\bar{\lambda}\langle v,v \rangle =\bar{\lambda}\lvert \lvert v \rvert  \rvert ^2$$
+also,
+$$v^T \bar{(Av)} =v^T \bar{A}\bar{v}=v^TA \bar{v}=(A^Tv)^T \bar{v}= \langle A^Tv,v \rangle $$
+$$=\langle Av,v \rangle =\langle \lambda v,v \rangle=(\lambda v)^T \bar{v} = \lambda \langle v,v \rangle =\lambda \lvert \lvert v \rvert  \rvert ^2 $$
+$$\therefore \lambda \lvert \lvert v \rvert  \rvert ^2= \bar{\lambda}\lvert \lvert v \rvert  \rvert ^2 \to \lambda \in \mathbb{R}$$
+
+#### Remarks
+-  $A$ is invertible iff 0 is not an eigenvalue.
+	→ If 0 is an eigenvalue, $Av=0v =0,v\neq {0}$. Then, $A$ is not full rank and is not invertible.
+	
+- Determinant of $A$ = product of eigenvalues.
+	→ $\det(A) = \det(PDP^-1)=\det(P)\det(A)\det(P^{-1})=\det(D)$.
+	
+- $A^k=PD^kP^{-1}$.
+#### Next Lecture [[Lecture 20]]

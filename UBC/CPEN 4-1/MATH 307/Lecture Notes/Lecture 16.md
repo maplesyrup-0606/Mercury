@@ -182,4 +182,4 @@ $$T^TT=(Q_{1}Q_{2} \cdots Q_{m})^T(Q_{1}Q_{2} \cdots Q_{m})$$
 $$=Q_{m}^T \cdots Q_{2}^TQ_{1}^TQ_{1}Q_{2}\cdots Q_{m}$$
 $$=I$$
 
-#### Next Lecture [[Lecture 17]]
+#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 17]]

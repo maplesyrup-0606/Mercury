@@ -121,4 +121,4 @@ $$=\langle \mathbf{x},\mathbf{u}_{k} \rangle  - \langle \mathbf{u}_{k},\mathbf{x
 $$=\langle \mathbf{x},\mathbf{u}_{k} \rangle - \langle \mathbf{u}_{k},\mathbf{x} \rangle  = 0$$
 
 As a result, $\mathbf{x}-\text{proj}_{U}(\mathbf{x})$ is orthogonal to any $\mathbf{u}_{k}$ in the basis of $U$ and hence $$\therefore \mathbf{x}-\text{proj}_{U}(\mathbf{x})\in U^\perp$$
-#### Next Lecture [[Lecture 14]]
+#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 14]]

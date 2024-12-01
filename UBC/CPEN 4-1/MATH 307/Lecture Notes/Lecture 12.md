@@ -254,4 +254,4 @@ u_{1}^2 & u_{1}u_{2} & \cdots & u_{1}u_{n} \\
 0 & 0 & \cdots & 0
 \end{bmatrix}$$
 $$\therefore \text{rank}(P)=1$$
-#### Next Lecture [[Lecture 13]]
+#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 13]]

@@ -85,3 +85,7 @@ Or we can just copy over at random and move on.
 2. How much down in the list of matches do we want to go?
 	1. High threshold would result in more repeating pixels, since we only choose a few matches.
 	2. If we have a low threshold, the image would be much more randomized. Maybe not fulfilling the task of filling the pixel in properly.
+
+
+#### Next Lecture [[UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 11|Lecture 11]]
+

@@ -1,5 +1,6 @@
 {
   "tabSize": 3,
   "alwaysUpdateLinks": true,
-  "newFileLocation": "current"
+  "newFileLocation": "current",
+  "attachmentFolderPath": "images"
 }

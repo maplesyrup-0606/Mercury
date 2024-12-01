@@ -1,0 +1,30 @@
+- [ ]  CPSC 425 Lecture Catch up
+	- [ ] Recordings / Notes
+		- [x] Feature Matching ✅ 2024-11-27
+		- [ ] Model Fitting 1
+		- [ ] Model Fitting 2
+		- [ ] Stereo
+		- [ ] Optical Flow 1
+		- [ ] Optical Flow 2
+		- [ ] Classification 1
+		- [ ] Classification 2
+		- [ ] Neural Networks
+	- [ ] Quizzes
+	- [ ] Midterm Recap
+- [ ] CPEN 411 Lecture Catch up
+	- [ ] Recordings / Notes
+		- [ ] Oct 23
+		- [ ] Oct 28
+		- [ ] Oct 30 
+		- [ ] Nov 4
+		- [ ] Nov 18
+		- [ ] Nov 20
+		- [ ] Nov 25
+	- [ ] Quizzes
+	- [ ] Midterm Recap
+- [ ] PHYS 200 Catch up
+	- [ ] HW
+- [ ] MATH 307 
+	- [ ] Notes
+- [ ] APSC 450 
+	- [ ] Quiz
