@@ -20,10 +20,10 @@ $$\bar{v}=\begin{bmatrix}
 \end{bmatrix}$$
 
 Note that
-$$\bar{(z_{1}z_{2})}=\bar{z_{1}z_{2}}$$
-$$\bar{Az}=\bar{A}\bar{z}$$
-$$\bar{(z_{1}+z_{2})}=\bar{z_{1}}+\bar{z_{2}}$$
-$$\bar{cz}=\bar{c}\bar{z}$$
+$$\overline{(z_{1}z_{2})}=\overline{z_{1}z_{2}}$$
+$$\overline{Az}=\overline{A}\overline{z}$$
+$$\overline{(z_{1}+z_{2})}=\overline{z_{1}}+\overline{z_{2}}$$
+$$\overline{cz}=\overline{c} \cdot \overline{z}$$
 
 #### Definition of Complex Inner Product
 $$\langle v,w \rangle=v^T \bar{w}=\begin{bmatrix}
@@ -56,7 +56,7 @@ What we know about orthogonal matrices is that $Q^{-1}=Q^T$. This gave us proper
 
 Now, let $A \in \mathbb{C}^{n\times n}$
 $$\langle Ax,Ay \rangle =(Ax)^T\overline{Ay}=x^TA^T\overline{Ay}=x^T\overline{\overline{A^T}Ay}$$
-$$=\langle x^T,\overline{A^T}Ay \rangle $$
+$$=\langle x,\overline{A^T}Ay \rangle $$
 
 hence, we require $\overline{A^T}A=I$ to have that $\langle Ax,Ay \rangle=\langle x,y \rangle$. This property is called being **unitary**.
 
@@ -93,10 +93,10 @@ $$\sum_{n=0}^{N-1}\omega _{N}^{kn}= \frac{1-\omega_{N}^{kN} }{1-\omega_{N}^k} = 
 #### Definition of Fourier Basis
 The Fourier Basis of $\mathbb{C}^n$ is $f_{0},f_{1},\cdots,f_{N-1}$ where
 $$f_{k}=\begin{bmatrix}
-w_{N}^0 \\
-w_{N}^k \\
+\omega_{N}^0 \\
+\omega_{N}^k \\
 \vdots \\
-w_{N}^{N-1}
+\omega_{N}^{k(N-1)}
 \end{bmatrix}$$
 
 
@@ -162,3 +162,5 @@ $$\sum_{n=0}^{N-1}\omega_{N}^{n(k-l)}=\sum_{n=0}^{N-1}1=N$$
 and if $k\neq l$,
 $$\sum_{n=0}^{N-1}\omega_{N}^{n(k-l)}=0$$
 according to the theorem above.
+
+#### Next Lecture [[Lecture 23]]

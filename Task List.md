@@ -1,30 +1,41 @@
 - [ ]  CPSC 425 Lecture Catch up
-	- [ ] Recordings / Notes
+	- [x] Recordings / Notes ✅ 2024-12-01
 		- [x] Feature Matching ✅ 2024-11-27
-		- [ ] Model Fitting 1
-		- [ ] Model Fitting 2
-		- [ ] Stereo
-		- [ ] Optical Flow 1
-		- [ ] Optical Flow 2
-		- [ ] Classification 1
-		- [ ] Classification 2
-		- [ ] Neural Networks
+		- [x] Model Fitting 1 ✅ 2024-12-01
+		- [x] Model Fitting 2 ✅ 2024-12-01
+		- [x] Stereo ✅ 2024-12-01
+		- [x] Optical Flow 1 ✅ 2024-12-01
+		- [x] Optical Flow 2 ✅ 2024-12-01
+		- [x] Classification 1 ✅ 2024-12-01
+		- [x] Classification 2 ✅ 2024-12-01
+		- [x] Neural Networks ✅ 2024-12-01
 	- [ ] Quizzes
 	- [ ] Midterm Recap
+	- [ ] Assignment 6
+		- [x] Need to hit office hours 😭 ✅ 2024-12-07
 - [ ] CPEN 411 Lecture Catch up
 	- [ ] Recordings / Notes
-		- [ ] Oct 23
-		- [ ] Oct 28
-		- [ ] Oct 30 
-		- [ ] Nov 4
-		- [ ] Nov 18
+		- [x] Oct 23 ✅ 2024-12-07
+		- [x] Oct 28 ✅ 2024-12-07
+		- [x] Oct 30 ✅ 2024-12-07
+		- [x] Nov 4 ✅ 2024-12-07
+		- [x] Nov 18 ✅ 2024-12-07
 		- [ ] Nov 20
 		- [ ] Nov 25
 	- [ ] Quizzes
 	- [ ] Midterm Recap
-- [ ] PHYS 200 Catch up
-	- [ ] HW
-- [ ] MATH 307 
-	- [ ] Notes
-- [ ] APSC 450 
-	- [ ] Quiz
+- [x] PHYS 200 Catch up ✅ 2024-12-07
+	- [x] HW ✅ 2024-12-07
+- [x] MATH 307 ✅ 2024-12-07
+	- [x] Notes ✅ 2024-12-07
+- [x] APSC 450 ✅ 2024-12-07
+	- [x] Quiz ✅ 2024-12-07
+
+
+Today
+- [ ] CPEN 411 Last two lectures
+	- [ ] Notes (Might need to re-listen to Load Store Queue)
+- [ ] CPSC 425 Last two lectures (+ notes at the same time)
+- [ ] CPEN 411 Assignment
+- [ ] PHYS 200 (After everything is done above)
+- [ ] Tutor Prep

@@ -65,3 +65,5 @@ Scoreboard? → Stalls for WAW and WAR hazards.
 	- Multiple CDBs: more FU logic for parallel assoc. stores.
 - Non-precise interrupts.
 
+#### Next Lecture [[UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 12|Lecture 12]]
+

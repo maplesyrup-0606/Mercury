@@ -302,3 +302,4 @@ We can have the one fully connected layer abstracted with an activation function
 The adjoint for $\mathbf{x}$ would be,
 $$\overline{\mathbf{x}}=\overline{\mathbf{y}}\frac{\partial \mathbf{y}}{\partial \mathbf{x}}$$
 
+#### Next Lecture [[UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 19|Lecture 19]]
