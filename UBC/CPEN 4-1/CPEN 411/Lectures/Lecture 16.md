@@ -84,3 +84,7 @@ Based on these predictions, the load instruction would proceed with a bypass or 
 In case of a,
 - Right prediction: Mark the stores as committed and proceed.
 - Wrong prediction: Roll-back, we fucked up.
+
+![[Screenshot 2024-12-09 at 3.57.43 PM.png]]
+
+#### Next Lecture [[Lecture 17 & 18|Lecture 17 & 18]]
