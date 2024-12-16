@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0497d64a08325a81",
+        "id": "60a3b5bcc825181c",
         "type": "tabs",
         "children": [
           {
-            "id": "6db16925a3bdef86",
+            "id": "9197a618cccdf012",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 17 & 18.md",
-                "mode": "source",
+                "file": "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 15.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 17 & 18"
+              "title": "Lecture 15"
             }
           }
         ]
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227
+    "width": 227,
+    "collapsed": true
   },
   "right": {
     "id": "d3aeb83127b6d472",
@@ -139,10 +140,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 12.md"
+                "file": "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 15.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 12"
+              "title": "Outline of Lecture 15"
             }
           }
         ],
@@ -164,58 +165,58 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "6db16925a3bdef86",
+  "active": "9197a618cccdf012",
   "lastOpenFiles": [
-    "images/Screenshot 2024-12-09 at 7.57.55 PM.png",
-    "images/Screenshot 2024-12-09 at 7.55.55 PM.png",
-    "images/Screenshot 2024-12-09 at 7.52.47 PM.png",
-    "images/Screenshot 2024-12-09 at 7.45.41 PM.png",
-    "images/Screenshot 2024-12-09 at 7.27.03 PM.png",
-    "images/Screenshot 2024-12-09 at 7.12.00 PM.png",
-    "images/Screenshot 2024-12-09 at 7.10.31 PM.png",
-    "images/Screenshot 2024-12-09 at 6.57.23 PM.png",
-    "images/Screenshot 2024-12-09 at 6.49.27 PM.png",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 16.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 17 & 18.md",
-    "images/Screenshot 2024-12-09 at 3.57.43 PM.png",
-    "images/Screenshot 2024-12-09 at 3.27.36 PM.png",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 15.md",
-    "Task List.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 14.md",
-    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 13.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 12.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 13.md",
     "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 11.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 18.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 10.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 9.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 8.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 7.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 6.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 5.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 4.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 3.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 1 & 2.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 16.md",
+    "UBC/CPEN 4-1/CPEN 411/Lectures/Lecture 15.md",
+    "UBC/CPEN 4-1/CPSC 425/Practice Questions/Practice 5.md",
+    "UBC/CPEN 4-1/CPSC 425/Practice Questions/Practice 7.md",
     "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 19.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 17.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 15.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 14.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 13.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 22.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 23.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 21.md",
-    "UBC/CPEN 4-1/CPEN 411/Assignments/Assignment4/Assignment_4.pdf",
-    "UBC/CPEN 4-1/CPEN 411/Assignments/Assignment4",
-    "UBC/CPEN 4-1/CPEN 411/Assignments/Assignment_4.pdf",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 20.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 19.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 18.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 6.md",
-    "UBC/CPEN 4-1/MATH 307/Coding Assignments/Asst4/example.wav",
-    "UBC/CPEN 4-1/MATH 307/Coding Assignments/Asst4/assignment4.ipynb",
-    "UBC/CPEN 4-1/MATH 307/Coding Assignments/Asst4",
-    "UBC/CPEN 4-1/MATH 307/Coding Assignments/example.wav",
-    "UBC/CPEN 4-1/MATH 307/Coding Assignments/assignment4.ipynb",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 3.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 2.md",
+    "UBC/CPEN 4-1/CPSC 425/Practice Questions/Practice 8.md",
+    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 20.md",
+    "UBC/CPEN 4-1/CPSC 425/Practice Questions/Practice 4.md",
+    "UBC/CPEN 4-1/CPSC 425/Practice Questions/Practice 3.md",
+    "UBC/CPEN 4-1/CPSC 425/Practice Questions/Practice 2.md",
+    "UBC/CPEN 4-1/CPSC 425/Practice Questions/Practice 1.md",
+    "images/Screenshot 2024-12-14 at 1.11.57 AM.png",
+    "UBC/CPEN 4-1/CPSC 425/425 Midterm.pdf",
+    "images/Screenshot 2024-12-12 at 4.26.06 PM.png",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/cheatsheet_mt2.synctex(busy)",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex35912.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex35803.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex35792.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex35766.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex35756.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex35741.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex34239.fls",
+    "UBC/CPEN 4-1/PHYS 200/cheat_sheet/pdflatex34235.fls",
+    "images/Screenshot 2024-12-11 at 2.00.05 AM.png",
+    "images/Screenshot 2024-12-11 at 1.59.50 AM.png",
+    "images/Screenshot 2024-12-11 at 1.56.15 AM.png",
+    "images/Screenshot 2024-12-11 at 1.55.56 AM.png",
+    "images/Screenshot 2024-12-11 at 1.48.33 AM.png",
+    "images/Screenshot 2024-12-11 at 1.46.41 AM.png",
+    "images/Screenshot 2024-12-11 at 1.45.02 AM.png",
+    "images/Screenshot 2024-12-11 at 1.43.21 AM.png",
     "images/Untitled 3.canvas",
     "images/Untitled 2.canvas",
     "images/Untitled 1.canvas",
     "images/Untitled.canvas",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 16.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 12.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 11.md",
-    "UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 10.md",
-    "UBC/CPEN 4-1/CPSC 425/Assignments/Assignment 6/hw6/hw_utils.py",
-    "UBC/CPEN 4-1/CPSC 425/Assignments/Assignment 6/hw6/deep_learning.ipynb",
     "images/cashflow_img.canvas"
   ]
 }

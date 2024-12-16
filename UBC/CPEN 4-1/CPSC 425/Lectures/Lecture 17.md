@@ -29,6 +29,8 @@ Other than incrementing the histogram bin. For example, it might be useful to de
 In the VLAD representation, instead of incrementing the histogram bin by one, we increment it by the residual vector $\mathbf{x-c(\mathbf{x})}$.
 
 This stores how close the descriptor is to some keyword, thus including more information. Instead of storing the count in each position, we store the average residual (128 dimensions).
+
+Helps distinguish objects based on fine grained details, for instance if we want to distinguish between a tiger and a cat.
 ![[Screenshot 2024-11-30 at 7.45.54 PM.png]]
 
 The dimensionality of a VLAD descriptor is $Kd$:

@@ -281,3 +281,5 @@ $$=A\cos(\varphi)DFT(\cos(2\pi k\mathbf{t}))-A\sin(\varphi)DFT(\sin(w\pi k\mathb
 $$=A\cos(\varphi)\times \frac{1}{2}N(\mathbf{e}_{k}+\mathbf{e}_{N-k})-A\sin(\varphi)\times \frac{1}{2i}N(\mathbf{e}_{k}-\mathbf{e}_{N-k})$$
 $$= \frac{AN}{2}(\cos(\varphi)+i\sin(\varphi))\mathbf{e}_{k} + \frac{AN}{2}(\cos(\varphi)-i\sin(\varphi))\mathbf{e}_{N-k}$$
 $$\therefore \frac{AN}{2}e^{i\varphi}\mathbf{e}_{k}+ \frac{AN}{2}e^{-i\varphi}\mathbf{e}_{N-k}$$
+
+#### Next Lecture [[Lecture 24]]

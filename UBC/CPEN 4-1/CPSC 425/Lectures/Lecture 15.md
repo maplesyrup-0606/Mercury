@@ -78,7 +78,9 @@ What’s the issue with solving the equation for optical flow?
 We will get a straight line for one instance,
 ![[Screenshot 2024-11-28 at 10.32.02 PM.png]]
 
-This is an **Aperture problem**, we can’t uniquely determine the actual motion based on the one instance. We can only measure component orthogonally.
+This is an **Aperture problem**, we can’t uniquely determine the actual motion without distinct features in track. 
+
+We can only measure component of visual motion in direction perpendicular to the contour.
 
 ![[Screenshot 2024-11-28 at 10.33.01 PM.png]]
 

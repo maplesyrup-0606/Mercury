@@ -46,7 +46,7 @@ Is it robust to noise? Not really, we would have some lines shifting (still clos
 1. Quantize parameter space (m,c)
 2. Create Accumulator Array A(m,c)
 3. Set A(m,c) = 0 for all m,c
-4. For each image edege (xi,yi)
+4. For each image edge (xi,yi)
 	1. For each element in A(m,c)
 	2. If (m,c) lies on the line : c = -xi * m + yi
 		1. Increment A(m,c) += 1
@@ -124,5 +124,11 @@ The idea is,
 
 ![[Screenshot 2024-11-28 at 3.32.31 PM.png]]
 
-
+###### Pros and Cons
+- **Pros**
+	- Can handle high percentage of outliers: each point votes separately.
+	- Can detect multiple instances of a model in a single pass.
+- **Cons**
+	- Search time increases exponentially with the number of model parameters.
+	- Can be tricky to pick a good bin size.
 #### Next Lecture [[UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 14|Lecture 14]]

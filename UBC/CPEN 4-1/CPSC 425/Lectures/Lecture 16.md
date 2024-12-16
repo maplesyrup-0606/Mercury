@@ -1,4 +1,4 @@
-x#### Instance vs. Category
+#### Instance vs. Category
 In classifications, we look for specific categories. We need the ability to find all possible “instances” under some “category”.
 
 #### WordNet
@@ -46,6 +46,7 @@ The issue is that classification assumes that the incoming image belongs to one 
 **Solution**:
 Create an ‘unknown’ or ‘irrelevant’ class.
 
+Traditional Image Classification Pipeline
 ![[Screenshot 2024-11-30 at 5.44.44 PM.png]]
 
 #### Image Classification
@@ -171,7 +172,7 @@ if we ignore the denominator. *It doesn’t matter since it appears in BOTH clas
 
 For higher dimensional data,
 ![[Screenshot 2024-11-30 at 6.37.47 PM.png]]
-We can extract two channels (green, blue) and extract patches some sky and grass. We can measure a prior distribution or fit a gaussian distribution to the data (likelihood). 
+We can extract two channels (green, blue) and extract patches, some sky and grass. We can measure a prior distribution or fit a gaussian distribution to the data (likelihood). 
 With the Gaussian likelihood we can evaluate the likelihood and compute the probability.
 
 ###### Bayes’ Risk

@@ -21,7 +21,7 @@ At the expense of **Fourier** transforms, and inverse Fourier transform, convolu
 A general implementation of convolution, would have a runtime of $O(m^2 \times n^2)$.
 Convolution in a Fast Fourier Transform space:
 - Cost of FFT/IFFT for image: $O(n^2\log n)$.
-- Cost of FFT/IFFT for image: $O(m^2\log m)$.
+- Cost of FFT/IFFT for filter: $O(m^2\log m)$.
 - Cost of convolution: $O(n^2)$. ← ==Not a function of filter size anymore!==
 
 ### Low-pass / High-pass Filtering

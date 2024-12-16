@@ -33,9 +33,23 @@
 
 
 Today
-- [ ] CPEN 411 Last two lectures
-	- [ ] Notes (Might need to re-listen to Load Store Queue)
+- [x] CPEN 411 Last two lectures ✅ 2024-12-10
+	- [x] Notes (Might need to re-listen to Load Store Queue) ✅ 2024-12-10
+	- [x] Quizzes left ✅ 2024-12-10
+	- [ ] Midterm Recap
+	- [ ] P-set
 - [ ] CPSC 425 Last two lectures (+ notes at the same time)
-- [ ] CPEN 411 Assignment
-- [ ] PHYS 200 (After everything is done above)
-- [ ] Tutor Prep
+- [x] CPEN 411 Assignment ✅ 2024-12-10
+- [ ] PHYS 200 
+	- [x] Online Text ✅ 2024-12-10
+	- [x] Practice Final ✅ 2024-12-10
+	- [x] Midterm 2 Recap (with answers on piazza) ✅ 2024-12-10
+- [x] Tutor Prep ✅ 2024-12-10
+
+
+Today
+- [ ] **CPSC 425**
+	- [ ] Lectures (from start)
+	- [ ] Quizzes (from start)
+	- [ ] Practice Problems (from start)
+	- [ ] Midterm Recap

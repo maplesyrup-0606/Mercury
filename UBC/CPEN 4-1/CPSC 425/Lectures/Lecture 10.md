@@ -59,7 +59,7 @@ Why would we want to synthesize texture?
 **Objective**: Generate new examples of a texture. We take a “data-driven” approach.
 **Idea**:
 - Draw samples directly from the actual texture.
-- Can account for more type of structure.
+- Can account for more types of structures.
 - Very simple to implement.
 - Success depends on choosing a correct “distance”.
 

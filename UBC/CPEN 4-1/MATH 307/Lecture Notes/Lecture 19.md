@@ -234,4 +234,4 @@ $$\therefore \lambda \lvert \lvert v \rvert  \rvert ^2= \bar{\lambda}\lvert \lve
 	→ $\det(A) = \det(PDP^-1)=\det(P)\det(A)\det(P^{-1})=\det(D)$.
 	
 - $A^k=PD^kP^{-1}$.
-#### Next Lecture [[Lecture 20]]
+#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 20]]

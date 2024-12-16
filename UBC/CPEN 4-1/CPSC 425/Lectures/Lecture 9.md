@@ -160,7 +160,7 @@ But how do quantize the corners, how can we set the threshold to determine a cor
 The simplest form is $min(\lambda_{1},\lambda_{2})$.
 
 ![[Screenshot 2024-10-18 at 3.02.27 PM.png]]
-But then this has to be done compute the eigen values for every single image and it is not efficient.
+But then this has to be done by computing the eigen values for every single image and it is not efficient.
 
 Thus, we have the alternative function,
 $$\lambda_{1}\lambda_{2}-\mathcal{k}(\lambda_{1}+\lambda_{2})^2$$

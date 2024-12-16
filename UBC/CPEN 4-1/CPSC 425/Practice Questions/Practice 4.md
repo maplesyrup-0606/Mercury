@@ -4,7 +4,6 @@
 **True**
 
 (B) The “spots” and (oriented) “bars” approach to texture representation described in Forsyth and Ponce is motivated, in part, by properties of human vision.
-
 **True**
 
 (C) The Laplacian pyramid provides no explicit representation of orientation. But, if we process each layer of the Laplacian pyramid further with a set of oriented filters then we can represent energy at distinct scales and orientations as an “oriented pyramid.”

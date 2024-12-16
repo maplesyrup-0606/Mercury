@@ -53,7 +53,7 @@ $$f(x)=\text{max}(x,0)$$
 
 #### Neural Network
 Connect a bunch of neurons together - a collection of connected neurons.
-All neurons share the same connectivity → yet have different weights and bias associated.
+All neurons share the same connectivity (for FC) → yet have different weights and bias associated.
 ![[Screenshot 2024-12-01 at 12.58.58 AM.png]]
 
 ![[Screenshot 2024-12-01 at 12.59.14 AM.png]]
@@ -75,13 +75,13 @@ A neural network,
 
 ![[Screenshot 2024-12-01 at 1.08.49 AM.png]]
 So in this case, it makes a prediction of $\mathbf{y}\in \mathbb{R}^2$ with an input $\mathbf{x}\in \mathbb{R}^3$ thus we can simplify
-$$\hat{\mathbf{y}}=f(\mathbf{x},\mathbf{W_{1}},\mathbf{W}_{2},\mathbf{b}_{1},\mathbf{b}_{2})=\sigma(\mathbf{W}_{2}^{(2\times 4)}\sigma(\mathbf{W}_{1}^{(4 \times 3)}\mathbf{x}+\mathbf{b}_{1}^{(4)})+\mathbf{b}_{2}^{(4)})$$
+$$\hat{\mathbf{y}}=f(\mathbf{x},\mathbf{W_{1}},\mathbf{W}_{2},\mathbf{b}_{1},\mathbf{b}_{2})=\sigma(\mathbf{W}_{2}^{(2\times 4)}\sigma(\mathbf{W}_{1}^{(4 \times 3)}\mathbf{x}+\mathbf{b}_{1}^{(4)})+\mathbf{b}_{2}^{(2)})$$
 
 ###### Why can’t we have linear activation functions?
 In the example above, say that $\sigma$ is the identity. Then,
 $$\sigma(\mathbf{W}_{2}^{(2\times 4)}\sigma(\mathbf{W}_{1}^{(4 \times 3)}\mathbf{x}+\mathbf{b}_{1}^{(4)})+\mathbf{b}_{2}^{(4)})=\mathbf{W}_{2}^{(2\times 4)}(\mathbf{W}_{1}^{(4 \times 
-3)}\mathbf{x}+\mathbf{b}_{1}^{(4)})+\mathbf{b}_{2}^{(4)}$$
-$$=\mathbf{W}_{2}^{(2\times 4)}\mathbf{W}_{1}^{(4 \times 3)}\mathbf{x}+\mathbf{W}_{2}^{(2\times 4)}\mathbf{b}_{1}^{(4)}+\mathbf{b}_{2}^{(4)}$$
+3)}\mathbf{x}+\mathbf{b}_{1}^{(4)})+\mathbf{b}_{2}^{(2)}$$
+$$=\mathbf{W}_{2}^{(2\times 4)}\mathbf{W}_{1}^{(4 \times 3)}\mathbf{x}+\mathbf{W}_{2}^{(2\times 4)}\mathbf{b}_{1}^{(4)}+\mathbf{b}_{2}^{(2)}$$
 $$=\mathbf{W}^*\mathbf{x}+\mathbf{b}^*$$
 the only class of functions that we can represent becomes linear functions.
 → Lot of functions in the world wouldn’t be linear. → *We don’t want to be restricted to linear functions despite of depth of the neural network.*
@@ -114,7 +114,7 @@ And since for linear functions, which are not bounded, this condition would not 
 
 ##### In the case of ReLU
 - With ReLU activation, we effectively get a linear spline approximation to any function. 
-- Optimization of neural network parameters = finding slops and transitions of linear pieces.
+- Optimization of neural network parameters = finding slopes and transitions of linear pieces.
 - The quality of approximation on the number of linear segments.
 
 We model functions to be piece-wise linear (the positive component) → which approximates the non-linear function.
@@ -153,7 +153,7 @@ With a given output, we want to change it to a probability distribution,
 ![[Screenshot 2024-12-01 at 1.44.53 AM.png]]
 
 - **Input and Output** layers (size and form) are dictated by the problem, intermediate layers have few constraints and can be *anything*.
-	- Intermediate is the hyper parameter!
+	- Number of neurons in intermediate layer is the hyper parameter!
 
 ![[Screenshot 2024-12-01 at 1.47.33 AM.png]]
 Inference (output is made to proper distribution):
@@ -187,11 +187,11 @@ We want the probability go to 1, so the loss would go to 0 for a good approximat
 Now we need to minimize the loss → via the gradient of loss with respect to the network parameters (weights, biases)
 #### Gradient Descent
 ![[Screenshot 2024-12-01 at 1.57.28 AM.png]]
+Start from random value of $\mathbf{W}_{0},\mathbf{b}_{0}$.
 
 For $k=0$ to max number of iterations,
-1. Start from random value of $\mathbf{W}_{0},\mathbf{b}_{0}$
-2. Compute the gradient of the loss with respect to previous parameters: $$\nabla \mathcal{L}(\mathbf{W},\mathbf{b})|_{\mathbf{W}=\mathbf{W}_{k},\mathbf{b}=\mathbf{b}_{k}}$$
-3. Re-estimate the parameters $$\mathbf{W}_{k+1}=\mathbf{W}_{k}-\lambda \frac{\partial \mathcal{L}(\mathbf{W},\mathbf{b})}{\mathbf{\partial W}}|_{\mathbf{W}=\mathbf{W}_{k},\mathbf{b}=\mathbf{b}_{k}}$$$$\mathbf{b}_{k+1}=\mathbf{b}_{k}-\lambda \frac{\partial \mathcal{L}(\mathbf{W},\mathbf{b})}{\partial \mathbf{b}}|_{\mathbf{W}=\mathbf{W}_{k},\mathbf{b}=\mathbf{b}_{k}}$$
+1. Compute the gradient of the loss with respect to previous parameters: $$\nabla \mathcal{L}(\mathbf{W},\mathbf{b})|_{\mathbf{W}=\mathbf{W}_{k},\mathbf{b}=\mathbf{b}_{k}}$$
+2. Re-estimate the parameters $$\mathbf{W}_{k+1}=\mathbf{W}_{k}-\lambda \frac{\partial \mathcal{L}(\mathbf{W},\mathbf{b})}{\mathbf{\partial W}}|_{\mathbf{W}=\mathbf{W}_{k},\mathbf{b}=\mathbf{b}_{k}}$$$$\mathbf{b}_{k+1}=\mathbf{b}_{k}-\lambda \frac{\partial \mathcal{L}(\mathbf{W},\mathbf{b})}{\partial \mathbf{b}}|_{\mathbf{W}=\mathbf{W}_{k},\mathbf{b}=\mathbf{b}_{k}}$$
 $\lambda$ is the learning-rate,
 - Too big: might not converge.
 - Too small: takes a long time.

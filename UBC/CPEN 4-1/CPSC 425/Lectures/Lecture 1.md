@@ -69,7 +69,7 @@ With just a bare-sensor all the points will contribute to all the sensors, hence
 
 #### Pinhole Camera
 Since we don’t want the above situation to happen, we use a thing called a **pinhole** so that 
-all rays but on is blocked and projected on the sensor.
+all rays but one is blocked and projected on the sensor.
 
 ![[Screenshot 2024-10-14 at 9.15.56 PM.png]]
 Hence, each scene point can only contribute to one sensor pixel.
@@ -109,7 +109,7 @@ In terms of the pinhole camera, a.k.a a small aperture,
 ##### Perspective Effects
 We know that **far objects** appear **smaller** than close ones.
 ![[Screenshot 2024-10-14 at 9.25.23 PM.png]]
-And relative size of objects that are equally far from the camera is preserved. (If A was half of B, then a would be have of b from the figure)
+And relative size of objects that are equally far from the camera is preserved. (If A was half of B, then a would be half of b from the figure)
 
 Size is inversely proportioned to distance.
 
@@ -220,7 +220,7 @@ Pinhole cameras are **slow**.
 ==That’s why we need lens, so that it can still capture more photons and make them still project to the focus point.==
 
 #### Reason for Lenses
-A real camera must have as finite aperture:
+A real camera must have a finite aperture:
 - **That captures more light.**
 - **While preserving as much of the pinhole abstraction as possible.**
 

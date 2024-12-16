@@ -97,3 +97,4 @@ where $f(\mathbf{I})$ is the score for class before soft-maxing (neuron value) a
 4. Make a small update to an image.
 5. Go back to step 2 and repeat.
 
+#### Next Lecture [[UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 20|Lecture 20]]

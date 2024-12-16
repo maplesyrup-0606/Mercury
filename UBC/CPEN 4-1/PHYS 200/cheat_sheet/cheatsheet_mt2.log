@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  13 NOV 2024 19:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  11 DEC 2024 18:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -616,62 +616,62 @@ Overfull \hbox (2.09277pt too wide) in paragraph at lines 89--90
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 101--114
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 101--115
 [][]
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 101--114
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 101--115
 [] 
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 124--125
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 125--126
 [][] 
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 149--150
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 142--143
 [][] 
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 165--205
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 158--198
 [][]
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 165--205
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 158--198
 []
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 165--205
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 158--198
 []
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 165--205
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 158--198
 [] 
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 218--219
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 211--212
 [][] 
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 233--234
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 226--227
 [][] 
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 246--247
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 242--243
 [][] 
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 264--265
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 260--261
 [][] 
  []
 
@@ -681,29 +681,149 @@ Overfull \hbox (2.09277pt too wide) in paragraph at lines 264--265
 <wavepacketimg.png, id=22, 507.8975pt x 361.35pt>
 File: wavepacketimg.png Graphic file (type png)
 <use wavepacketimg.png>
-Package pdftex.def Info: wavepacketimg.png  used on input line 272.
+Package pdftex.def Info: wavepacketimg.png  used on input line 268.
 (pdftex.def)             Requested size: 231.98833pt x 165.04858pt.
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 283--284
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 279--280
 [][] 
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 307--308
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 303--304
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--313
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
 
 
-Overfull \hbox (2.09277pt too wide) in paragraph at lines 324--325
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 320--321
 [][] 
  []
 
-[2 <./wavepacketimg.png>] (./cheatsheet_mt2.aux)
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 336--337
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--344
+
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 351--352
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--359
+
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 367--368
+[][] 
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 387--388
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--398
+
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 405--406
+[][] 
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 424--425
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--437
+
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 446--447
+[][] 
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 470--471
+[][] 
+ []
+
+[2 <./wavepacketimg.png>]
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 487--488
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--494
+
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 501--502
+[][] 
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 517--518
+[][] 
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 532--533
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--538
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 542--545
+
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 551--552
+[][] 
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 567--568
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--574
+
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 581--582
+[][] 
+ []
+
+
+Overfull \hbox (2.09277pt too wide) in paragraph at lines 600--601
+[][] 
+ []
+
+[3] (./cheatsheet_mt2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -717,11 +837,11 @@ Here is how much of TeX's memory you used:
  561502 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,107p,436b,828s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on cheatsheet_mt2.pdf (2 pages, 256519 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on cheatsheet_mt2.pdf (3 pages, 297379 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 95 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

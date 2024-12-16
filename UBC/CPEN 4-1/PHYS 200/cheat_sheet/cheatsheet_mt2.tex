@@ -36,7 +36,7 @@
 %\colorbox[HTML]{e4e4e4}{\makebox[\textwidth-2\fboxsep][l]{texto}
 \begin{document}
 
-\begin{center}{\huge{\textbf{PHYS 200 Midterm 2 Cheat Sheet}}}\\
+\begin{center}{\huge{\textbf{PHYS 200 Final Cheat Sheet}}}\\
 \end{center}
 \begin{multicols*}{3}
 
@@ -63,7 +63,7 @@
 \node [mybox] (box){%
     \begin{minipage}{0.3\textwidth}
       1. massless\\
-      2. no rest frame\\
+      2. no rest frame $\rightarrow$  if had one, $E=0,p=0$ which is nothing.\\
       3. always move at $c$ (in all frames)\\
       4. $E=pc=hc/\lambda$, definite energy and momentum, related to \textbf{wavelength}
     \end{minipage}
@@ -105,7 +105,8 @@
     \begin{minipage}{0.3\textwidth}
       $$\lambda' - \lambda = \frac{h}{m_e c}(1-\cos{\theta})$$
       1. $m$ is dependent on the object we are striking the photon to.\\
-      2. Don't forget unit conversions.
+      2. Don't forget unit conversions. \\ 
+      3. $hc = 1240 \text{nm}\cdot \text{eV}$
     \end{minipage}
 };
 %------------ Variation of Parameters Header ---------------------
@@ -123,15 +124,7 @@
 \node[fancytitle, right=10pt] at (box.north west) {Classical view};
 \end{tikzpicture}
 
-%------------ Series Solution Content ---------------
-\begin{tikzpicture}
-\node [mybox] (box){%
-    \begin{minipage}{0.3\textwidth}
-        \end{minipage}
-};
-%------------ Series Solution Header ---------------------
-\node[fancytitle, right=10pt] at (box.north west) {Classical view continued};
-\end{tikzpicture}
+
 
 %------------ Systems of ODE Content ---------------
 \begin{tikzpicture}
@@ -238,11 +231,14 @@
       1. $\ket{\theta} = \cos{\theta} \ket{0} + \sin{\theta} \ket{90}$ \\ 
       2. probability transmission : $\cos^2{\theta}$ \\ 
       3. probability absorbed : $\sin^2{\theta}$ \\ 
-      4. In case of $\ket{\phi} = a \ket{x} + b \ket{y}$, when getting probability need to normalize $\vert a\vert ^ 2+ \vert b \vert ^2 = 1$
+      4. In case of $\ket{\phi} = a \ket{x} + b \ket{y}$, when getting probability need to normalize $\vert a\vert ^ 2+ \vert b \vert ^2 = 1$ \\ 
+      5. Energy is still maintained.
+      
     \end{minipage}
+    
 };
 %------------ Vector Space Header ---------------------
-\node[fancytitle, right=10pt] at (box.north west) {Polarisation};
+\node[fancytitle, right=10pt] at (box.north west) {Polarization};
 \end{tikzpicture}
 
 \begin{tikzpicture}
@@ -260,7 +256,7 @@
 };
 
 %------------ Vector Space Header ---------------------
-\node[fancytitle, right=10pt] at (box.north west) {De bregolie wave length};
+\node[fancytitle, right=10pt] at (box.north west) {De broglie wave length / others};
 \end{tikzpicture}
 
 \pagebreak
@@ -274,7 +270,7 @@
       2. The narrower the wavepacket in position, wider range of frequencies, wider momentum wavefunction \\ 
       3. The narrower the wavepacket in momentum, the wider position wavefunction. \\ 
       4. $\langle p \rangle = \int_{-\infty}^{\infty} p \vert \tilde{\Psi}(p) \vert^2 dp$ \\ 
-      5. $ (\Delta p)^2 = \int_{-\infty}^{\infty} (p - \langle p \rangle )^2 \vert \tilde{\Psi}(x) \vert^2 dp$
+      5. $ (\Delta p)^2 = \int_{-\infty}^{\infty} (p - \langle p \rangle )^2 \vert \tilde{\Psi}(x) \vert^2 dp$ (Same for $x$)
     \end{minipage}
 };
 
@@ -322,6 +318,287 @@
 
 
 \end{tikzpicture}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+    1. Event : something that happens at some place ($x$) and some time ($t$) \\
+    2. Relativity of Simultaneity: Events in another frame won't be simulatenous. \\ 
+    3. Lengths perpendicular to motion do not change in length. \\ 
+    4. All observers have to agree to some event, whether happening at the same time doesn't matter.
+    \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Basics};
+
+
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+    $$T' = \frac{1}{\sqrt{1-(v/c)^2}}T = \gamma T$$
+   Where $T$ is proper time, moving clock moves slower. \\ 
+   Clock is synchronized from another frame. \\  
+    \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Time Dilation};
+
+
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+      $$L' = \frac{1}{\gamma}L$$
+      $L$ is proper length, as measured by observer in rest-frame of object. \\ 
+
+    \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Length Contraction};
+
+
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+    Gallelian transformations fail at high speeds. \\ 
+    $t' = \gamma (t- \frac{vx}{c^2}),\hspace{.2in}x'=\gamma (x - vt)$ \\ 
+    $t = \gamma (t' + \frac{vx'}{c^2}),\hspace{.2in} x=\gamma (x'+vt')$ \\ ``
+    Be careful of $v$ sign!!! Extra terms are for clock synchronization. \\ 
+    Origins have to agree at the same place (think of Thanos!). \\ 
+    $u'_x = \frac{u_x - V}{1 - u_xV/c^2},u_x = \frac{u'_x + V}{1 + u'_xV/c^2}$ \\ 
+    $u'_y = \frac{u_y}{\gamma_v(1-u_xv/c^2)},u'_z= \frac{u_z}{\gamma_v(1-u_xv/c^2)}$
+    \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Lorentz Transformations};
+
+
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+    $$(\Delta s)^2= -(c\Delta t)^2 + (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2$$
+    This is lorentz invariant, $(\Delta s)^2 = (\Delta s')^2$ \\ 
+    For two given events, any two inertial observers agree on $s^2$. \\
+    Proper time: time measure between two events happening at same place ($\Delta x = 0$).  \\ 
+    Proper length: length measure between two events happening at same time ($\Delta t = 0$). \\ 
+    \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Space Time Interval};
+
+
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+    space-like separated: $(\Delta s)^2 = -(c\Delta t)^2 + (\Delta x)^2 > 0$ \\ 
+    time-like separated: $(\Delta s)^2 = -(c\Delta t)^2 + (\Delta x)^2 < 0$ \\ 
+    null-like separated: $(\Delta s)^2 = -(c\Delta t)^2 + (\Delta x)^2 = 0$ \\ 
+    An event, would be a coordinate in the diagram (axes change per frame). \\ 
+    In time-like separated, some events can happen at same place. \\ 
+    In space-like separated, some evetns can happen at same time (or even reverse time).
+  \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Space time diagram, Causality};
+
+
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+    We know that $\frac{\lambda}{p}$ and $f = \frac{E}{h}$ hence,
+    $$e^{i(2\pi x/\lambda - 2\pi ft)} = e^{i(px - Et)/\hbar}$$
+    $v_{\text{wave.propagation}} = \lambda f = E/p = (\frac{1}{2}mv^2)/(mv) = \frac{1}{2} $ \\ 
+    $v_{wave packet} = \frac{df}{d(\lambda^{-1})} = \frac{d(E/h)}{d(p/h)} = dE/dp = \frac{d}{dp}(\frac{p^2}{2m}) = \frac{p}{m} = v$ \\ 
+    dispersion : shorter wavelengths bunch at the the front, longer ones lag behind. \\
+    Schrodinger Equation generates time evolution, 
+    $$\frac{\partial \psi}{\partial t} = \frac{i\hbar}{2m}\frac{\partial^2 \psi}{\partial x^2}$$
+    i.e. \\ 
+    $$\psi(t+ \Delta t) \approx \psi(t) + \Delta t \frac{\partial \psi}{\partial t} = \psi(t) + \frac{i\hbar}{2m}\frac{\partial^2 \psi}{\partial x^2}\Delta t$$ 
+    If we know $\psi$ for all $x$ at some $t$, we can solve for all $t$. 
+    \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Schrodinger Equation};
+
+
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+      For a \textbf{free particle}, there is no force, momentum \textbf{does not change}. \\ 
+      So if we measure position across some time, it is different (momentum!!) \\ 
+      But if we measure momentum across some time, it is same! \\ 
+      At the same time, energy is the same (if potential is same). \\ 
+      For a free particle, S.E. is,
+      $$i\hbar \frac{\partial}{\partial t} \psi(x,t) = -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}\psi(x,t)$$
+      If we have potential, then, 
+      $$E= \frac{p^2}{2m}+V(x)$$
+      and,
+      $$i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial ^2 \psi}{\partial x^2}+V(x)\psi$$
+      Classically, an electron would bounce between bound states, but in QM the electron still would exist outside the bound! \\ 
+      Now with potential, the width of the wavepacket wouldn't always increase. \\ 
+      \textbf{Boundaries have to be continuous and approach 0 for $\pm \infty$}
+    \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {SE cont'd};
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+    Let's consider the SE with well-defined energy,
+    $$i\hbar \frac{\partial}{\partial t}e^{-iEt/\hbar} = Ee^{-iEt/\hbar}$$
+    Then,
+    $$i\hbar \frac{\partial}{\partial t}(e^{-iEt/\hbar}\psi_E(x)=Ee^{-iEt/\hbar}\psi_E(x))$$
+    This is a stationary state: PDF doesn't change with time.
+  \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {SE will well defined energy};
+
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+    Energy is also a classical observable, so there must exist states with well-defined energy. \\ 
+    A.k.a \textbf{Energy Eigenstates} \\ 
+
+    \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Energy Eigenstates};
+
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+      $$[-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)]e^{-iEt/\hbar \psi_E (x)} = Ee^{-iEt/\hbar}$$
+      $$= Ee^{-iEt/\hbar}\psi_E(x)$$
+      Hence,
+      $$-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}\psi_E(x)+V(x)\psi_E(x) = E\psi_E (x)$$
+      \textbf{Solutions will only exist for discrete energies $\rightarrow$ energy spectrum. Solutions are called energy eigenstates.}
+    \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Time independent SE};
+
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+      $$\psi_n = \sin(\frac{n\pi x}{L})$$
+      $$E_n = \frac{\hbar^2}{2m}(\frac{n\pi}{L})^2 = \frac{h^2n^2}{8mL^2}$$
+
+    \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Infinite Square Well};
+
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+    $V=0$ inside well, $V=V_0$ outside well. \\ 
+    $$\frac{\partial^2 \psi}{\partial x^2}= \frac{2m}{\hbar^2}[V(x) - E]\psi$$
+    If $E>V$ (inside well),
+    $$\psi(x) = C \sin(k x) + D\cos(k x)$$
+    If $E < V$ (inside barrier), 
+    $$\psi(x) = Ae^{-kx}+Be^{kx}$$
+    Depending on sign of $x$ either $A$ or $B$ can go to zero. \\ 
+    Other constants can be determined by continuity of 0th, 1st derivative. \\ 
+  \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Finite Square Well};
+
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+    Outside the well we get a function $e^{\pm \kappa x}$
+    In anther way,
+    $$e^{-x/ \eta} \rightarrow \eta = \frac{1}{\kappa} = \frac{\hbar}{\sqrt{2m(V-E)}}$$
+    So now we have a finite chance of finding an electron outside of the well. \\ 
+    Lowest energy is still not zero - electron always has some kinetic energy.
+  \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Barrier Penetration};
+
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+    If the barrier isn't infinite width (would also work with infinite width), the wave would partially reflect and transmit at the same time. \\ 
+    If we recall that $e^{-x/\eta}$ the bigger the difference between the potentail well height and particle energy, the less the wavefunction extends outside well. \\ 
+    $$P_{\text{transmit}}=\lvert \Psi \rvert^2=(e^{-w/\eta})^2 = e^{-2w/\eta}$$
+  \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Quantum Tunneling};
+
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth} 
+   time independent SE,
+   $$-\frac{\hbar}{2m}(\partial_x^2+\partial_y^2+\partial_z^2)\psi_E - \frac{1}{4\pi\epsilon_0}\frac{e^2}{\lvert \vec{r} \rvert}\psi_E = E\psi_E $$ 
+   $$E_n = - \frac{13.6\text{eV}}{n^2}$$
+   An Hydrogen Atom is stable!, \\ 
+   1. The electron isn't orbiting the nucleus, has a distributeed PDF centered on nucleus. \\ 
+   2. Existence of lowest energy state implies stability (no lower state to go to). \\ 
+   3. If atom radiates or absorbs photon, the electron jumps from one energy level to another (only certain frequencies are permitted (QM!)). 
+   $$\lambda' = \gamma (1+ \frac{v}{c})\lambda$$
+  \end{minipage}
+};
+
+%------------ Vector Space Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Hydrogen Atom};
+
+\end{tikzpicture}
+
 
 
 

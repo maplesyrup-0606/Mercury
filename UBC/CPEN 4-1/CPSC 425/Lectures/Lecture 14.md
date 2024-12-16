@@ -23,17 +23,17 @@ Binoculars enhance binocular depth perception in two distinct ways:
 - Compute depth and surfaces.
 
 #### 2-view Geometry
-How de find dense correspondences between two views?
+How do we find dense correspondences between two views?
 ![[Screenshot 2024-11-28 at 4.13.54 PM.png]]
 
 In the planar case: the mapping can be obtained by homography
 ![[Screenshot 2024-11-28 at 4.15.45 PM.png]]
-And we can get to dense correspondences since we know ho to warp every point.
+And we can get to dense correspondences since we know how to warp every point.
 ==It only works when the world is planar, which is generally not the case.==
 
 Non-planar case:
 ![[Screenshot 2024-11-28 at 4.16.41 PM.png]]
-Under perspective projection, lines are still lines. The only correspondence that would be consistent would a line in the second view.
+Under perspective projection, lines are still lines. The only correspondence that would be consistent would be a line in the second view.
 ![[Screenshot 2024-11-28 at 4.17.32 PM.png]]
 And that line is called the epipolar line.
 
@@ -116,12 +116,14 @@ For each epipolar line
 ```
 Not the best..
 
+#### Block Matching
+
 Define the window function by,
 $$\mathbf{W}_{m}(x,y)=\left\{ (u,v)\vert x-\frac{m}{2} \leq u \leq x + \frac{m}{2}, y-\frac{m}{2}\leq v\leq y+\frac{m}{2} \right\}$$
 
 SSD measures intensity difference as a function of disparity:
 $$C_{R}(x,y,d)=\sum_{(u,v) \in \mathbf{W}_{m}(x,y)}[I_{L}(u,v)-I_{R}(u -d,v-d)]^2$$
-
+![[Screenshot 2024-12-12 at 4.26.06 PM.png]]
 
 #### Image Normalization
 Average Pixel:

@@ -112,7 +112,7 @@ The optimal is at about 2 or 3 (3 or 4 laplacian levels).
 ###### Key-point Localization
 After key-points are detected, we remove those that have ==low contrast== or are ==poorly localized== along an edge (not strong blobs).
 
-Blobs respond to edges AND blobby regions (and since edges are not **locally unique** we do really don’t want them)
+Blobs respond to edges AND blobby regions (and since edges are not **locally unique** we really don’t want them)
 
 We distinguish them via **Covariance Matrix (+ Eigen Values)**, we combine blobs with Harris and leave those that have **high corner-ness!!!**.
 
@@ -206,3 +206,4 @@ We don’t compute histogram but statistically measure → we get smaller dimens
 Any combination of the two categories would work!
 
 
+#### Next Lecture [[UBC/CPEN 4-1/CPSC 425/Lectures/Lecture 12|Lecture 12]]
