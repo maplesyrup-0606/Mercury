@@ -176,7 +176,7 @@ Similarly we have to downgrade `P3` to S state and update the memory with the ap
 But… wasn’t `P1` filled with a different block in `B3`? Yes, so we have to evict it. If we look closer at `B3` the value is in M state, so when evicting the memory also has to be updated.
 
 ```
-P1: B3 [S, 00 | 28]
+P1: B3 [S, 00 | 28] // now 118
 P3: B3 [S, 00 | 28]
 Memory: tag.118 [00 | 40] // evict comes first!
 Memory: tag.138 [00 | 28]

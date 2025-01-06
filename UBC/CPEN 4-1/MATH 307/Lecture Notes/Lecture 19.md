@@ -150,7 +150,7 @@ For symmetric and real $A$, the eigenvalues are real.
 #### Theorem (Spectral)
 Let $A \in \mathbb{R}^{n\times n}$ be symmetric and real. Then there exists a real orthogonal matrix $P \in \mathbb{R}^{n\times n}$ and real diagonal matrix $D \in \mathbb{R}^{n\times n}$ such that $A=PDP^T$.
 
-1. Eigenvalues are real, they for the diagonal entries of $D$. $$D=\begin{bmatrix}
+1. Eigenvalues are real, they form the diagonal entries of $D$. $$D=\begin{bmatrix}
 \lambda_{1} \\
  & \lambda_{2}  \\
  &  & \ddots \\
@@ -231,7 +231,10 @@ $$\therefore \lambda \lvert \lvert v \rvert  \rvert ^2= \bar{\lambda}\lvert \lve
 	→ If 0 is an eigenvalue, $Av=0v =0,v\neq {0}$. Then, $A$ is not full rank and is not invertible.
 	
 - Determinant of $A$ = product of eigenvalues.
-	→ $\det(A) = \det(PDP^-1)=\det(P)\det(A)\det(P^{-1})=\det(D)$.
-	
+	→ $\det(A) = \det(PDP^{-1})=\det(P)\det(A)\det(P^{-1})=\det(D)$.
+	$$\det(A-\lambda I) = (-1)^n(\lambda-\lambda_{1}) \times \cdots \times (\lambda-\lambda_{n}) = (\lambda_{1}-\lambda) \times \cdots \times (\lambda_{n} - \lambda)$$
+	$$\det(A) = \lambda_{1} \times \cdots \times \lambda_{n}$$
 - $A^k=PD^kP^{-1}$.
-#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 20]]
+#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 20|Lecture 20]]
+
+

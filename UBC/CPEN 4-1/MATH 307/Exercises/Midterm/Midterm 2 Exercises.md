@@ -246,15 +246,14 @@ Then the columns are not orthogonal, rather the rows are.
 
 - If $AA^T$ is a diagonal matrix, then the rows of $A$ are orthogonal.
 $$A=\begin{bmatrix}
-- & a_{1} & - \\
+ & a_{1} &  \\
  & \vdots &  \\
-- & a_{n} & -
+ & a_{n} & 
 \end{bmatrix}$$
-
 $$AA^T=\begin{bmatrix}
-- & a_{1} & - \\
+ & a_{1} &  \\
  & \vdots &  \\
-- & a_{n} & -
+ & a_{n} & 
 \end{bmatrix}\begin{bmatrix}
 \vert &  & \vert \\
 a_{1} & \cdots & a_{n} \\

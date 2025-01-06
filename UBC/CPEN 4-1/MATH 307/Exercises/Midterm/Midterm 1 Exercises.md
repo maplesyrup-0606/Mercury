@@ -273,7 +273,7 @@ Contradicts with the fact that only the zero vector can have a norm of 0.
 ### 12.
 The function
 $$\lvert \lvert x \rvert  \rvert _{p}=\left( \sum_{k=1}^n \lvert x_{k} \rvert^p \right)^{\frac{1}{p}}$$
-does not satisfy the triangle inequality if $0<p<1$. Prove this for $n=2$ and $p=0.5$. In other words, fund vectors $\mathbf{x},\mathbf{y}\in \mathbb{R}^2$ such that
+does not satisfy the triangle inequality if $0<p<1$. Prove this for $n=2$ and $p=0.5$. In other words, find vectors $\mathbf{x},\mathbf{y}\in \mathbb{R}^2$ such that
 $$\lvert \lvert x+y\rvert  \rvert_{0.5}>\lvert \lvert x \rvert  \rvert _{0.5}+\lvert \lvert y \rvert  \rvert _{0.5} $$
 %% $$\mathbf{x}=\begin{bmatrix}
 0  \\

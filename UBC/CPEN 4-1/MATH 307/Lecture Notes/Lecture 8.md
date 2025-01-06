@@ -21,7 +21,7 @@ $$ \mathbf{v} =\begin{bmatrix}
 -1 \\
 0
 \end{bmatrix}$$
-We want to find a solution exists to the linear solution,
+We want to find if a solution exists to the linear solution,
 $$\begin{bmatrix}
 1 & -1 & 0 \\
 1 & 0 & 2 \\
@@ -43,7 +43,7 @@ $$\begin{bmatrix}
 0 & 0 & 0 & |  & 0
 \end{bmatrix}$$
 
-We have the rank of the augmented solution equal to the number of unknowns, giving a unique solution. As a result, we know that $\mathbf{v}=\text{span}\{\mathbf{u}_{1},\mathbf{u}_{2},\mathbf{u}_{3}\}$.
+We have the rank of the augmented solution equal to the number of unknowns, giving a unique solution. As a result, we know that $\mathbf{v} \in \text{span}\{\mathbf{u}_{1},\mathbf{u}_{2},\mathbf{u}_{3}\}$.
 
 ###### Exercise
 With the same $\mathbf{u}_{1},\mathbf{u}_{2},\mathbf{u}_{3}$ determine if $\mathbf{w}=\begin{bmatrix}3 \\ 4 \\ 0 \\ 2 \end{bmatrix}$ is in the same span consisting of the three vectors.

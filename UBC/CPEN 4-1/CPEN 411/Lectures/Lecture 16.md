@@ -51,7 +51,7 @@ But before deciding to execute a load, we must check for dependencies vs. **the 
 #### Load bypassing so far
 - Store executed in a store buffer.
 - If load address matches in the store buffer, stall.
-- If stalling always necessary?
+- Is stalling always necessary?
 - What if store value is already available?
 
 ```

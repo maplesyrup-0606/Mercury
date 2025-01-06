@@ -61,18 +61,18 @@ Also, if $N$ is even, then $\overline{f_{\frac{N}{2}}}=f_{N-\frac{N}{2}}=f_{\fra
 
 Moreover,
 $$f_{\frac{N}{2}}=\begin{bmatrix}
-\omega_{\frac{N}{2}}^0 \\
-\omega_{\frac{N}{2}}^{\frac{N}{2}} \\
-\omega_{\frac{N}{2}}^{\frac{N}{2} \times 2} \\
+\omega_{N}^0 \\
+\omega_{N}^{\frac{N}{2}} \\
+\omega_{N}^{\frac{N}{2} \times 2} \\
 \vdots \\
-\omega_{\frac{N}{2}}^{\frac{N}{2}\times(N-1)}
+\omega_{N}^{\frac{N}{2}\times(N-1)}
 \end{bmatrix}
 =\begin{bmatrix}
 1 \\
+e^{\pi i} \\
 e^{2\pi i} \\
-e^{4\pi i} \\
 \vdots \\
-e^{(N-1)2\pi i}
+e^{(N-1)\pi i}
 \end{bmatrix}=\begin{bmatrix}
 1 \\
 -1 \\
@@ -120,7 +120,7 @@ $DFT(x)$ is the vector of coefficients to $x$ with respect to the Fourier basis,
 $$\therefore DFT(x)=F_{N}x$$
 
 Also, note that we have
-$$F_{N}\overline{F_{N}}^T=I$$
+$$F_{N}\overline{F_{N}}^T=NI$$
 
 $$F_{N}\overline{F_{N}}^T=\begin{bmatrix}
 \overline{f_{0}}^T \\
@@ -186,20 +186,19 @@ $$y_{3}=\langle x,f_{3} \rangle=x^T\overline{f_{3}} =1\times 1 +2 \times i + 2 \
 
 
 #### Theorem
-Let us have $x \in \mathbb{R}^n$ and denote $y\in DFT(x) \in \mathbb{C}^n$. Then, we have that
+Let us have $x \in \mathbb{R}^n$ and denote $y= DFT(x) \in \mathbb{C}^n$. Then, we have that
 $$\overline{y[k]}=y[N-k]$$
 for $0 < k  < N$.
+
+[Proof]
+$$\overline{y[k]}=\overline{\langle x,f_{k} \rangle }=\overline{x^T\overline{f_{k}}}=\overline{x^Tf_{N-k}}=x^T\overline{f_{N-k}}=\langle x,f_{N-k} \rangle =y[N-k]$$
+
 
 ###### Terminology
 We use the notation $x[k]=x_{k}$ for a vector x.
 
 ###### Inverse Fourier Transform
 $$IDFT(y) = \frac{1}{N}\overline{F_{N}}^Ty$$
-
-[Proof]
-$$\overline{y[k]}=\overline{\langle x,f_{k} \rangle }=\overline{x^T\overline{f_{k}}}=\overline{x^Tf_{N-k}}=x^T\overline{f_{N-k}}=\langle x,f_{N-k} \rangle =y[N-k]$$
-
-
 #### Sinusoids
 Let $N$ be a positive integer and let
 $$\mathbf{n}=\begin{bmatrix}

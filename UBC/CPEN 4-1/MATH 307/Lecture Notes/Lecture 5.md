@@ -111,7 +111,7 @@ $$\lvert \lvert D \rvert  \rvert =\text{max}_{\lvert \lvert \mathbf{x} \rvert  \
 $$\leq\text{max}_{\lvert \lvert \mathbf{x} \rvert  \rvert =1}\sqrt{ (d_{\text{max}}x_{1})^2+\cdots+(d_{\text{max}}x_{n})^2 }$$
 $$=\text{max}_{\lvert \lvert \mathbf{x} \rvert  \rvert =1}d_{\text{max}}\sqrt{ (x_{1})^2+\cdots+(x_{n})^2 }$$
 $$=d_{\text{max}}$$
-$$\therefore D \leq d_{\text{max}}$$
+$$\therefore \lvert \lvert D \rvert  \rvert  \leq d_{\text{max}}$$
 
 Now let’s show the other way,
 $$\lvert \lvert D \rvert  \rvert = \text{max}_{\lvert \lvert x \rvert  \rvert =1}\lvert \lvert D\mathbf{x} \rvert  \rvert  $$

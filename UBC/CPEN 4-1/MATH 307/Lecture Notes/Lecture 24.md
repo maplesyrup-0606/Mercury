@@ -1,6 +1,6 @@
 Just to re-iterate (I know, it’s redundant.. don’t really care),
 #### Theorem
-Let $bx=A\cos(2\pi k\mathbf{t}+\varphi)$. Then, we have 
+Let $x=A\cos(2\pi k\mathbf{t}+\varphi)$. Then, we have 
 $$DFT(\mathbf{x})= \frac{AN}{2}e^{i\varphi}\mathbf{e}_{k}+ \frac{AN}{2}e^{-i\varphi}\mathbf{e}_{N-k}$$
 for $0 < k <N$, where $e^{i\varphi}=\cos(\varphi)+i\sin(\varphi)$ and $\mathbf{e}_{0},\cdots,\mathbf{e}_{N-1}$ are the standard basis vectors. In other words,
 $$DFT(\mathbf{x})=\begin{bmatrix}

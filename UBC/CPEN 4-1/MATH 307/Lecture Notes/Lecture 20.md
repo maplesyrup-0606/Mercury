@@ -232,7 +232,7 @@ Thus, $N(A)=\text{span}\left\{ q_{r+1},\cdots,q_{n} \right\}$.
 Similar to the second argument, the orthogonal complement of $N(A)$ would be $\text{span}\left\{ q_{r+1},\cdots,q_{n} \right\}^\perp=\text{span}\left\{ q_{1},\cdots,q_{r} \right\}$.
 
 - $\text{rank}(A)=r$
-$\text{dim}(A)=\text{rank}(R(A)) = \text{rank}(R(P\Sigma Q^T)) =\text{dim}(R(P))=\text{dim}(P)=r$.
+$\text{rank}(A)=\text{dim}(R(A))=\text{dim}(\text{span}\left\{ p_{1},\cdots,p_{r} \right\}) = r$.
 
 #### Theorem
 We have that $\lvert \lvert A \rvert \rvert=\sigma_{1}$, that is, the largest singular value. If $A$ is invertible, then $\lvert \lvert A^{-1} \rvert \rvert = \sigma_{n}^{-1}$ and $\text{cond}(A) = \frac{\sigma_{1}}{\sigma_{n}}$.

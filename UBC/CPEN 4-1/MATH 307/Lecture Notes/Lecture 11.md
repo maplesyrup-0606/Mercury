@@ -182,5 +182,6 @@ We note that elementary row operations do not change the linear independence of 
 
 Hence, $\text{rank}(A)=\text{rank}(A^T)$.
 
-#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 12]]
+#### Next Lecture [[UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 12|Lecture 12]]
+
 
