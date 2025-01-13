@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+% \usepackage[paperheight=16cm, paperwidth=12cm,% Set the height and width of the paper
+% includehead,
+% nomarginpar,% We don't want any margin paragraphs
+% textwidth=10cm,% Set \textwidth to 10cm
+% headheight=10mm,% Set \headheight to 10mm
+% ]{geometry}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xspace}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{graphicx}
+
+
+\makeatletter
+\DeclareRobustCommand\onedot{\futurelet\@let@token\@onedot}
+\def\@onedot{\ifx\@let@token.\else.\null\fi\xspace}
+\def\iid{\emph{i.i.d}\onedot} \def\IID{\emph{I.I.D}\onedot}
+\def\eg{\emph{e.g}\onedot} \def\Eg{\emph{E.g}\onedot}
+\def\ie{\emph{i.e}\onedot} \def\Ie{\emph{I.e}\onedot}
+\def\cf{\emph{c.f}\onedot} \def\Cf{\emph{C.f}\onedot}
+\def\etc{\emph{etc}\onedot} \def\vs{\emph{vs}\onedot}
+\def\wrt{w.r.t\onedot} \def\dof{d.o.f\onedot}
+\def\aka{\emph{a.k.a}\onedot}
+\def\etal{\emph{et al}\onedot}
+\makeatother
+
+\newcommand{\important}[1]{{\color{blue}{\bf\sf #1}}}
+
+\title{CPEN455: Deep Learning \\ Homework Template}
+\author{Created by 
+Qihang Zhang}
+\date{Finished: 2025 Jan. 9}
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{\textbf{UBC CPEN455 2024 Winter Term 2 }}
+\fancyhead[R]{\textbf{Homework Template}}
+
+\maketitle
+\thispagestyle{fancy}
+
+
+\section{Problem 1}
+
+\section{Problem 2}
+\noindent
+\textbf{A 2.1}\\
+
+\noindent
+To insert inline equations, use $\frac{1}{1-p}$. To bold characters in equations, type $\mathbf{b}$. For script style letters, use $\mathcal{N}$.\\
+
+\noindent
+For a displayed equation, you can use
+
+\begin{equation}
+    P(k) = {N \choose k}p^{k}(1-p)^{N - k}
+\end{equation}\\
+Or you can also use 
+$$
+f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}
+$$\\
+Also for series equations, you can use
+\begin{align}
+A &= 2 \int_{-r}^{r} \sqrt{r^2 - x^2} \, dx \\
+  &= 2r^2 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos^2\theta \, d\theta \\
+  &= \pi r^2 
+\end{align}
+
+
+\noindent
+For matrices, format as follows:
+\begin{equation}
+    \begin{bmatrix}
+    x_{11} & x_{12} & \cdots & x_{1n} \\
+    \vdots & \vdots & & \vdots \\
+    x_{m1} & x_{m2} & \cdots & x_{mn} \\
+    \end{bmatrix}
+\end{equation} \\
+
+\noindent
+For more math symbols, check \href{https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols}{Wiki}, \href{https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf}{LATEX Mathematical Symbols}, Google, or ask Chat-GPT.\\
+
+\noindent
+\textbf{A 2.2}\\
+
+If you want to insert a picture:
+
+\begin{figure}[h]
+\centering
+%\includegraphics[width=0.5\textwidth]{your_picture.jpg}
+\caption{Caption for the image.}
+\label{fig:image1}
+\end{figure}
+
+\noindent
+\textbf{A 2.3}\\
+
+To highlight words in a different color, you can use \textcolor{blue}{textcolor} to turn something blue. You can also \important{define custom commands} for frequent use.
+
+\end{document}
