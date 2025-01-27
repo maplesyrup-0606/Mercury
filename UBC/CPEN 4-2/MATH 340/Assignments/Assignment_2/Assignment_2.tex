@@ -1,0 +1,83 @@
+
+\documentclass[11pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage[margin=1in]{geometry}
+
+\newenvironment{solution}
+  {\par\noindent\textbf{Solution:}\par}
+  {\par}
+\title{MATH 340, 2024/25, Term 2, Assignment 2}
+\author{Mercury Mcindoe 85594505} 
+
+\begin{document}
+\maketitle 
+\thispagestyle{empty}
+
+\begin{enumerate}[start=3]
+  \item For a nonempty $S \subset \mathbf{R}^n$ and a positive real number $r \in \mathbb{R}$ (and $r > 0$),
+    define the set $rS$ as follows:
+    $$rS := \left\{ z \in \mathbf{R}^n \hspace{.05in} \vert \hspace{.05in} z = rx, x \in S \right\}$$
+    Here $rx$ is the multiplication of the vector $x \in \mathbf{R}^n$ by the scalar $r \in \mathbf{R}$; in your more
+    familiar notation, $r\vec{x}$. The set $rS$ is the set of all points that are obtained by multiplying
+    $r$ with the vectors $x \in S$. \\ 
+    For a given nonempty $S \subset \mathbf{R}^n$ and a given positive number $r>0$, prove that if $S$ is
+    a convex set then $rS$ is a convex set as well.
+    \begin{solution}
+      Since $S$ is convex, for all $x, y \in S$ and $t \in [0,1]$, we have 
+      $$(1-t)x + ty \in S.$$
+      
+      Let $w = (1-t)x + ty \in S$. For some $r \in \mathbf{R}^+$, we consider:
+      $$rw = r(1-t)x + rty = (1-t)(rx) + t(ry).$$
+
+      By the definition of $rS$, if $x, y, w \in S$, then $rx, ry, rw \in rS$. 
+
+      Therefore, $rS$ is also a convex set.
+    \end{solution}
+
+  \item For given two nonempty sets $S_1,S_2 \subset \mathbf{R}^n$, define the operation $S_1+S_2$ as follows:
+    $$S_1+S_2 := \left\{ z \in \mathbf{R}^n \hspace{.05in} \vert \hspace{.05in} \text{ there exist some } x \in S_1 \text{ and some } y \in S_2 \text{ such that } z =x+y \right\}$$
+    that is, each point $z \in S_1 + S_2$ is the one that can be expressed as the sum $x+y$ for some $x \in S_1$,
+    and $y \in S_2$; here the sum $x+y$ is the vector sum between the two vectors. One does this for 
+    all $x \in S_1$ and $y \in S_2$ and get the set $S_1 + S_2$.
+
+    \begin{enumerate}[label=(\alph*)]
+      \item Consider $S_1 = \left\{ (x_1,x_2) \in \mathbf{R}^2 \hspace{.05in} \vert \hspace{.05in}
+        \vert x_1 - 1\vert \le 1 \& \vert x_2 -2 \vert \le 1\right\}$ \\  
+        and $ S_2 = \left\{ (x_1,x_2) \in \mathbf{R}^2 \hspace{.05in} \vert \hspace{.05in}
+        \vert x_1\vert \le 2 \& \vert x_2 \vert \le 1\right\}$. Sketch the set $S_1 + S_2$. You do not need to explain 
+        your solution for this question. But, your sketch should be neat and very clear, indicating all the 
+        relevant coordinate values.
+        \begin{solution}
+        \end{solution}
+      \item Is it true that $S_1 + S_2$ must be convex for \textbf{any} nonempty convex sets $S_1$ and $S_2$ in
+        $\mathbf{R}^n$? Justify your answer carefully. \textbf{[This problem is independent of part (a). 
+        The sets $S_1,S_2$ are arbitrary convex sets in this question, not the particular example given in part (a).
+        If you do this problem only for the sets of part (a) or a particular example, you will get zero mark.]}
+        \begin{solution}
+          Let $z_1,z_2 \in S_1 + S_2$ such that $z_1 = x_1 + y_1,z_2 = x_2 + y_2$ and $x_1,x_2 \in S_1$, $y_1,y_2 \in S_2$.
+          First, let 
+          \begin{align*}
+            w &= w_1 + w_2 \\
+              &= (1-t)z_1 + tz_2 \\
+              &= (1-t)(x_1 + y_1) + t(x_2 + y_2) \\
+              &= \{(1-t)x_1 + tx_2\} + \{(1-t)y_1 + ty_2\}.
+          \end{align*}
+          for some $t \in [0,1]$. \\ 
+          Since $S_1$ and $S_2$ are non-empty convex sets, we have:
+          \[
+          w_1 = (1-t)x_1 + tx_2 \in S_1 \quad \text{and} \quad w_2 = (1-t)y_1 + ty_2 \in S_2.
+          \]
+          By the definition of $S_1 + S_2$, we can write:
+          \[
+          w = w_1 + w_2 = (1-t)z_1 + tz_2 \in S_1 + S_2, \quad t \in [0,1],
+          \]
+          proving that $S_1 + S_2$ is also a convex set.
+      \end{solution}
+    \end{enumerate}
+\end{enumerate}
+\end{document}

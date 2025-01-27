@@ -1,7 +1,0 @@
-- [ ] CPEN 411 Final Plan
-	- [x] Quizzes ✅ 2024-12-16
-	- [x] Midterm ✅ 2024-12-16
-	- [ ] Tutorials (do pipelining)
-	- [x] Final (2008) ✅ 2024-12-16
-	- [x] P-set ✅ 2024-12-16
-	- [ ] Content Review

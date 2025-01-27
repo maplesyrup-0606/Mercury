@@ -4,17 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "8c890467e54b4594",
+        "id": "f051baedae252a5f",
         "type": "tabs",
         "children": [
           {
-            "id": "ea93baf61c4e4ff3",
+            "id": "24a291b9f8ffc36e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "UBC/CPEN 4-2/MATH 340/Lectures/Lecture 2 (Standard Form and Others).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Lecture 2 (Standard Form and Others)"
+            }
+          },
+          {
+            "id": "7abf11e774cbdf96",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UBC/CPEN 4-2/MATH 340/MATH340_textbook.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "MATH340_textbook"
             }
           }
         ]
@@ -73,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227,
+    "width": 200,
     "collapsed": true
   },
   "right": {
@@ -161,21 +177,38 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "ea93baf61c4e4ff3",
+  "active": "24a291b9f8ffc36e",
   "lastOpenFiles": [
-    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/pdflatex93649.fls",
-    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/assignment_1.synctex.gz",
-    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/assignment_1.pdf",
-    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/assignment_1.out",
-    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/assignment_1.synctex(busy)",
-    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/assignment_1.log",
-    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/assignment_1.fls",
-    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/pdflatex93648.fls",
-    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/assignment_1.fdb_latexmk",
-    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/assignment_1.aux",
-    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/assignment_1.tex",
-    "UBC/CPEN 4-2/MATH 340/Lectures/Lecture 1.md",
-    "UBC/CPEN 4-2/MATH 340/Untitled.md",
+    "UBC/CPEN 4-2/MATH 340/MATH340_textbook.pdf",
+    "UBC/CPEN 4-2/CPSC 427/team-01/doc/proposal.pdf",
+    "UBC/CPEN 4-2/CPSC 427/team-01/proposal.pdf",
+    "UBC/CPEN 4-2/CPSC 427/team-01/doc",
+    "UBC/CPEN 4-2/CPSC 427/team-01/README.md",
+    "UBC/CPEN 4-2/CPSC 427/team-01",
+    "UBC/CPEN 4-2/CPSC 303/Assignments/Assignment_1/pdflatex88424.fls",
+    "UBC/CPEN 4-2/CPSC 303/Assignments/Assignment_1/pdflatex88423.fls",
+    "UBC/CPEN 4-2/MATH 340/Assignments/Assignment_2/Assignment_2.synctex(busy)",
+    "UBC/CPEN 4-2/MATH 340/Assignments/Assignment_2/pdflatex79595.fls",
+    "UBC/CPEN 4-2/MATH 340/Assignments/Assignment_2/pdflatex79564.fls",
+    "UBC/CPEN 4-2/MATH 340/Assignments/Assignment_2/pdflatex79531.fls",
+    "UBC/CPEN 4-2/MATH 340/Lectures/Lecture 2 (Standard Form and Others).md",
+    "UBC/CPEN 4-2/MATH 340/Lectures/Lecture 3 Standard Form - Simplex Method.md",
+    "images/Screenshot 2025-01-26 at 1.43.03 AM.png",
+    "images/Screenshot 2025-01-25 at 11.29.23 PM.png",
+    "images/Screenshot 2025-01-25 at 11.28.01 PM.png",
+    "images/Screenshot 2025-01-25 at 11.26.12 PM.png",
+    "UBC/CPEN 4-2/CPEN 455/Task List.md",
+    "UBC/CPEN 4-2/CPSC 303/Assignments/Assignment_1/q6d_plot.png",
+    "UBC/CPEN 4-2/CPSC 303/Assignments/Assignment_1/q6c_plot.png",
+    "UBC/CPEN 4-2/MATH 340/Assignments/Assignment_1/figure1.jpg",
+    "UBC/CPEN 4-2/MATH 340/Assignments/figure1.jpg",
+    "UBC/CPEN 4-2/MATH 340/figure1.jpg",
+    "UBC/CPEN 4-2/figure1.jpg",
+    "UBC/CPEN 4-2/CPSC 303/Task List.md",
+    "UBC/CPEN 4-2/MATH 340/Task List.md",
+    "UBC/CPEN 4-2/CPSC 427/Task List.md",
+    "Task List.md",
+    "UBC/CPEN 4-2/MATH 340/Lectures/Lecture 1 (Intro).md",
     "UBC/CPEN 4-2/CPSC 303/Intro.md",
     "UBC/CPEN 4-2/Untitled.md",
     "UBC/CPEN 4-1/MATH 307/Exercises/Midterm/Midterm 2 Exercises.md",
@@ -192,23 +225,6 @@
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 16.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 15.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 24.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 22.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 21.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 14.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 13.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 12.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 11.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 10.md",
-    "images/Pasted image 20241217211821.png",
-    "images/Screenshot 2024-12-17 at 9.17.54 PM.png",
-    "images/Screenshot 2024-12-17 at 8.59.15 PM.png",
-    "images/Screenshot 2024-12-17 at 5.37.11 PM.png",
-    "images/Screenshot 2024-12-14 at 1.11.57 AM.png",
-    "images/Screenshot 2024-12-12 at 4.26.06 PM.png",
-    "images/Screenshot 2024-12-11 at 2.00.05 AM.png",
-    "images/Screenshot 2024-12-11 at 1.59.50 AM.png",
-    "images/Screenshot 2024-12-11 at 1.56.15 AM.png",
-    "images/Screenshot 2024-12-11 at 1.55.56 AM.png",
     "images/Untitled 3.canvas",
     "images/Untitled 2.canvas",
     "images/Untitled 1.canvas",

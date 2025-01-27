@@ -15,7 +15,9 @@
 \usepackage{xcolor}
 \usepackage[colorlinks,linkcolor=blue]{hyperref}
 \usepackage{graphicx}
-
+\newenvironment{solution}
+  {\par\noindent\textbf{Solution:}\par}
+  {\par}
 
 \makeatletter
 \DeclareRobustCommand\onedot{\futurelet\@let@token\@onedot}
@@ -32,23 +34,147 @@
 
 \newcommand{\important}[1]{{\color{blue}{\bf\sf #1}}}
 
-\title{CPEN455: Deep Learning \\ Homework Template}
-\author{Created by 
-Qihang Zhang}
-\date{Finished: 2025 Jan. 9}
+\title{CPEN455: Deep Learning \\ Homework 1}
+\author{Mercury Mcindoe 85594505}
+\date{January 19th 2025}
 
 \begin{document}
 
 \pagestyle{fancy}
 \fancyhead{} % clear all header fields
 \fancyhead[L]{\textbf{UBC CPEN455 2024 Winter Term 2 }}
-\fancyhead[R]{\textbf{Homework Template}}
+\fancyhead[R]{\textbf{Homework 1}}
 
 \maketitle
 \thispagestyle{fancy}
 
 
 \section{Problem 1}
+\subsection{}
+\begin{solution}
+
+
+
+\end{solution}
+\subsection{}
+\begin{solution}
+  Let's first consider the case before Dropout ($i.e., \textbf{h}$). Since $\textbf{x} \sim \mathcal{N}(\textbf{0}, I)$, 
+  each entry $x_i$ within $\textbf{x}$ follows a normal distribution $\mathcal{N}(0,1)$ and each are iid.
+  Let $\textbf{z} = W\textbf{x}$,
+  $$\mathbb{E}[\textbf{z}] = \mathbb{E}[W\textbf{x}] = W\mathbb{E}[\textbf{x}] = 0$$
+  $$\text{Var}(\textbf{z}) = \text{Var}(W\textbf{x}) = W\text{Var}(\textbf{x})W^T = W
+  \begin{bmatrix} 
+    \text{Var}(x_1) & \text{Cov}(x_1,x_2) & \cdots & \text{Cov}(x_1,x_N) \\ 
+    \text{Cov}(x_2,x_1) & \text{Var}(x_2) & \cdots & \text{Cov}(x_2,x_N) \\ 
+    \vdots & \vdots & \ddots & \vdots \\ 
+    \text{Cov}(x_n,x_1) & \text{Cov}(x_n,x_2) & \cdots & \text{Var}(x_n,x_n) 
+  \end{bmatrix}W^T$$
+
+  Since we know that each $x_i$ is iid which follows $\mathcal{N}(0,1)$, the variance-covariance matrix of $\textbf{z}$ is then,
+  $$\text{Var}(\textbf{z}) = W
+  \begin{bmatrix}
+    1 & 0 & \cdots & 0 \\ 
+    0 & 1 & \cdots & 0 \\ 
+    \vdots & \vdots & \ddots & \vdots \\ 
+    0 & 0 & \cdots & 1
+  \end{bmatrix}
+  W^T = WW^T = I$$
+
+  Which shows that $\textbf{z} = W\textbf{x} \sim \mathcal{N}(0,I)$. Now considering that $\sigma(\textbf{z}) = \text{max}(\textbf{z},0)$, each entry $z_i$ would have the following expectations and variances,
+  $$\mathbb{E}[h_i] = \int_0^\infty \frac{z}{\sqrt{2\pi}}e^{-\frac{z^2}{2}}dz = \left[ -\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}} \right]_0^\infty = \frac{1}{\sqrt{2\pi}}$$
+  $$E[h_i^2] = \int_0^\infty \frac{z^2}{\sqrt{2\pi}}e^{-\frac{z^2}{2}}dz = \frac{1}{2}$$
+  $$\text{Var}(h_i) = \mathbb{E}[h_i^2] - (\mathbb{E}[h_i])^2 = \frac{1}{2} - \frac{1}{2\pi}$$
+  
+  Putting all these together,
+  $$\therefore \text{Var}(\textbf{h}) = \left(\frac{1}{2}-\frac{1}{2\pi}\right)I_M$$
+
+
+  Now let's consider after Dropout, we know that $\tilde{\textbf{h}} = \frac{\textbf{m}}{1-p} \odot \textbf{h}$, for an try $\tilde{h}_i$,
+
+
+\begin{align*}
+\mathbb{E}[\tilde{h}_i] 
+&= \mathbb{E}\left[\frac{m_i}{1-p} \cdot h_i\right] \\
+&= \frac{1}{1-p} \mathbb{E}[m_i] \cdot \mathbb{E}[h_i] \\
+&= \frac{1-p}{1-p} \mathbb{E}[h_i] \\
+&= \frac{1}{\sqrt{2\pi}}.
+\end{align*}
+
+The variance of \(\tilde{h}_i\) is:
+\begin{align*}
+\text{Var}(\tilde{h}_i) 
+&= \mathbb{E}[\tilde{h}_i^2] - \mathbb{E}[\tilde{h}_i]^2 \\
+&= \mathbb{E}\left[\left(\frac{1}{1-p}\right)^2 \cdot m_i^2 \cdot h_i^2\right] 
+   - \left(\mathbb{E}\left[\frac{1}{1-p} \cdot m_i \cdot h_i\right]\right)^2 \\
+&= \left(\frac{1}{1-p}\right)^2 \left(\mathbb{E}[m_i^2] \mathbb{E}[h_i^2] 
+   - \mathbb{E}[m_i]^2 \cdot \mathbb{E}[h_i]^2\right) \\
+&= \frac{1}{1-p} \cdot \mathbb{E}[h_i^2] - \mathbb{E}[h_i]^2 \\
+&= \frac{1}{1-p} \cdot \frac{1}{2} - \frac{1}{2\pi}.
+\end{align*}
+  Hence,
+  $$\therefore \text{Var}(\tilde{\textbf{h}}) = \left(\frac{1}{1-p} \cdot \frac{1}{2} - \frac{1}{2\pi}\right)I_M$$ 
+
+\end{solution}
+
+
+\subsection{}
+\begin{solution}
+For one unit, the expectation that it is kept is $ 1- p$, then given $M$ units the expectation would be $M \cdot (1-p)$ units kept.
+For each unit, we have a probability $1-p$ that it is kept, so if we compute the probabilty that $k$ units are kept, $P(\text{kept} =k)$,
+$$P(\text{kept} =k) = {M\choose k} \cdot (1-p)^k\cdot p^{M-k}$$
+hence, a binomial distribution with probability $1-p$.
+\end{solution}
+
+
+
+\subsection{}
+\begin{solution}
+  First let $M(1-p) = \alpha$, in other words $p = 1- \frac{\alpha}{M}$,
+  $$ \lim_{M \to \infty} {M \choose k}\cdot (1-p)^k \cdot p^{M-k} = \lim_{M \to \infty} \frac{M(M-1)\cdot(M-k+1)}{k!}(1-p)^k (1-\frac{\alpha}{M})^{M-k} $$
+  $$ = \lim_{M \to \infty} \frac{\left(M\cdot(1-p)\right)\cdot \left((M-1)\cdot(1-p)\right) \cdots \left((M-k+1)(1-p)\right)}{k!} \cdot (1-\frac{\alpha}{M})^{M-k}$$
+  $$ = \lim_{M \to \infty} \frac{\left(M\cdot(1-p)\right)\cdot \left((M-1)\cdot(1-p)\right) \cdots \left((M-k+1)(1-p)\right)}{k!} \cdot (1-\frac{\alpha}{M})^{\frac{M}{\alpha}} \cdot (1-\frac{\alpha}{M})^{-k}$$
+  $$=\frac{\alpha^k}{k!}e^{-\alpha} = \frac{\left(M(1-p)\right)^k}{k!}e^{-M(1-p)}$$
+It becomes a Poisson distribution with parameter $M(1-p)$.
+\end{solution}
+
+\subsection{}
+\begin{solution}
+Let's say that we want to keep $x$ units and get the probability distribution. We then want to sum all the probabilities
+of keeping $x$ units for all $M$. Thus we want,
+$$P(x \text{ units kept}) = \sum_{M=x}^\infty P(x \text{ units kept} \cap M \text{ units})$$
+
+Let's do the math!
+\begin{align*}
+P(x \text{ units kept} \cap M \text{ units}) 
+&= \frac{\lambda^M e^{-\lambda}}{M!} \cdot {M \choose x} \cdot (1-p)^x \cdot p^{M-x} \\
+&= \frac{\lambda^M e^{-\lambda}}{M!} \cdot \frac{M!}{(M-x)! \cdot x!} \cdot (1-p)^x \cdot p^{M-x} \\
+&= \frac{e^{-\lambda}}{x!} \cdot (1-p)^x \cdot \frac{\lambda^M \cdot p^{M-x}}{(M-x)!}.
+\end{align*}
+
+Now, the probability of \(x\) units being kept is:
+\begin{align*}
+P(x \text{ units kept}) 
+&= \sum_{M=x}^\infty \frac{e^{-\lambda}}{x!} \cdot (1-p)^x \cdot \frac{\lambda^M \cdot p^{M-x}}{(M-x)!} \\
+&= \frac{e^{-\lambda}}{x!} \cdot (1-p)^x \cdot \sum_{M=x}^\infty \frac{\lambda^M \cdot p^{M-x}}{(M-x)!}.
+\end{align*}
+
+Let \(M' = M - x\). Then:
+\begin{align*}
+P(x \text{ units kept}) 
+&= \frac{e^{-\lambda}}{x!} \cdot (1-p)^x \cdot \sum_{M'=0}^\infty \frac{\lambda^{M'+x} \cdot p^{M'}}{M'!} \\
+&= \frac{e^{-\lambda}}{x!} \cdot (1-p)^x \cdot \lambda^x \cdot \sum_{M'=0}^\infty \frac{(\lambda p)^{M'}}{M'!}.
+\end{align*}
+
+Since \(\sum_{M'=0}^\infty \frac{(\lambda p)^{M'}}{M'!} = e^{\lambda p}\), we get:
+\begin{align*}
+P(x \text{ units kept}) 
+&= \frac{e^{-\lambda}}{x!} \cdot (1-p)^x \cdot \lambda^x \cdot e^{\lambda p} \\
+&= \frac{e^{-\lambda(1-p)} \cdot \{\lambda(1-p)\}^x}{x!}.
+\end{align*}
+
+Therefore, the number of kept units follows a Poisson distribution with parameter \(\lambda(1-p)\).
+\end{solution}
+
 
 \section{Problem 2}
 \noindent
