@@ -6,6 +6,7 @@
 \usepackage{amsthm}
 \usepackage{amsfonts}
 \usepackage{enumitem}
+\usepackage{pdfpages}
 \usepackage[margin=1in]{geometry}
 
 \newenvironment{solution}
@@ -18,7 +19,89 @@
 \maketitle 
 \thispagestyle{empty}
 
-\begin{enumerate}[start=3]
+\begin{enumerate}
+  \item Consider the problem [Vanderbei 5th edition, Exercise 1.1].
+    \begin{enumerate}[label=(\alph*)]
+      \item Write this as a Linear Programming problem in the standard inequality form).
+You must explain your notation and variables. 
+      \begin{solution}
+        Let's denote the variables for Bands and Coils as $x_b,x_c$ respectively. Then our goal is to 
+        maximize $25x_b + 30x_c$ while satisfying the constraints  
+        $$x_b \le 6000, x_c \le 4000, x_b \ge 0, x_c \ge 0, \frac{x_b}{200}+\frac{x_c}{140} \le 40$$
+
+        Thus, we get the LP Problem in the standard inequality form,
+        \[
+        \begin{aligned}
+          \text{maximize} \quad & 25x_b + 30x_c \\
+          \text{subject to} \quad 
+          & \frac{x_b}{200} + \frac{x_c}{140} \leq 40, \\
+          & x_b \leq 6000, \\
+          & x_c \leq 4000, \\
+          & x_b, x_c \geq 0.
+        \end{aligned}
+\] 
+      \end{solution}
+     \item Solve the LP by writing down a code in the Python language using the Jupyter notebook; login to UBC syzygy website and the Jupyter notebook. Attach the pdf file that include both the code and the results; note that you can
+save the Jupyter notebook as a pdf file. 
+       \begin{solution}
+      \includepdf[pages=-]{Assignment_2_q1.pdf}
+       \end{solution}
+
+\end{enumerate}
+\item Consider the problem [Vanderbei. 5th edition, Exercise 1.2].
+  \begin{enumerate}[label=(\alph*)]
+    \item Write this as a Linear Programming problem (in the standard inequality form).
+You must explain your notation and variables.
+    \begin{solution}
+      We denote the variables as the following: 
+      \[
+        \begin{aligned}
+          x_\text{INY}:\quad & \text{Ithaca–Newark-Y}\\ 
+          x_\text{INB}:\quad & \text{Ithaca–Newark-B}\\ 
+          x_\text{INM}:\quad & \text{Ithaca–Newark-M}\\ 
+          x_\text{NBY}:\quad & \text{Newark–Boston-Y}\\ 
+          x_\text{NBB}:\quad & \text{Newark–Boston-B}\\ 
+          x_\text{NBM}:\quad & \text{Newark–Boston-M}\\ 
+          x_\text{IBY}:\quad & \text{Ithaca–Boston-Y}\\ 
+          x_\text{IBB}:\quad & \text{Ithaca–Boston-B}\\ 
+          x_\text{IBM}:\quad & \text{Ithaca–Boston-M}\\ 
+        \end{aligned}
+      \]
+      The LP Problem is,
+      \[
+      \begin{aligned}
+          \text{maximize} \quad &300  x_\text{INY}+ 220x_\text{INB} + 100  x_\text{INM} \\ 
+                    & + 160 x_\text{NBY} + 130 x_\text{NBB}+ 80 x_\text{NBM} \\ 
+                    & + 360  x_\text{IBY}+ 280 x_\text{IBB}+ 140 x_\text{IBM}\\
+          \text{subject to} \quad 
+          & x_\text{INY} \le 4 \\ 
+          & x_\text{INB} \le 8 \\ 
+          & x_\text{INM} \le 22 \\ 
+          & x_\text{NBY} \le 8 \\ 
+          & x_\text{NBB} \le 13 \\
+          & x_\text{NBM} \le 20 \\ 
+          & x_\text{IBY} \le 3 \\ 
+          & x_\text{IBB} \le 10 \\ 
+          & x_\text{IBM} \le 18\\
+          & x_\text{INY} + x_\text{INB} + x_\text{INM} +  x_\text{IBY} +x_\text{IBB} + x_\text{IBM} \le 30\\        
+          & x_\text{NBY} +  x_\text{NBB} + x_\text{NBM} + x_\text{IBY} + x_\text{IBB} + x_\text{IBM} \le 30 \\ 
+          & x_\text{INY},x_\text{INB},x_\text{INM},x_\text{NBY},x_\text{NBB},x_\text{NBM} ,x_\text{IBY} ,x_\text{IBB} ,x_\text{IBM} \ge 0
+        \end{aligned}
+      \]
+
+    \end{solution}
+    \item Solve the LP by writing down a code in the Python language using the Jupyter
+notebook; login to UBC syzygy website and the Jupyter notebook. Attach the pdf file that include both the code and the results; note that you can
+save the Jupyter notebook as a pdf file. \\  Hint1: You will need integer variables, those taking only integer values. For that
+you can add the command cat='Integer' like in the following example: \\ 
+ticketvars = LpVariable.dicts("ticket", ticket, lowBound=0, cat='Integer') \\ 
+Here the last part cat='Integer' restrict the variables to be integer variables. ] \\  Hint2: It is not necessary, but, to practice with 'for-loops' and 'dictionary', you
+can try to use dictionary variables as done in the blending (cat food) example. ]
+  \begin{solution}
+    \includepdf[pages=-]{Assignment_2_q2.pdf}
+
+  \end{solution}
+  \end{enumerate}
   \item For a nonempty $S \subset \mathbf{R}^n$ and a positive real number $r \in \mathbb{R}$ (and $r > 0$),
     define the set $rS$ as follows:
     $$rS := \left\{ z \in \mathbf{R}^n \hspace{.05in} \vert \hspace{.05in} z = rx, x \in S \right\}$$

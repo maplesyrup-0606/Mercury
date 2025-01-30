@@ -43,34 +43,36 @@ $$T_3(f)=f(0)+x f'(0)+\frac{x^2}{2} f''(0).$$
   From the $f'(x)$ above, $f''(x)$ is,
   $$f''(x) = \frac{d}{dx}f'(x) = \frac{d}{dx}\frac{1}{2\sqrt{1+x}} = -\frac{1}{4(1+x)^{\frac{3}{2}}}$$ 
   Therefore, $f''(0) = -\frac{1}{4\cdot 1^{\frac{3}{2}}}= -\frac{1}{4}$. \\ \\
-  Now we can get $T_3(f)$, \\ $$T_3(f) = 1 + \frac{1}{2} \cdot x - \frac{1}{4} \cdot \frac{x^2}{2} = 1+ \frac{1}{2}x -\frac{1}{4}x^2$$ 
+  Now we can get $T_3(f)$, \\ $$T_3(f) = 1 + \frac{1}{2} \cdot x - \frac{1}{4} \cdot \frac{x^2}{2} = 1+ \frac{1}{2}x -\frac{1}{8}x^2$$ 
 \end{solution} 
 \item Compute the absolute error and the relative error in using $T_3(f)$ as an algorithm for approximating $f(x)$ for $x=0.1$, namely $f(0.1)=\sqrt{1.1}=1.0488...$. 
 
   \begin{solution}
     From the problem we are given that $y = 1.0488$. Now let's compute $\bar{y}$. 
-    $$\bar{y} = 1 + \frac{1}{2} \cdot 0.1 - \frac{1}{4} \cdot (0.1)^2 = 1.0475$$
+    $$\bar{y} = 1 + \frac{1}{2} \cdot 0.1 - \frac{1}{8} \cdot (0.1)^2 = 1.04875$$
     Now let's compute the absolute error,
-    $$\vert \bar{y} -y \vert = \vert 1.0475 - 1.0488 \vert = 0.0013$$
+    $$\vert \bar{y} -y \vert = \vert 1.04875 - 1.0488088482 \vert = 0.0000588482 \approx 5.8848 \times 10^{-5}$$
+    
+    
     The relative error is, 
-    $$\left| \frac{\bar{y} - y}{y} \right| = \left| \frac{0.0013}{1.0488} \right| = 0.0012395118$$    
+    $$\left| \frac{\bar{y} - y}{y} \right| = \left| \frac{1.04875 - 1.0488088482 }{ 1.0488088482}  \right| = 0.0000561096 = 5.6110 \times 10^{-5}$$    
   \end{solution}
   
 \item Repeat the same computations for the two-term Taylor expansion $T_2(f)$ with $x=0.1$, and determine which of $T_2(f)$ and $T_3(f)$ gives you a better approximation. 
   \begin{solution}
     Let's calculate the relative and absolute error for $T_2(f)$,
-    $$\vert \bar{y} - y \vert = \vert 1 + \frac{0.1}{2} - 1.0488 \vert=0.0012$$
-    $$\left| \frac{\bar{y} - y}{y} \right| = \left| \frac{0.0012}{1.0488} \right| = 0.0011441648$$
-    Revising what we've computed at (c), we can see that the absolute and relative error is smaller for $T_2(f)$ hence concluding that $T_2(f)$ gives a better approximation. 
+    $$\vert \bar{y} - y \vert = \vert 1 + \frac{0.1}{2} - 1.0488088482 \vert=0.0011911518 \approx 1.1912 \times 10^{-3}$$
+    $$\left| \frac{\bar{y} - y}{y} \right| = \left| \frac{0.0011911518 }{1.0488088482 } \right| =  0.0011357187 \approx 1.1357 \times 10^{-3}$$
+    Revising what we've computed at (c), we can see that the absolute and relative error is smaller for $T_3(f)$ hence concluding that $T_3(f)$ gives a better approximation at $x=0.1$. 
   \end{solution}
 
 \item What are the relative backward errors  for $T_2(f)$ and $T_3(f)$?
 
   \begin{solution}
-    First, for $T_3(f)$, let's search for $\bar{x}$ such that $f(\bar{x})=\bar{y}=1.0475$.
-    $$f(\bar{x})=\sqrt{1+\bar{x}} = 1.0475 \to \bar{x} = 1.0475^2-1 = 0.09725625$$
+    First, for $T_3(f)$, let's search for $\bar{x}$ such that $f(\bar{x})=\bar{y}=1.04875$.
+    $$f(\bar{x})=\sqrt{1+\bar{x}} = 1.04875 \to \bar{x} = 1.04875^2-1 =0.0998765625$$
     Therefore, the relative backward error for $T_3(f)$ is, 
-    $$\left| \frac{\bar{x} - x}{x} \right| = \left| \frac{0.1 - 0.09725625}{0.1} \right| = 0.0274375$$
+    $$\left| \frac{\bar{x} - x}{x} \right| = \left| \frac{0.1 - 0.0998765625}{0.1} \right| = 0.001234375  \approx 1.2344 \times 10^{-3}$$
 
     Second, for $T_2(f)$,
     $$f(\bar{x}) = \sqrt{1+\bar{x}} = 1.5 \to \bar{x} = 1.05^2 - 1 = 0.1025$$
@@ -82,11 +84,33 @@ $$T_3(f)=f(0)+x f'(0)+\frac{x^2}{2} f''(0).$$
 
 \item Use the formula given in the textbook in the framed box on page 5 to explain the difference between the errors for $T_2(f)$ and $T_3(f)$. The last term in that formula (the one involving $\xi$) represents the error in the approximation and may be useful. We do not know the exact value of $\xi$ but we can still bound the expressions for the error.
   \begin{solution}
-    First, let's keep with $x_0 = 0$ and analyze the formula from the textbook. 
-    $$f(h) = \underbrace{f(0) + h\cdot f'(0)}_{T_2(f)(h)} + \frac{h^2}{2!}\cdot f''(\xi_1) 
-    = \underbrace{f(0) + h\cdot f'(0) + \frac{h^2}{2!}\cdot f''(0)}_{T_3(f)(h)} + \frac{h^3}{3!}\cdot f'''(\xi_2)$$
-  where $\xi_1,\xi_2 \in (0,h)$.
-   So we can see the difference among errors,
+    We know that for $f(x) =\sqrt{1+x}$, it has continuous derivatives for $x \in (-1, \infty)$. Thus, using the formula from the text book 
+    we can fomulate the remainding terms from $T_2(f)$ and $T_3(f)$ as the following: 
+    $$R_2(f) = \frac{h^2}{2!}f''(\xi_1) \quad R_3(f) = \frac{h^3}{6!}f'''(\xi_2)$$
+    as we try to compute $f(x_0 + h)$ with $\xi_1,\xi_2 \in (x_0, x_0 +h)$ and let's assume $x_0$ is near 0 so that we are in the same context as the questions above.
+    \\ 
+    Given the function $f(x) = \sqrt{1+x}$,
+    $$f''(x) = \frac{-1}{4} \cdot \frac{1}{(1+x)^{\frac{3}{2}}} \quad f'''(x) = \frac{3}{8}\cdot \frac{1}{(1+x)^{\frac{5}{2}}}$$
+
+    Combining the remainding terms with the derivatives we can get the absolute error $e_2(f),e_3(f)$:
+    $$e_2(f) = \frac{h^2}{8} \cdot \frac{1}{(1+\xi_1)^{\frac{3}{2}}} \quad e_3(f) = \frac{h^3}{16} \cdot \frac{1}{(1+\xi_2)^{\frac{5}{2}}}$$
+
+    Given that $\xi_1,\xi_2 \in (x_0, x_0 + h)$,
+    $$\frac{h^2}{8} \cdot \frac{1}{(1+x_0 + h)^{\frac{3}{2}}} < e_2(f) <  \frac{h^2}{8} \cdot \frac{1}{(1+x_0)^{\frac{3}{2}}}   $$
+    $$\frac{h^3}{16} \cdot \frac{1}{(1+x_0+h)^{\frac{5}{2}}} < e_3(f) < \frac{h^3}{16} \cdot \frac{1}{(1+x_0)^{\frac{5}{2}}} $$
+    We also know that $h > 0$ and all terms are positive, thus proving that $e_3(f) < e_2(f)$.
+    \\ 
+
+    In terms of relative error, 
+    $$e_{2_\text{relative}}(f) = \frac{e_2}{f(x_0+h)} = \frac{e_2(f)}{\sqrt{1+x_0+h}} \quad e_{3_\text{relative}}(f) = \frac{e_3(f)}{f(x_0+h)} = \frac{e_3(f)}{\sqrt{1+x_0+h}}$$
+    we can once again formulate the bounds,
+  $$\frac{h^2}{8} \cdot \frac{1}{(1+x_0 + h)^{2}} < e_{2_\text{relative}}(f) <  \frac{h^2}{8} \cdot \frac{1}{(1+x_0)^{\frac{3}{2} }(\sqrt{1+x_0+h})}   $$
+    $$\frac{h^3}{16} \cdot \frac{1}{(1+x_0+h)^{3}} < e_{3_\text{relative}}(f) < \frac{h^3}{16} \cdot \frac{1}{(1+x_0)^{\frac{5}{2}} (\sqrt{1+x_0+h})} $$
+    similar to the absolute error we have that $h>0$ and all terms are postiive, showing $e_{3_\text{relative}} < e_{2_\text{relative}}$. 
+
+    \\ 
+    To conclude, in terms of both absolute and relative error we have that $T_3(f)$ produces a smaller error,
+     
   \end{solution}
 
 
@@ -112,6 +136,7 @@ $x=1.57079$ as a specific example to illustrate your point.
   $$\kappa = \left| \frac{1.57079}{\sin(1.57079)\cos(1.57079)}\right| = 248,275.7898120366$$
   And this is very large, thus showing that the problem of evaluating $f(x)$ near $\frac{\pi}{2}$ is ill-conditioned.
 \end{solution}
+
 
 
 \item Take now $x=1$, and determine whether the problem of evaluating $f(x)=\tan(x)$ at or near that value is well conditioned.
@@ -153,7 +178,7 @@ Consider the floating point system given by $(\beta,t,L,U)=(10,4,-30,30)$, using
     The algebraically smallest number in the system is $-9.999 \times 10^{30}$, 
     \begin{align*}
       1.000 + (-9.999 \times 10^{30}) &= 0.\underbrace{000\dots000}_{29\text{ zeros}}1 \times 10^{30} - 9.999 \cdot 10^{30} \\
-      &= -9.998\underbrace{9\dots9}_{27 \text{nines}} \cdot 10^{30} \\
+      &= -9.998\underbrace{9\dots9}_{27 \text{ nines}} \cdot 10^{30} \\
       &= -9.999 \cdot 10^{30}, \quad \text{due to our system.}
     \end{align*}
     due to our system.
@@ -167,7 +192,7 @@ Consider the floating point system given by $(\beta,t,L,U)=(10,4,-30,30)$, using
                         &= 1 + 5.5 \cdot 10^{-4} \\
                         &= 1 + 0.00055 \\
                         &= 1.00055 \\
-                        &= 1.000 \cdot 10^0.
+                        &= 1.001 \cdot 10^0.
     \end{align*}
   \end{solution}
 \item What is the largest number in this system?
@@ -187,24 +212,19 @@ Consider the floating point system given by $(\beta,t,L,U)=(10,4,-30,30)$, using
 $$ f(x) = \frac{1-\cos(x)}{x^2}.$$ 
 \begin{enumerate}
 \item Show that  $0 \leq f(x) < \frac12$ for all $x \ne 0$.
-  \begin{solution}
-  Given that $f(x) = \frac{1-\cos(x)}{x^2}$, we already know that $f(x) \ge 0$ since $1-\cos(x) \ge 0$ and $x^2 \ge 0$.
-  Now let's look at the behavior near $x=0$, 
-  $$\lim_{x \to 0} \frac{1-\cos(x)}{x^2} = \lim_{x \to 0} \frac{\sin^2(x)}{x^2} \cdot \frac{1}{1+\cos(x)} = \frac{1}{2}$$  
-  Let's use the trigonometric property that $\cos(x) = 1-2\sin^2(\frac{x}{2})$, also we know that for any $t \in \mathbb{R}, \sin^2(t) \le t^2$.
-  Since $x\neq 0$, 
-  $$\sin^2(x) \le x^2 \to \frac{\sin^2(x)}{x^2} \le 1$$
-  If we replace $x$ with $\frac{x}{2}$ we get,
-  $$\sin^2(\frac{x}{2}) \le (\frac{x}{2})^2 \to \frac{\sin^2(\frac{x}{2})}{x^2} \le \frac{1}{4} \to \frac{\frac{1-\cos(x)}{2}}{x^2} \le \frac{1}{4}$$
-  $$\therefore \frac{1-\cos(x)}{x^2} \le \frac{1}{2}$$
 
-  However, since we know that the value $\frac{1}{2}$ is achieved at the limit near $x=0$, excluding $x=0$ we get,
-
-  $$\therefore \hspace{.1in} 0 \le \frac{1-\cos(x)}{x^2} < \frac{1}{2}$$
-  as required.
+\begin{solution}
+  We know that $\forall x \in \mathbb{R}$ that $1-\cos(x) \ge 0, x^2 \ge 0$, and for all $x = 2\pi k$ where $k \neq 0$ that $f(x) = 0$, hence we can conclude with $f(x) =\frac{1-\cos(x)}{x^2} \ge 0$. 
+  \\ 
+  Also for all $x \in \mathbb{R}$,
+  $$\frac{1-\cos(x)}{x^2} = \frac{1 - \left( 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \frac{x^8}{8!} - \cdots  \right)}{x^2}$$
+  $$=\frac{1}{2} - \frac{x^2}{4!} + \frac{x^4}{6!} - \frac{x^6}{8!} + \cdots $$
+  Thus, we can do the following:
+  $$\frac{1-\cos(x)}{x^2} = \frac{1}{2} - \left( \frac{x^2}{4!} - \frac{x^4}{6!} + \frac{x^6}{8!} - \cdots \right) < \frac{1}{2} $$
+  In conclusion, we have that,
+  $$\therefore 0 \le f(x) < \frac{1}{2}$$
 
 \end{solution}
-
 \item 
 The \matlab command
 \begin{verbatim}
@@ -213,8 +233,111 @@ x=single(3e-4);
 generates a variable $x$ in single precision, with value $x=3 \cdot 10^{-4}$. 
 Write a short \matlab script that computes $f(x)$ for the above particular value of $x$ in single precision. Now, repeat the same calculation in double precision (\matlabns's default).  (Use {\tt format long} to see more digits in your output.)
 Explain the difference in the results and provide  a well-justified reason for this difference, based on analyzing the error and  the properties of the single precision and the double precision floating point systems. What goes wrong with the single-precision computation?
+
+\begin{solution}
+  Here is the code and results, \textbf{code:}
+  \begin{verbatim}
+  func = @(x) (1 - cos(x))/x^2;
+
+  x = single(3e-4);
+
+  format long;
+  disp('Single Precision')
+  disp('x:')
+  disp(x)
+  disp('function value:')
+  disp(func(x))
+
+  x = 3e-4;
+
+  format long;
+  disp('Double Precision')
+  disp('x:')
+  disp(x)
+  disp('function value:')
+  disp(func(x))
+  \end{verbatim}
+
+  \textbf{results:}
+  \begin{verbatim}
+  Single Precision
+x:
+   3.0000001e-04
+
+function value:
+   0.6622738
+
+Double Precision
+x:
+     3.000000000000000e-04
+
+function value:
+   0.499999995727683
+  \end{verbatim}
+
+  \textbf{Analyzation:}
+  Single precision provides roughly 7 to 8 significant digits in precision, hence it can only provide a limited precision. 
+  Also, since we compute $1-\cos(x)$, the cutoff gets severely magnifide since smaller details are totall removed. Finally, due to the 
+  fact that we divide by $x^2$, we further magnify this already magnified error since $x < 1$ hence we tend to get a severely inaccurate result when computing
+  with single precision. On the other hand, double precision can provide roughly 15 to 16 significant digits in precision. Which reduces the magnified errors 
+  we've mentioned for single precision by a significant amount, giving us a more accurate representation. \\ 
+  By looking at the logs in the results mentioned above, this is proved since double precision provides us with  0.499999995727683 which is under and near $\frac{1}{2}$,
+  where as single precision provides us with $0.6622738$ which is further from $\frac{1}{2}$ than double precision and violates that $f(x) < \frac{1}{2}$.
+
+
+\end{solution}
+
 \item Use the formula
 $$ \cos(x) = 1-2 \sin^2 \left( \frac{x}{2} \right) $$ to rewrite the formula for $f(x)$. Repeat your calculations for the same value of $x$ in single and double precision.  Explain the results.
+  \begin{solution}
+The following is the code and results, \textbf{code}:
+  \begin{verbatim}
+  func2 = @(x) sin(x/2)^2 /(x^2/2);
+
+x = single(3e-4);
+
+format long;
+disp('Single Precision')
+disp('x:')
+disp(x)
+disp('function value:')
+disp(func2(x))
+
+x = 3e-4;
+
+format long;
+disp('Double Precision')
+disp('x:')
+disp(x)
+disp('function value:')
+disp(func2(x))
+  \end{verbatim}
+
+  \textbf{results:}
+  \begin{verbatim}
+  Single Precision
+x:
+   3.0000001e-04
+
+function value:
+   0.5000000
+
+Double Precision
+x:
+     3.000000000000000e-04
+
+function value:
+   0.499999996250000
+  \end{verbatim}
+  \textbf{Analyzation:} The above results show somewhat a different result compared to (b). The reasoning between the results of single precision and double precision is still consistent.
+  We have single precision providing a result directly at 0.5 while double precision provides us with 0.499999996250000. This is due to the difference of the number of significant bits that can be represented,
+  thus we still have double precision provides us with a result with higher accuracy due to the lower cutoff. \\ 
+  The major reason that the results are different when compared to (b) is due to the fact that we switch from $1-\cos(x)$ to $2\sin^2(\frac{x}{2})$. 
+  
+  For $x$ very near to 0, we have $\cos(x) \approx 1$, hence $1-\cos(x)$ is a really small number. This number being small 
+  causes significant cancellation error, however as we switch the expressions, we are less prone to round off errors. 
+  As a result, both single and double precision calculations yield more accurate values close to 0.5.
+\end{solution}
 \end{enumerate}
 
 %%% Question 5
@@ -248,8 +371,8 @@ In determining the interpolating polynomials below use mainly pen and paper, but
     Let's construct the four basis functions, $\phi_0(x),\phi_1(x),\phi_2(x),\phi_3(x)$.
     $$\phi_0(x) = \frac{x(x-1)(x-2)}{-(-1-1)(-1-2)} = -\frac{x(x-1)(x-2)}{6}$$
     $$\phi_1(x) = \frac{(x+1)(x-1)(x-2)}{(0-1)(0-2)}= \frac{(x+1)(x-1)(x-2)}{2}$$
-    $$\phi_3(x) = \frac{(x+1)x(x-2)}{(1+1)(1-2)}=-\frac{x(x+1)(x-2)}{2}$$
-    $$\phi_4(x) = \frac{(x+1)x(x-1)}{(2+1)2(2-1)}=\frac{x(x+1)(x-1)}{6}$$
+    $$\phi_2(x) = \frac{(x+1)x(x-2)}{(1+1)(1-2)}=-\frac{x(x+1)(x-2)}{2}$$
+    $$\phi_3(x) = \frac{(x+1)x(x-1)}{(2+1)2(2-1)}=\frac{x(x+1)(x-1)}{6}$$
     By letting $c_j = y_j$, 
     $$\therefore p(x) =  -\frac{x(x-1)(x-2)}{6} +\frac{(x+1)(x-1)(x-2)}{2} -  x(x+1)(x-2)$$
   \end{solution}
@@ -257,18 +380,33 @@ In determining the interpolating polynomials below use mainly pen and paper, but
   \begin{solution}
     The newton basis will have the basis functions,
     $$\phi_0(x) = 1, \phi_1(x) = (x+1), \phi_2(x) = (x+1)x, \phi_3(x) = (x+1)x(x-1)$$
-    Let's construct the linear system,
+    Let's construct the lower triangular system,
     $$A= \begin{bmatrix}
       1 & 0 & 0 & 0 \\ 
       1 & 1 & 0 & 0 \\ 
       1 & 2 & 2 & 0 \\ 
       1 & 3 & 6 & 6 
       \end{bmatrix}, \textbf{y} = \begin{bmatrix} 1 \\ 1 \\ 2 \\ 0 \end{bmatrix}$$
-  \end{solution} 
-  Then, $$c = \begin{bmatrix} 1 \\ 0 \\ \frac{1}{2} \\[3pt] -\frac{2}{3} \end{bmatrix}$$
-  Giving us the interpolating cubic polynomial,
-  $$\therefore p(x) = 1 + \frac{1}{2}x(x+1) -\frac{2}{3}x(x-1)(x+1)$$
-
+    Then, $$c = \begin{bmatrix} 1 \\ 0 \\ \frac{1}{2} \\[3pt] -\frac{2}{3} \end{bmatrix}$$
+    Now let's construct the divided difference table, 
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        $i$ & $x_i$ & $f[x_i]$ & $f[x_{i-1},x_i]$ & $f[x_{i-2},x_{i-1},x_i]$ &  $f[x_{i-3},x_{i-2},x_{i-1},x_i]$ \\ 
+        \hline
+        0   & -1    & 1 &      &   &  \\ 
+        1   & 0     & 1 &  0   &   &  \\
+        2   & 1     & 2 &  1   & $\frac{1}{2}$ &  \\ 
+        3   & 2     & 0 & -2   & $\frac{-3}{2}$ & $\frac{-2}{3}$ \\ 
+        \hline
+    \end{tabular}
+    \caption{Divided Differences}
+    \end{table}
+    
+    Giving us the interpolating cubic polynomial,
+    $$\therefore p(x) = 1 + \frac{1}{2}x(x+1) -\frac{2}{3}x(x-1)(x+1)$$
+    \end{solution} 
 \item Show that the three representations give the same polynomial.
 
   \begin{solution}
@@ -322,8 +460,9 @@ $$ \max_{0 \le x \le 1} | e^x - p_2(x)|.$$
   For,
   $$ \text{max}_{s \in [0,1]}\left| \prod_{j=0}^2 (s-x_j) \right| = \text{max}_{s \in [0,1]} \left| s(s-\frac{1}{2})(s-1) \right| $$
   We need to find the maximum of $\left| s(s-\frac{1}{2})(s-1) \right| $ within the range [0,1]. 
-  $$\frac{d}{ds}s(s-\frac{1}{2})(s-1) = 3s^2-3s+\frac{1}{2} = 0 \to s = \frac{3-\sqrt{6}}{6} \in [0,1] \text{ local maximum}$$
-  $\left| s(0) \right| = 0, \left| s(1) \right| = 0$.
+  $$\frac{d}{ds}s(s-\frac{1}{2})(s-1) = 3s^2-3s+\frac{1}{2} = 0 \to s = \frac{3 \pm \sqrt{6}}{6} \in [0,1] $$ 
+  
+  $\left| s(0) \right| = 0, \left| s(1) \right| = 0,  \vert s(\frac{3-\sqrt{6}}{6}) \vert = \frac{\sqrt{3}}{36} ,  \vert s(\frac{3+\sqrt{3}}{6}) \vert = \frac{\sqrt{3}}{36}$.
 
   Thus,
   $$  \text{max}_{s \in [0,1]} s(s-\frac{1}{2})(s-1) = \frac{\sqrt{3}}{36}$$

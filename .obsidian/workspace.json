@@ -20,18 +20,6 @@
               "icon": "lucide-file",
               "title": "Lecture 2 (Standard Form and Others)"
             }
-          },
-          {
-            "id": "7abf11e774cbdf96",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UBC/CPEN 4-2/MATH 340/MATH340_textbook.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "MATH340_textbook"
-            }
           }
         ]
       }
@@ -179,19 +167,20 @@
   },
   "active": "24a291b9f8ffc36e",
   "lastOpenFiles": [
-    "UBC/CPEN 4-2/MATH 340/MATH340_textbook.pdf",
-    "UBC/CPEN 4-2/CPSC 427/team-01/doc/proposal.pdf",
-    "UBC/CPEN 4-2/CPSC 427/team-01/proposal.pdf",
-    "UBC/CPEN 4-2/CPSC 427/team-01/doc",
-    "UBC/CPEN 4-2/CPSC 427/team-01/README.md",
-    "UBC/CPEN 4-2/CPSC 427/team-01",
-    "UBC/CPEN 4-2/CPSC 303/Assignments/Assignment_1/pdflatex88424.fls",
-    "UBC/CPEN 4-2/CPSC 303/Assignments/Assignment_1/pdflatex88423.fls",
-    "UBC/CPEN 4-2/MATH 340/Assignments/Assignment_2/Assignment_2.synctex(busy)",
-    "UBC/CPEN 4-2/MATH 340/Assignments/Assignment_2/pdflatex79595.fls",
-    "UBC/CPEN 4-2/MATH 340/Assignments/Assignment_2/pdflatex79564.fls",
-    "UBC/CPEN 4-2/MATH 340/Assignments/Assignment_2/pdflatex79531.fls",
+    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/assignment_1.synctex(busy)",
+    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/pdflatex52165.fls",
+    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/pdflatex52161.fls",
+    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/pdflatex52150.fls",
+    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/pdflatex52140.fls",
+    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/pdflatex52126.fls",
+    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/pdflatex52120.fls",
+    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/pdflatex52107.fls",
+    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/pdflatex52088.fls",
+    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/pdflatex52076.fls",
+    "UBC/CPEN 4-2/CPEN 455/Assignments/Assignment_1/pdflatex52071.fls",
     "UBC/CPEN 4-2/MATH 340/Lectures/Lecture 2 (Standard Form and Others).md",
+    "UBC/CPEN 4-1/CPSC 425/README.md",
+    "UBC/CPEN 4-2/CPSC 427/team-01/README.md",
     "UBC/CPEN 4-2/MATH 340/Lectures/Lecture 3 Standard Form - Simplex Method.md",
     "images/Screenshot 2025-01-26 at 1.43.03 AM.png",
     "images/Screenshot 2025-01-25 at 11.29.23 PM.png",
@@ -224,7 +213,6 @@
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 17.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 16.md",
     "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 15.md",
-    "UBC/CPEN 4-1/MATH 307/Lecture Notes/Lecture 24.md",
     "images/Untitled 3.canvas",
     "images/Untitled 2.canvas",
     "images/Untitled 1.canvas",

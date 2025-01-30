@@ -177,58 +177,350 @@ Therefore, the number of kept units follows a Poisson distribution with paramete
 
 
 \section{Problem 2}
-\noindent
-\textbf{A 2.1}\\
+\subsection{}
+\begin{solution}
+We need the hyperparameter $\epsilon$ to avoid division by 0 during training.
+\end{solution}
 
-\noindent
-To insert inline equations, use $\frac{1}{1-p}$. To bold characters in equations, type $\mathbf{b}$. For script style letters, use $\mathcal{N}$.\\
+\subsection{}
+\begin{solution}
+  \[
+    \begin{aligned}
+\mathbb{E}[\hat{Y}[i,j]] &= \mathbb{E}\left[ \gamma[j] \cdot \frac{Y[i,j] -\mathbf{m}[j]}{\sqrt{\mathbf{v}[j]}} +\boldsymbol{\beta}[j]\right] \\ 
+                         &= \frac{\gamma[j]}{\textbf{v}[j]} \cdot \left(\mathbb{E} \left[ Y[i,j] \right]  - \mathbb{E}[\textbf{m}[j]] \right) + \mathbb{E}[\boldsymbol{\beta}[j]]  \\
+                         &=  \frac{\gamma[j]}{\textbf{v}[j]} \cdot \left( \textbf{m}[j] - \textbf{m}[j] \right) + \boldsymbol{\beta}[j] \\ 
+                         &= \boldsymbol{\beta}[j]
+  \end{aligned}
+\]
 
-\noindent
-For a displayed equation, you can use
-
-\begin{equation}
-    P(k) = {N \choose k}p^{k}(1-p)^{N - k}
-\end{equation}\\
-Or you can also use 
-$$
-f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}
-$$\\
-Also for series equations, you can use
-\begin{align}
-A &= 2 \int_{-r}^{r} \sqrt{r^2 - x^2} \, dx \\
-  &= 2r^2 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos^2\theta \, d\theta \\
-  &= \pi r^2 
-\end{align}
+\[
+  \begin{aligned}
+    Var(\hat{Y}[i,j]) &= \mathbb{E}[\hat{Y}[i,j]^2] - \mathbb{E}[\hat{Y}[i,j]]^2 = \mathbb{E}[\hat{Y}[i,j]^2] - \boldsymbol{\beta}[j]^2\\ 
+                      &= \mathbb{E}\left[ \frac{\gamma[j]^2}{\textbf{v}[j]} \cdot (Y[i,j] - \textbf{m}[j])^2 + 2\cdot \frac{\gamma[j] \boldsymbol{\beta}[j]}{\sqrt{\textbf{v}[j]}} \cdot \left( E\left[Y[i,j]  - \textbf{m}[j]\right] \right)  + \boldsymbol{\beta}[j]^2\right]- \boldsymbol{\beta}[j]^2 \\ 
+                      &= \frac{\gamma[j]^2}{\textbf{v}[j]} \cdot \mathbb{E}\left[ \left( Y(i,j) - \textbf{m}[j]\right)^2 \right] + 0 + 0 \\ 
+                      &= \frac{\gamma[j]^2}{\textbf{v}[j]}\cdot \mathbb{E}\left[ Y[i,j]^2 -2Y[i,j]\textbf{m}[j] + \textbf{m}[j]^2 \right] \\ 
+                      &= \frac{\gamma[j]^2}{\textbf{v}[j]}\cdot \left( \mathbb{E}\left[ Y[i,j]^2\right] - 2\textbf{m}[j]^2 + \textbf{m}[j]^2 \right) \\ 
+                      &= \frac{\gamma[j]^2}{\textbf{v}[j]}\cdot \left( \textbf{v}[j] - \textbf{m}[j]^2 + \textbf{m}[j]^2  \right)  
+          \\            &= \gamma[j]^2
+  \end{aligned}
+\]
+  Thus,
+  $$\mathbb{E}\left[ \hat{Y}[i,j] \right]= \boldsymbol{\beta}[j] \quad Var(\hat{Y}[i,j]) = \gamma[j]^2$$
+\end{solution}
 
 
-\noindent
-For matrices, format as follows:
-\begin{equation}
-    \begin{bmatrix}
-    x_{11} & x_{12} & \cdots & x_{1n} \\
-    \vdots & \vdots & & \vdots \\
-    x_{m1} & x_{m2} & \cdots & x_{mn} \\
+\subsection{}
+\begin{solution}
+  Firstly, let's denote the derivative of the ReLU activation function, we denote it as $f$ where $f$ denotes the step function from 0 to 1 where the scalar input equals zero. 
+  Also, we will denote the indexes with subscripts, for instance, $Y[i,j]=Y_{ij}$ in the following explanations.
+
+  \textbf{Problem 1:} $\frac{\partial \ell}{\partial \gamma}$
+  $$\frac{\partial \ell}{\partial \gamma} = \begin{bmatrix}  \frac{\partial \ell}{\partial \gamma_1} \\ \frac{\partial \ell}{\partial \gamma_2} \\ \vdots \\ \frac{\partial \ell}{\partial \gamma_M}   \end{bmatrix}$$
+
+  Now let's compute $\frac{\partial \ell}{\partial \gamma_j} $ for $ j = 1, \dots, M$.
+  \[ 
+  \begin{aligned}
+    \frac{\partial \ell}{\partial \gamma_j} &= \sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}\frac{\partial H_{kl}}{\partial \hat{Y}_{kl}}\frac{\partial \hat{Y}_{kl}}{\partial \gamma_j}  \\
+                                         \\ &=\sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\frac{\partial \hat{Y}_{kl}}{\partial \gamma_j}
+  \end{aligned}
+  \]
+
+  Now let's compute $\frac{\partial \hat{Y}_{kl}}{\partial \gamma{j}}$,
+
+  \[ 
+  \begin{aligned} 
+    \frac{\partial \hat{Y}_{kl}}{\partial \gamma_j} &= \frac{\partial}{\partial \gamma_j} \left( \gamma_l \cdot \frac{ Y_{kl} - \textbf{m}_l }{\sqrt{\textbf{v}_l + \epsilon}} + \boldsymbol{\beta}_j \right) \\ 
+                                                     &=  \delta_{lj} \cdot \frac{ Y_{kl} - \textbf{m}_l }{\sqrt{\textbf{v}_l + \epsilon}}
+  \end{aligned}
+  \]
+  In summary,
+  \[
+    \begin{aligned}
+      \frac{\partial \ell}{\partial \gamma_j} &=\sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\frac{\partial \hat{Y}_{kl}}{\partial \gamma_j} \\ 
+                                              &=\sum_{k=1}^B \frac{\partial \ell}{\partial H_{kj}} f(\hat{Y}_{kj})\frac{Y_{kj} - \textbf{m}_j}{\sqrt{\textbf{v}_j + \epsilon}} 
+    \end{aligned}
+  \]
+
+
+  \textbf{Problem 2:} $\frac{\partial l}{\partial \beta}$
+  $$ \frac{\partial l}{\partial \beta} = \begin{bmatrix}  \frac{\partial l}{\partial \beta_1} \\  \frac{\partial l}{\partial \beta_2} \\ \vdots \\ \frac{\partial l}{\partial \beta_M}  \end{bmatrix} $$
+
+  Similarly, let's compute $ \frac{\partial l}{\partial \beta_j}$ for $j = 1,\cdots, M$. 
+ \[ 
+  \begin{aligned}
+    \frac{\partial \ell}{\partial \beta_j} &= \sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}\frac{\partial H_{kl}}{\partial \hat{Y}_{kl}}\frac{\partial \hat{Y}_{kl}}{\partial \beta_j}  \\
+                                         \\ &=\sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\frac{\partial \hat{Y}_{kl}}{\partial \beta_j}
+  \end{aligned}
+  \]
+
+  Now we compute $\frac{\partial \hat{Y}_{kl}}{\partial \beta_j}$,
+  \[
+    \begin{aligned}
+      \frac{\partial \hat{Y}_{kl}}{\partial \beta_j} &= \frac{\partial}{\partial \beta_j}  \left( \gamma_l \cdot \frac{ Y_{kl} - \textbf{m}_l }{\sqrt{\textbf{v}_l + \epsilon}} + \beta_l \right) \\  
+                        &= \delta_{lj}
+    \end{aligned}
+  \]
+
+  In summary,
+  \[
+      \begin{aligned}
+      \frac{\partial \ell}{\partial \beta_j} &=\sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\frac{\partial \hat{Y}_{kl}}{\partial \beta_j} \\ 
+                                             &=\sum_{k=1}^B \frac{\partial \ell}{\partial H_{kj}} f(\hat{Y}_{kj})
+      \end{aligned}
+  \]
+
+  \textbf{Problem 3:}$\frac{\partial \ell}{\partial \textbf{m}}$
+  $$\frac{\partial \ell}{\partial \textbf{m}} = \begin{bmatrix} \frac{\partial \ell}{\partial \textbf{m}_1} \\ \frac{\partial \ell}{\partial \textbf{m}_2}  \\ \vdots \\ \frac{\partial \ell}{\partial \textbf{m}_M}  \end{bmatrix}$$
+
+  Let's find $\frac{\partial \ell}{\partial \textbf{m}_j}$ for $j = 1,\dots,M$.
+\[ 
+  \begin{aligned}
+    \frac{\partial \ell}{\partial \textbf{m}_j} &= \sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}\frac{\partial H_{kl}}{\partial \hat{Y}_{kl}}\frac{\partial \hat{Y}_{kl}}{\partial \textbf{m}_j}  \\
+                                             \\ &=\sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\frac{\partial \hat{Y}_{kl}}{\partial \textbf{m}_j}
+  \end{aligned}
+  \]
+  If we compute $\frac{\partial \hat{Y}_{kl}}{\partial \textbf{m}_j}$, 
+\[
+    \begin{aligned}
+      \frac{\partial \hat{Y}_{kl}}{\partial \textbf{m}_j} &= \frac{\partial}{\partial \textbf{m}_j}  \left( \gamma_l \cdot \frac{ Y_{kl} - \textbf{m}_l }{\sqrt{\textbf{v}_l + \epsilon}} + \beta_l \right) \\  
+                                                          &= - \delta_{lj}\cdot \gamma_l \cdot \frac{1}{\sqrt{\textbf{v}_l + \epsilon}} + \gamma_l \cdot (Y_{kl} - \textbf{m}_l) \cdot (-\frac{1}{2}) \cdot (\textbf{v}_l + \epsilon)^{-\frac{3}{2}} \cdot \frac{\partial \textbf{v}_l}{\partial \textbf{m}_j}  
+    \end{aligned}
+  \]
+
+  Let's investigate what $\frac{\partial \textbf{v}_l}{\partial \textbf{m}_j}$ is,
+  \[
+  \begin{aligned}
+    \frac{\partial \textbf{v}_l}{\partial \textbf{m}_j} &= \frac{\partial}{\partial \textbf{m}_j} \left( \frac{1}{B}\sum_{i=1}^B (Y_{il} - \textbf{m}_l)^2 \right)  \\ 
+                                                        &=\frac{2}{B} \sum_{i=1}^B (Y_{il} - \textbf{m}_l) \cdot \frac{\partial \textbf{m}_l}{\partial \textbf{m}_j} \\ 
+                                                        &= \delta_{lj}\cdot \frac{2}{B} \sum_{i=1}^B (Y_{il} - \textbf{m}_l) \\ 
+                                                        &= 0
+  \end{aligned}
+  \]
+
+  Hence,
+    \[
+      \begin{aligned}
+        \frac{\partial \ell}{\partial \textbf{m}_j} &=\sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\frac{\partial \hat{Y}_{kl}}{\partial \textbf{m}_j} \\ 
+                                                    &= \sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\left(  - \delta_{lj}\cdot \gamma_l \cdot \frac{1}{\sqrt{\textbf{v}_l + \epsilon}} \right)  \\ 
+                                                    &=\sum_{k=1}^B \frac{\partial \ell}{\partial H_{kj}} f(\hat{Y}_{kj}) \left( -\gamma_j \cdot \frac{1}{\sqrt{\textbf{v}_j + \epsilon}} \right)
+      \end{aligned}
+  \]
+
+  \textbf{Problem 4:}$\frac{\partial \ell}{\partial \textbf{v}}$
+  $$\frac{\partial \ell}{\partial \textbf{v}} = \begin{bmatrix} \frac{\partial\ell}{\partial\textbf{v}_1} \\ \frac{\partial\ell}{\partial\textbf{v}_2} \\ \vdots \\ \frac{\partial\ell}{\partial\textbf{v}_M} \end{bmatrix}$$
+
+  As usual, let's compute $\frac{\partial\ell}{\partial\textbf{v}_j}$ for $j =1,\dots,M$.
+\[ 
+  \begin{aligned}
+    \frac{\partial \ell}{\partial \textbf{v}_j} &= \sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}\frac{\partial H_{kl}}{\partial \hat{Y}_{kl}}\frac{\partial \hat{Y}_{kl}}{\partial \textbf{v}_j}  \\
+                                             \\ &=\sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\frac{\partial \hat{Y}_{kl}}{\partial \textbf{v}_j}
+  \end{aligned}
+  \]
+ Let's compute $\frac{\partial \hat{Y}_{kl}}{\partial \textbf{v}_j}$,
+  \[
+    \begin{aligned}
+       \frac{\partial \hat{Y}_{kl}}{\partial \textbf{v}_j} &= \frac{\partial}{\partial \textbf{v}_j}  \left( \gamma_l \cdot \frac{ Y_{kl} - \textbf{m}_l }{\sqrt{\textbf{v}_l + \epsilon}} + \beta_l \right) \\  
+                                                           &= \gamma_l \cdot (Y_{kl}- \textbf{m}_l) \cdot (-\frac{1}{2}) \cdot (\textbf{v}_l + \epsilon)^{-\frac{3}{2}}\cdot \frac{\partial \textbf{v}_l}{\partial \textbf{v}_j} \\ 
+                                                           &= \delta_{lj} \cdot \gamma_l \cdot (Y_{kl} - \textbf{m}_l) \cdot (-\frac{1}{2}) \cdot (\textbf{v}_l + \epsilon)^{-\frac{3}{2}}
+     \end{aligned}
+  \]
+  Therefore,
+      \[
+      \begin{aligned}
+        \frac{\partial \ell}{\partial \textbf{v}_j} &=\sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\frac{\partial \hat{Y}_{kl}}{\partial \textbf{v}_j} \\ 
+                                                    &= \sum_{k = 1}^{B} \sum_{l = 1}^{M} \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\left( \delta_{lj} \cdot \gamma_l \cdot (Y_{kl} - \textbf{m}_l) \cdot (-\frac{1}{2}) \cdot (\textbf{v}_l + \epsilon)^{-\frac{3}{2}}
+ \right)  \\ 
+                                                    &=\sum_{k=1}^B \frac{\partial \ell}{\partial H_{kj}} f(\hat{Y}_{kj}) \left( -\gamma_j \cdot \frac{1}{2} \cdot (Y_{kj} -\textbf{m}_j) \cdot (\textbf{v}_j + \epsilon)^{-\frac{3}{2}}  \right)
+      \end{aligned}
+  \]
+  \textbf{Problem 5:}$\frac{\partial \ell}{\partial Y}$
+  $$\frac{\partial \ell}{\partial Y} = \begin{bmatrix} 
+    \frac{\partial \ell}{\partial Y_{11}} & \cdots & \frac{\partial \ell}{\partial Y_{1M}} \\ 
+    \vdots & \frac{\partial \ell}{\partial Y_{st}} & \vdots \\ 
+    \frac{\partial \ell}{\partial Y_{B1}} & \cdots & \frac{\partial \ell}{\partial Y_{BM}}
+  \end{bmatrix}$$
+
+  Now, we compute $\frac{\partial \ell}{\partial Y_{st}}$ for $s=1,\dots,B$ and $t=1,\dots,M$.
+  \[
+    \begin{aligned}
+      \frac{\partial \ell}{\partial Y_{st}} &= \sum_{k=1}^B\sum_{l=1}^M  \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\frac{\partial \hat{Y}_{kl}}{\partial Y_{st}} 
+    \end{aligned}
+  \]
+
+  Let's compute $\frac{\partial \hat{Y}_{kl}}{\partial Y_{st}}$,
+  \[
+    \begin{aligned}
+      \frac{\partial \hat{Y}_{kl}}{\partial Y_{st}} &= \frac{\partial}{\partial Y_{st}}  \left( \gamma_l \cdot \frac{ Y_{kl} - \textbf{m}_l }{\sqrt{\textbf{v}_l + \epsilon}} + \beta_l \right) \\ 
+                                                    &= \gamma_l \cdot (\frac{\partial Y_{kl}}{\partial Y_{st}} - \frac{\partial \textbf{m}_l}{\partial Y_{st}})\cdot \frac{1}{\sqrt{\textbf{v}_l + \epsilon}} -\frac{1}{2} \cdot \gamma_l \cdot (Y_{kl} -\textbf{m}_l)\cdot (\textbf{v}_l + \epsilon)^{-\frac{3}{2}}\cdot \frac{\partial \textbf{v}_l}{\partial Y_{st}}
+     \end{aligned}
+  \]
+  We know have to find out $\frac{\partial Y_{kl}}{\partial Y_{st}}, \frac{\partial \textbf{m}_l}{\partial Y_{st}},\frac{\partial \textbf{v}_l}{\partial Y_{st}}$,
+  $$\frac{\partial Y_{kl}}{\partial Y_{st}} = \delta_{ks}\cdot \delta_{lt}$$
+
+  \[
+    \begin{aligned}
+      \frac{\partial \textbf{m}_l}{\partial Y_{st}} &= \frac{\partial}{\partial Y_{st}} \left( \frac{1}{B}\sum_{i=1}^B Y_{il} \right) \\ 
+                                                    &= \frac{1}{B} \cdot \delta_{lt} 
+    \end{aligned}
+  \]
+
+  \[
+    \begin{aligned}
+      \frac{\partial \textbf{v}_l}{\partial Y_{st}} &= \frac{\partial}{\partial Y_{st}} \left(\frac{1}{B} \sum_{i=1}^B (Y_{il} - \textbf{m}_l)^2\right) \\ 
+                                                    &= \frac{2}{B} \sum_{i=1}^B (Y_{il} - \textbf{m}_l)\cdot\left(\frac{\partial Y_{il}}{\partial Y_{st}} - \frac{\partial \textbf{m}_l}{\partial Y_{st}}\right) \\ 
+                                                    &= \frac{2}{B} \sum_{i=1}^B (Y_{il} - \textbf{m}_l) \cdot (\delta_{is}\cdot \delta_{lt} -\frac{1}{B} \cdot \delta_{lt}) \\ 
+                                                    &= \frac{2}{B} \cdot \delta_{lt} \cdot (Y_{sl} - \textbf{m}_l) -\frac{2}{B^2} \cdot \delta_{lt} \cdot \sum_{i=1}^B (Y_{il} - \textbf{m}_l) \\ 
+                                                    &= \frac{2}{B} \cdot \delta_{lt} \cdot (Y_{sl} - \textbf{m}_l)
+    \end{aligned}
+  \]
+
+  Putting it all together,
+  \[ 
+    \begin{aligned}
+      \frac{\partial \hat{Y}_{kl}}{\partial Y_{st}} &=  \gamma_l \cdot (\delta_{ks}\cdot \delta_{lt}- \frac{1}{B} \cdot \delta_{lt})\cdot \frac{1}{\sqrt{\textbf{v}_l + \epsilon}} -\frac{1}{2} \cdot \gamma_l \cdot (Y_{kl} -\textbf{m}_l)\cdot (\textbf{v}_l + \epsilon)^{-\frac{3}{2}}\cdot \frac{2}{B} \cdot \delta_{lt} \cdot (Y_{sl} - \textbf{m}_l)
+    \end{aligned}
+  \]
+
+  And,
+  \[
+    \begin{aligned}
+      \frac{\partial \ell}{\partial Y_{st}} &= \sum_{k=1}^B\sum_{l=1}^M  \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\frac{\partial \hat{Y}_{kl}}{\partial Y_{st}} \\ 
+                                            &=\sum_{k=1}^B\sum_{l=1}^M  \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\left\{  \gamma_l \cdot (\delta_{ks}\cdot \delta_{lt}- \frac{1}{B} \cdot \delta_{lt})\cdot \frac{1}{\sqrt{\textbf{v}_l + \epsilon}} -\frac{1}{2} \cdot \gamma_l \cdot (Y_{kl} -\textbf{m}_l)\cdot (\textbf{v}_l + \epsilon)^{-\frac{3}{2}}\cdot \frac{2}{B} \cdot \delta_{lt} \cdot (Y_{sl} - \textbf{m}_l)\right\} \\
+                                            &=\sum_{k=1}^B\sum_{l=1}^M  \frac{\partial \ell}{\partial H_{kl}}f(\hat{Y}_{kl})\left\{  \gamma_l \cdot (\delta_{ks}\cdot \delta_{lt}- \frac{1}{B} \cdot \delta_{lt})\cdot (\textbf{v}_l + \epsilon)^{-\frac{1}{2}} - \frac{1}{B} \cdot\gamma_l \cdot (Y_{kl} -\textbf{m}_l)\cdot (\textbf{v}_l + \epsilon)^{-\frac{3}{2}}\cdot  \delta_{lt} \cdot (Y_{sl} - \textbf{m}_l)\right\} \\
+                                            &= \frac{\partial \ell}{\partial H_{st}}f(\hat{Y}_{st}) \cdot \gamma_{t} \cdot (\textbf{v}_t + \epsilon)^{-\frac{1}{2}} -\frac{1}{B} \sum_{k=1}^B \frac{\partial \ell}{\partial H_{kt}}f(\hat{Y}_{kt})\cdot \gamma_t \cdot \left\{ (\textbf{v}_t + \epsilon)^{-\frac{1}{2}} - (Y_{kt} - \textbf{m}_t)\cdot (\textbf{v}_t + \epsilon)^{-\frac{3}{2}}\cdot (Y_{st} - \textbf{m}_t) \right\} 
+    \end{aligned}
+  \]
+
+\end{solution}
+
+
+\section{Problem 3}
+\subsection{}
+\begin{solution}
+  From class, we learned that,
+  \[
+    \begin{aligned}
+      \frac{\partial \ell}{\partial \textbf{h}_L} &=\left( \frac{\partial \textbf{y}}{\partial \textbf{h}_L} \right)^T \frac{\partial \ell}{\partial \textbf{y}} \\ 
+      \frac{\partial \ell}{\partial \textbf{h}_{L-1}} &=\left( \frac{\partial \textbf{h}_L}{\partial \textbf{h}_{L-1}} \right)^T \frac{\partial \ell}{\partial \textbf{h}_L} 
+    \end{aligned}
+  \]
+
+  Then for $1 \le i \le L$, we can say that,
+  $$\frac{\partial \ell}{\partial \textbf{h}_i}=\left( \frac{\partial \textbf{h}_{i+1}}{\partial \textbf{h}_{i}} \right)^T \left( \frac{\partial \textbf{h}_{i+2}}{\partial \textbf{h}_{i+1}} \right)^T \cdots \left(\frac{\partial \textbf{y}}{\partial \textbf{h}_L} \right)^T \frac{\partial \ell}{\partial \textbf{y}}$$
+
+  Let's first compute $\frac{\partial \ell}{\partial \textbf{y}}$,
+  \[
+    \frac{\partial \ell}{\partial \textbf{y}} = \begin{bmatrix} \frac{\partial \ell}{\partial \textbf{y}_1} \\ \vdots \\ \frac{\partial \ell}{\partial \textbf{y}_{D_L}} \end{bmatrix} \in \mathbb{R}^{D_L \times 1} 
+  \]
+
+  Then, for $\frac{\partial \ell}{\partial \textbf{y}_j}$, for $j =1,\dots,D_L$.
+  \[
+    \begin{aligned}
+      \frac{\partial \ell}{\partial \textbf{y}_j} &= \frac{\partial}{\partial \textbf{y}_j} \left( - \sum_{k=1}^K \bar{\textbf{y}}[k]\cdot \log(\textbf{y}[k]) \right) \\ 
+                                                  &= -\sum_{k=1}^K \bar{\textbf{y}}[k] \cdot \frac{ \frac{\partial \textbf{y}[k]}{\partial \textbf{y}[j]}}{\textbf{y}[k]} \\ 
+                                                  &= -\frac{\bar{\textbf{y}}[j]}{\textbf{y}[j]}
+    \end{aligned}
+  \]
+
+  Now let's find $\frac{\partial \textbf{h}_{k + 1}}{\partial \textbf{h}_{k}}$ for $k=i,\dots,L-1$. We are aware that $\textbf{h}_i = \sigma \left(W_i\textbf{h}_{i-1} + \textbf{b}_i \right)$. \\ 
+  If we let $z_i = W_i\textbf{h}_{i-1} +\textbf{b}_i$, then,
+  \[
+    \begin{aligned}
+      \frac{\partial \textbf{h}_{k+1}}{\partial \textbf{h}_k} &= \frac{\partial \textbf{h}_{k+1}}{\partial z_{k+1}}\cdot \frac{\partial z_{k+1}}{\partial \textbf{h}_k}  \\ 
+                                                              &= \text{diag}(\sigma'(z_{k+1})) \cdot W_{k+1} \in \mathbb{R}^{D_{k+1} \times D_k}
+    \end{aligned}
+  \]
+  Now, let's get $\frac{\partial \textbf{y}}{\partial \textbf{h}_L}$,
+\[
+  \frac{\partial \textbf{y}}{\partial \textbf{h}_L} = \begin{bmatrix}     
+    \frac{\partial \textbf{y}[1]}{\partial \textbf{h}_L[1]} & \cdots & \frac{\partial \textbf{y}[1]}{\partial \textbf{h}_L[D_L]} \\ 
+    \vdots & & \vdots \\ 
+    \frac{\partial \textbf{y}[D_L]}{\partial \textbf{h}_L[1]} & \cdots  & \frac{\partial \textbf{y}[D_L]}{\partial \textbf{h}_L[D_L]} 
+
+  \end{bmatrix} \in \mathbb{R}^{D_L \times D_L}
+\]
+So let's try computing $\frac{\partial \textbf{y}_i}{\partial \textbf{h}_L[k]}$,
+\[
+  \begin{aligned}
+    \frac{\partial \textbf{y}_i}{\partial \textbf{h}_L[k]} &= \frac{\partial}{\partial \textbf{h}_L[k]} \left( \frac{\text{exp}(\textbf{h}_L[i])}{\sum_j \text{exp}(\textbf{h}_L[j])} \right) \\ 
+                                                           &= \frac{\partial \textbf{h}_L[i]}{\partial \textbf{h}_L[k]} \cdot \left( \frac{\text{exp}(\textbf{h}_L[i])}{\sum_j \text{exp}(\textbf{h}_L[j])} \right) - \text{exp}(\textbf{h}_L[i])\cdot \frac{\sum_j \frac{\partial \textbf{h}_L[j]}{\partial \textbf{h}_L[k]}\cdot \text{exp}(\textbf{h}_L[j])}{\left( \sum_j \text{exp}(\textbf{h}_L[j]) \right)^2} \\ 
+                                                           &= \delta_{ki} \cdot \textbf{y}[i] - \text{exp}(\textbf{h}_L[i]) \cdot \frac{\text{exp}(\textbf{h}_L[k])}{\left( \sum_j \text{exp}(\textbf{h}_L[j]) \right)^2} \\ 
+                                                           &= \delta_{ki} \cdot \textbf{y}[i] - \textbf{y}[i] \cdot \textbf{y}[k]
+  \end{aligned}
+\]
+
+For simplicity, let's pre-compute $\left( \frac{\partial \textbf{y}}{\partial \textbf{h}_L} \right)^T \frac{\partial \ell}{\partial \textbf{y}}$,
+\[
+  \begin{aligned}
+    \left( \frac{\partial \textbf{y}}{\partial \textbf{h}_L} \right)^T \frac{\partial \ell}{\partial \textbf{y}} &= \begin{bmatrix} \textbf{y}[1] - \textbf{y}[1]^2 & -\textbf{y}[2]\textbf{y}[1] & \cdots & -\textbf{y}[D_L]\textbf{y}[1] \\ 
+      -\textbf{y}[1]\textbf{y}[2] & \textbf{y}[2]-\textbf{y}[2]^2 & \cdots & -\textbf{y}[D_L]\textbf{y}[2] \\
+      \vdots & \vdots & \cdots & \vdots \\ 
+       -\textbf{y}[1]\textbf{y}[D_L] & -\textbf{y}[2]\textbf{y}[D_L] & \cdots &  \textbf{y}[D_L] - \textbf{y}[D_L]^2 \\
+       \end{bmatrix} \begin{bmatrix} -\frac{\bar{\textbf{y}}[1]}{\textbf{y}[1]} \\ \vdots  \\ -\frac{\bar{\textbf{y}}[D_L]}{\textbf{y}[D_L]}  \end{bmatrix}
+  \\
+                                     &= \begin{bmatrix} -\bar{\textbf{y}}[1] + \textbf{y}[1]\left( \sum_j \bar{\textbf{y}}[j] \right) \\ 
+                                     -\bar{\textbf{y}}[2] + \textbf{y}[2]\left( \sum_j \bar{\textbf{y}}[j] \right) \\ 
+                                        \vdots \\ 
+                                    -\bar{\textbf{y}}[D_L] + \textbf{y}[D_L]\left( \sum_j \bar{\textbf{y}}[j] \right) 
+                                   \end{bmatrix}
+                                  \\
+                                     &= \begin{bmatrix} \textbf{y}[1] - \bar{\textbf{y}}[1] \\ 
+                                      \textbf{y}[2] - \bar{\textbf{y}}[2] \\ 
+                                    \vdots \\ 
+                                \textbf{y}[D_L] - \bar{\textbf{y}}[D_L] 
+                                  \end{bmatrix}
+     \end{aligned}
+\]
+
+Thus,
+\[
+  \begin{aligned}
+    \frac{\partial \ell}{\partial \textbf{h}_i} &=\left( \frac{\partial \textbf{h}_{i+1}}{\partial \textbf{h}_{i}} \right)^T \left( \frac{\partial \textbf{h}_{i+2}}{\partial \textbf{h}_{i+1}} \right)^T \cdots \left(\frac{\partial \textbf{y}}{\partial \textbf{h}_L} \right)^T \frac{\partial \ell}{\partial \textbf{y}} \\ 
+                                                &=      \left( \text{diag}(\sigma'(z_{i})) \cdot W_{i} \right)^T \left( \text{diag}(\sigma'(z_{i+1})) \cdot W_{i+1} \right)^T \cdots \left( \text{diag}(\sigma'(z_{L-1})) \cdot W_{L-1} \right)^T \left(   \begin{bmatrix} \textbf{y}[1] - \bar{\textbf{y}}[1] \\ 
+                                      \textbf{y}[2] - \bar{\textbf{y}}[2] \\ 
+                                    \vdots \\ 
+                                \textbf{y}[D_L] - \bar{\textbf{y}}[D_L] 
+                            \end{bmatrix}\right) \in \mathbb{R}^{D_{i} \times 1}
+  \end{aligned}
+\]
+\end{solution}
+
+\subsection{}
+\begin{solution}
+  Let's start with $\frac{\partial \ell}{\partial W_i} \in \mathbb{R}^{D_{i} \times D_{i-1}}$,
+  \[
+    \frac{\partial \ell}{\partial W_i} = \begin{bmatrix} 
+      \frac{\partial \ell}{\partial W_i[1,1]} & \frac{\partial \ell}{\partial W_i[2,1]} & \cdots & \frac{\partial \ell}{\partial W_i[D_{i-1},1]} \\ 
+      \vdots & \vdots & \cdots & \vdots \\ 
+      \frac{\partial \ell}{\partial W_i[1,D_i]} & \cdots & \cdots & \frac{\partial \ell}{\partial W_i[D_{i-1},D_i]}
+      
     \end{bmatrix}
-\end{equation} \\
+  \]
+  Using the same setup as the prior question, $\textbf{h}_i = \sigma(W_i\textbf{h}_{i-1} + \textbf{b}_i), z_i = W_i\textbf{h}_{i-1} + \textbf{b}_i$,
+  \[
+  \begin{aligned}
+    \frac{\partial \ell}{\partial W_i[x,y]} &= \frac{\partial \ell}{\partial z_i[x]} \cdot \frac{\partial z_i[x]}{\partial W_i[x,y]} \\ 
+                                            &= \frac{\partial \ell}{\partial z_i[x]} \cdot \textbf{h}_{i-1}[y] \\ 
+  \end{aligned}
+  \]
+  Given this, if we were to compute $\frac{\partial \ell}{\partial z_i}$,
+  \[
+    \begin{aligned}
+      \frac{\partial \ell}{\partial z_i} &= \left( \frac{\partial \textbf{h}_i}{\partial z_i} \right)^T \frac{\partial \ell}{\partial \textbf{h}_i} \\ 
+                                         &= \sigma'(z_i) \odot \frac{\partial \ell}{\partial \textbf{h}_i}  
+    \end{aligned}
+  \]
 
-\noindent
-For more math symbols, check \href{https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols}{Wiki}, \href{https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf}{LATEX Mathematical Symbols}, Google, or ask Chat-GPT.\\
-
-\noindent
-\textbf{A 2.2}\\
-
-If you want to insert a picture:
-
-\begin{figure}[h]
-\centering
-%\includegraphics[width=0.5\textwidth]{your_picture.jpg}
-\caption{Caption for the image.}
-\label{fig:image1}
-\end{figure}
-
-\noindent
-\textbf{A 2.3}\\
-
-To highlight words in a different color, you can use \textcolor{blue}{textcolor} to turn something blue. You can also \important{define custom commands} for frequent use.
-
+  These combined will give us,
+  $$ \frac{\partial \ell}{\partial W_i} = \left( \sigma'(z_i) \odot \frac{\partial \ell}{\partial \textbf{h}_i} \right) \textbf{h}_{i-1}^T \in \mathbb{R}^{D_i \times D_{i-1}} $$
+  where $\frac{\partial \ell}{\partial \textbf{h}_i} \in \mathbb{R}^{D_i \times 1}$. \\ 
+  Now, let's compute $\frac{\partial \ell}{\partial \textbf{b}_i}$, 
+  \[
+    \begin{aligned}
+      \frac{\partial \ell}{\partial \textbf{b}_i} &= \left(\frac{\partial z_i}{\partial \textbf{b}_i} \right)^T \left( \frac{\partial \textbf{h}_i}{\partial z_i}\right)^T \frac{\partial \ell}{\partial \textbf{h}_i}  \\ 
+                                                  &= I \left( \sigma'(z_i) \odot \frac{\partial \ell}{\partial \textbf{h}_i} \right) \\ 
+                                                  &= \sigma'(z_i) \odot \frac{\partial \ell}{\partial \textbf{h}_i} \in \mathbb{R}^{D_i \times 1 }
+    \end{aligned}
+    \]
+\end{solution}
 \end{document}
