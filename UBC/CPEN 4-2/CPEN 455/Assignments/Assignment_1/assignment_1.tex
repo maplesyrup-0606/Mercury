@@ -80,7 +80,7 @@
   \end{bmatrix}
   W^T = WW^T = I$$
 
-  Which shows that $\textbf{z} = W\textbf{x} \sim \mathcal{N}(0,I)$. Now considering that $\sigma(\textbf{z}) = \text{max}(\textbf{z},0)$, each entry $z_i$ would have the following expectations and variances,
+  Which shows that $\textbf{z} = W\textbf{x} \sim \mathcal{N}(0,I)$. Now considering that $\sigma(\textbf{z}) = \text{max}(\textbf{z},0)$, each entry $h_i$ would have the following expectations and variances,
   $$\mathbb{E}[h_i] = \int_0^\infty \frac{z}{\sqrt{2\pi}}e^{-\frac{z^2}{2}}dz = \left[ -\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}} \right]_0^\infty = \frac{1}{\sqrt{2\pi}}$$
   $$E[h_i^2] = \int_0^\infty \frac{z^2}{\sqrt{2\pi}}e^{-\frac{z^2}{2}}dz = \frac{1}{2}$$
   $$\text{Var}(h_i) = \mathbb{E}[h_i^2] - (\mathbb{E}[h_i])^2 = \frac{1}{2} - \frac{1}{2\pi}$$
@@ -423,11 +423,11 @@ We need the hyperparameter $\epsilon$ to avoid division by 0 during training.
   \]
 
   Now let's find $\frac{\partial \textbf{h}_{k + 1}}{\partial \textbf{h}_{k}}$ for $k=i,\dots,L-1$. We are aware that $\textbf{h}_i = \sigma \left(W_i\textbf{h}_{i-1} + \textbf{b}_i \right)$. \\ 
-  If we let $z_i = W_i\textbf{h}_{i-1} +\textbf{b}_i$, then,
+  If we let $\textbf{z}_i = W_i\textbf{h}_{i-1} +\textbf{b}_i$, then,
   \[
     \begin{aligned}
-      \frac{\partial \textbf{h}_{k+1}}{\partial \textbf{h}_k} &= \frac{\partial \textbf{h}_{k+1}}{\partial z_{k+1}}\cdot \frac{\partial z_{k+1}}{\partial \textbf{h}_k}  \\ 
-                                                              &= \text{diag}(\sigma'(z_{k+1})) \cdot W_{k+1} \in \mathbb{R}^{D_{k+1} \times D_k}
+      \frac{\partial \textbf{h}_{k+1}}{\partial \textbf{h}_k} &= \frac{\partial \textbf{h}_{k+1}}{\partial \textbf{z}_{k+1}}\cdot \frac{\partial \textbf{z}_{k+1}}{\partial \textbf{h}_k}  \\ 
+                                                              &= \text{diag}(\sigma'(\textbf{z}_{k+1})) \cdot W_{k+1} \in \mathbb{R}^{D_{k+1} \times D_k}
     \end{aligned}
   \]
   Now, let's get $\frac{\partial \textbf{y}}{\partial \textbf{h}_L}$,
@@ -476,7 +476,7 @@ Thus,
 \[
   \begin{aligned}
     \frac{\partial \ell}{\partial \textbf{h}_i} &=\left( \frac{\partial \textbf{h}_{i+1}}{\partial \textbf{h}_{i}} \right)^T \left( \frac{\partial \textbf{h}_{i+2}}{\partial \textbf{h}_{i+1}} \right)^T \cdots \left(\frac{\partial \textbf{y}}{\partial \textbf{h}_L} \right)^T \frac{\partial \ell}{\partial \textbf{y}} \\ 
-                                                &=      \left( \text{diag}(\sigma'(z_{i})) \cdot W_{i} \right)^T \left( \text{diag}(\sigma'(z_{i+1})) \cdot W_{i+1} \right)^T \cdots \left( \text{diag}(\sigma'(z_{L-1})) \cdot W_{L-1} \right)^T \left(   \begin{bmatrix} \textbf{y}[1] - \bar{\textbf{y}}[1] \\ 
+                                                &=      \left( \text{diag}(\sigma'(\textbf{z}_{i+1})) \cdot W_{i+1} \right)^T \left( \text{diag}(\sigma'(\textbf{z}_{i+2})) \cdot W_{i+2} \right)^T \cdots \left( \text{diag}(\sigma'(\textbf{z}_{L})) \cdot W_{L} \right)^T \left(   \begin{bmatrix} \textbf{y}[1] - \bar{\textbf{y}}[1] \\ 
                                       \textbf{y}[2] - \bar{\textbf{y}}[2] \\ 
                                     \vdots \\ 
                                 \textbf{y}[D_L] - \bar{\textbf{y}}[D_L] 
@@ -487,40 +487,149 @@ Thus,
 
 \subsection{}
 \begin{solution}
-  Let's start with $\frac{\partial \ell}{\partial W_i} \in \mathbb{R}^{D_{i} \times D_{i-1}}$,
+  Let's start with $\frac{\partial \ell}{\partial W_i} \in \mathbb{R}^{D_{i-1} \times D_{i}}$,
   \[
     \frac{\partial \ell}{\partial W_i} = \begin{bmatrix} 
-      \frac{\partial \ell}{\partial W_i[1,1]} & \frac{\partial \ell}{\partial W_i[2,1]} & \cdots & \frac{\partial \ell}{\partial W_i[D_{i-1},1]} \\ 
+      \frac{\partial \ell}{\partial W_i[1,1]} & \frac{\partial \ell}{\partial W_i[2,1]} & \cdots & \frac{\partial \ell}{\partial W_i[D_{i},1]} \\ 
       \vdots & \vdots & \cdots & \vdots \\ 
-      \frac{\partial \ell}{\partial W_i[1,D_i]} & \cdots & \cdots & \frac{\partial \ell}{\partial W_i[D_{i-1},D_i]}
+      \frac{\partial \ell}{\partial W_i[1,D_{i-1}]} & \cdots & \cdots & \frac{\partial \ell}{\partial W_i[D_{i},D_{i-1}]}
       
     \end{bmatrix}
   \]
-  Using the same setup as the prior question, $\textbf{h}_i = \sigma(W_i\textbf{h}_{i-1} + \textbf{b}_i), z_i = W_i\textbf{h}_{i-1} + \textbf{b}_i$,
+  Using the same setup as the prior question, $\textbf{h}_i = \sigma(W_i\textbf{h}_{i-1} + \textbf{b}_i), \textbf{z}_i = W_i\textbf{h}_{i-1} + \textbf{b}_i$,
   \[
   \begin{aligned}
-    \frac{\partial \ell}{\partial W_i[x,y]} &= \frac{\partial \ell}{\partial z_i[x]} \cdot \frac{\partial z_i[x]}{\partial W_i[x,y]} \\ 
-                                            &= \frac{\partial \ell}{\partial z_i[x]} \cdot \textbf{h}_{i-1}[y] \\ 
+    \frac{\partial \ell}{\partial W_i[x,y]} &= \frac{\partial \ell}{\partial \textbf{z}_i[x]} \cdot \frac{\partial z_i[x]}{\partial W_i[x,y]} \\ 
+                                            &= \frac{\partial \ell}{\partial \textbf{z}_i[x]} \cdot \textbf{h}_{i-1}[y] \\ 
   \end{aligned}
   \]
-  Given this, if we were to compute $\frac{\partial \ell}{\partial z_i}$,
+  Given this, if we were to compute $\frac{\partial \ell}{\partial \textbf{z}_i}$,
   \[
     \begin{aligned}
-      \frac{\partial \ell}{\partial z_i} &= \left( \frac{\partial \textbf{h}_i}{\partial z_i} \right)^T \frac{\partial \ell}{\partial \textbf{h}_i} \\ 
-                                         &= \sigma'(z_i) \odot \frac{\partial \ell}{\partial \textbf{h}_i}  
+      \frac{\partial \ell}{\partial \textbf{z}_i} &= \left( \frac{\partial \textbf{h}_i}{\partial  \textbf{z}_i} \right)^T \frac{\partial \ell}{\partial \textbf{h}_i} \\ 
+                                         &= \sigma'(\textbf{z}_i) \odot \frac{\partial \ell}{\partial \textbf{h}_i}  
     \end{aligned}
   \]
 
   These combined will give us,
-  $$ \frac{\partial \ell}{\partial W_i} = \left( \sigma'(z_i) \odot \frac{\partial \ell}{\partial \textbf{h}_i} \right) \textbf{h}_{i-1}^T \in \mathbb{R}^{D_i \times D_{i-1}} $$
+  $$ \frac{\partial \ell}{\partial W_i} =\textbf{h}_{i-1} \left( \sigma'(\textbf{z}_i) \odot \frac{\partial \ell}{\partial \textbf{h}_i} \right) ^T \in \mathbb{R}^{D_{i-1} \times D_{i}} $$
   where $\frac{\partial \ell}{\partial \textbf{h}_i} \in \mathbb{R}^{D_i \times 1}$. \\ 
   Now, let's compute $\frac{\partial \ell}{\partial \textbf{b}_i}$, 
   \[
     \begin{aligned}
-      \frac{\partial \ell}{\partial \textbf{b}_i} &= \left(\frac{\partial z_i}{\partial \textbf{b}_i} \right)^T \left( \frac{\partial \textbf{h}_i}{\partial z_i}\right)^T \frac{\partial \ell}{\partial \textbf{h}_i}  \\ 
-                                                  &= I \left( \sigma'(z_i) \odot \frac{\partial \ell}{\partial \textbf{h}_i} \right) \\ 
-                                                  &= \sigma'(z_i) \odot \frac{\partial \ell}{\partial \textbf{h}_i} \in \mathbb{R}^{D_i \times 1 }
+      \frac{\partial \ell}{\partial \textbf{b}_i} &= \left(\frac{\partial \textbf{z}_i}{\partial \textbf{b}_i} \right)^T \left( \frac{\partial \textbf{h}_i}{\partial \textbf{z}_i}\right)^T \frac{\partial \ell}{\partial \textbf{h}_i}  \\ 
+                                                  &= I \left( \sigma'(\textbf{z}_i) \odot \frac{\partial \ell}{\partial \textbf{h}_i} \right) \\ 
+                                                  &= \sigma'(\textbf{z}_i) \odot \frac{\partial \ell}{\partial \textbf{h}_i} \in \mathbb{R}^{D_i \times 1 }
     \end{aligned}
     \]
 \end{solution}
+
+\subsection{}
+\begin{solution}
+  \textbf{Forward Pass:} \\ 
+  Let's start with identifying some terms and the ones given, 
+  \[
+    \begin{aligned}
+      \textbf{h}_i &= \sigma(W_i\textbf{h}_{i-1} +\textbf{b}_i) \\
+      \textbf{z}_i &= W_i\textbf{h}_{i-1}+\textbf{b}_i \\
+      \textbf{h}_i             &= \sigma(\textbf{z}_i)
+    \end{aligned}
+  \]
+
+
+  Now, let's derive the variance $Var(\textbf{z}_i)$, we assume that $\textbf{b}_i = 0$ and the elements of
+  $W_i$ are iid and each element has zero mean. Also, the elements $\textbf{h}_{i-1}$ of are iid. We also assume that $\textbf{h}_{i-1}$, $W_i$ are also independent.
+\[
+  \begin{aligned}
+    Var(\textbf{z}_i [s]) &= \sum_{t = 1}^{D_{i-1}} \mathbb{V} \left[ W_i[s,t] \textbf{h}_{i-1}[t] \right] \\ 
+                          &= D_{i-1} \cdot \mathbb{V} \left[W_i[s,t]\textbf{h}_{i-1}[t]\right] \\ 
+                          &= D_{i-1} \cdot \left( \mathbb{V}\left[W_i[s,t]\right]\cdot \mathbb{V}\left[\textbf{h}_{i-1}[t]\right] +\mathbb{E}\left[\textbf{h}_{i-1}[t]] \right]^2 \cdot \mathbb{V}\left[ W_i[s,t] \right] + \mathbb{E}\left[ W_i[s,t] \right]^2 \cdot \mathbb{V}\left[ \textbf{h}_{i-1}[t] \right] \right) \\ 
+                          &= D_{i-1} \cdot \left( \mathbb{V}\left[W_i[s,t]\right]\cdot \mathbb{V}\left[\textbf{h}_{i-1}[t]\right] +  \mathbb{E}\left[\textbf{h}_{i-1}[t]] \right]^2 \cdot \mathbb{V}\left[ W_i[s,t] \right]\right) \\
+                          &= D_{i-1} \cdot \left( \mathbb{V}\left[ W_i[s,t]\right] \cdot \mathbb{E}\left[ \textbf{h}_{i-1}[t]^2\right] \right)
+  \end{aligned}
+\]
+Let's try evaluating $\mathbb{E}\left[ \textbf{h}_{i-1}[t]^2\right]$, let's also denote the pdf of $\textbf{h}_{i-1}[t]$ as some $f_{\textbf{z}_{i-1}}$,
+  \[
+    \begin{aligned}
+      \mathbb{E}\left[ \textbf{h}_{i-1}[t]^2\right] &= \int_{-\infty}^{\infty} (\sigma(\textbf{z}_{i-1}[t]) \cdot f_{\textbf{z}_{i-1}[t]} d\textbf{z}_{i-1}[t] \\ 
+                                                    &= \int_0^{\infty} \textbf{z}_{i-1}[t]^2 \cdot f_{\textbf{z}_{i-1}[t]} d\textbf{z}_{i-1}[t] \\ 
+                                                    &= \frac{1}{2} \mathbb{V}\left[ \textbf{z}_{i-1}[t] \right]
+    \end{aligned}
+  \]
+
+  Therefore, we have that,
+  \[
+    \mathbb{V}[\textbf{z}_i[s]]=D_{i-1} \cdot \mathbb{V}[W_i[s,t]] \cdot \frac{1}{2} \mathbb{V}[\textbf{z}_{i-1}[t]]
+  \]
+  By unrolling the recursion we get that,
+  \[
+    \mathbb{V}[\textbf{z}_L[s]] = \mathbb{V}[\textbf{z}_1[t]]  \cdot  \prod_{i=2}^L \frac{D_{i-1}\mathbb{V}[W_i[s,t]]}{2} 
+  \]
+  And we can simply assume that,
+  \[
+    \frac{D_{i-1}\mathbb{V}[W_i[s,t]]}{2}=1 \to \mathbb{V}[W_i[s,t]] = \frac{2}{D_{i-1}}
+  \]
+
+  \textbf{Backward Pass:} \\ 
+  Using the same notation from the previous question, 
+  \[
+    \begin{aligned}
+      \frac{\partial \ell}{\partial \textbf{h}_{i-1}[j]} &= \sum_{k=1}^{D_i} \frac{\partial \ell}{\partial \textbf{z}_i[k]}\frac{\partial \textbf{z}_i[k]}{\partial \textbf{h}_{i-1}[j]} \\ 
+                                                         &=  \sum_{k=1}^{D_i} \frac{\partial \ell}{\partial \textbf{z}_i[k]} \sum_m\left(\frac{\partial }{\partial \textbf{h}_{i-1}[j]}\left(W_i[k,m]\textbf{h}_{i-1}[m]\right)\right) \\ 
+                                                         &= \sum_{k=1}^{D_i} \frac{\partial \ell}{\partial \textbf{z}_i[k]}W_i[k,j] 
+    \end{aligned}
+    \]
+    Let's assume independence of $W_i[k,j]$ and $\frac{\partial \ell}{\partial \textbf{z}_{i}[k]}$ and we also assume zero mean of $\frac{\partial \ell}{\partial \textbf{h}_{i-1}[k]}$ for all $i$ along with $W_i[k,j]$ being symmetrically distributed around 0.
+    
+    We can also see that,
+    \[
+      \frac{\partial \ell}{\partial\textbf{z}_i[k]} = \sigma '\left( \textbf{z}_i[k]\right) \cdot \frac{\partial \ell}{\partial \textbf{h}_i[k]}
+  \]
+  Here, we assume independence of $\sigma(\textbf{z}_i[k])'$ and $\frac{\partial \ell}{\partial \textbf{h}_i[k]}$.
+  We can see that,
+  \[
+    \begin{aligned}
+      \mathbb{E}\left[ \frac{\partial \ell}{\partial \textbf{z}_i[k]} \right] &= \mathbb{E}\left[ \sigma'(\textbf{z}_i[k]) \right] \cdot \mathbb{E}\left[ \frac{\partial \ell}{\partial \textbf{h}_i[k]} \right] \\ 
+                                                                              &= 0
+    \end{aligned}
+    \]
+    Then,
+    \[
+      \begin{aligned}
+        \mathbb{V}\left[\frac{\partial \ell}{\partial \textbf{h}_{i-1}[j]}\right] &= \sum_{k=1}^{D_i} \frac{\partial \ell}{\partial \textbf{z}_i[k]}W_i[k,j] \\
+                                                                                  &= D_i \cdot \mathbb{V}\left[ \frac{\partial \ell}{\partial \textbf{z}_i[k]}W_i[k,j]  \right] \\ 
+                                                                                  &= D_i \cdot \left( \mathbb{V}\left[ W_i[k,j] \right] \cdot \mathbb{E}\left[ \left(\frac{\partial \ell}{\partial \textbf{z}_i[k]} \right)^2 \right] \right) 
+      \end{aligned}
+    \]
+
+    Let's compute $\mathbb{E}\left[ \left(\frac{\partial \ell}{\partial \textbf{z}_i[k]} \right)^2 \right]$,
+    \[
+      \begin{aligned}
+        \mathbb{E}\left[ \left(\frac{\partial \ell}{\partial \textbf{z}_i[k]} \right)^2\right]&= \mathbb{V} \left[ \frac{\partial \ell}{\partial \textbf{z}_i[k]} \right] \\ 
+                                                                                              &= \mathbb{V}\left[ \sigma '\left( \textbf{z}_i[k]\right) \cdot \frac{\partial \ell}{\partial \textbf{h}_i[k]}
+ \right] \\
+                                                                                              &=\int_{0}^{\infty}  \frac{\partial \ell}{\partial \textbf{h}_i[k]}^2 \cdot f_{\frac{\partial \ell}{\partial \textbf{h}_i[k]}} d\frac{\partial \ell}{\partial \textbf{h}_i[k]} \\ 
+                                                                                              &= \frac{1}{2} \cdot \mathbb{V}\left[\frac{\partial \ell}{\partial \textbf{h}_i[k]} \right] 
+      \end{aligned}
+    \]
+
+    Combining the above expressions we can get,
+  \[
+    \mathbb{V}\left[\frac{\partial \ell}{\partial \textbf{h}_{i-1}[j]}\right] = D_i \cdot \mathbb{V}\left[ W_i[k,j] \right] \cdot \frac{1}{2} \cdot \mathbb{V}\left[ \frac{\partial \ell}{\partial \textbf{h}_i[k]} \right] 
+  \]
+
+  Unrolling the recursion, we can conclude with,
+  \[
+    \mathbb{V}\left[ \frac{\partial \ell}{\partial \textbf{h}_1[j]}\right] = \mathbb{V}\left[ \frac{\partial \ell}{\partial \textbf{h}_L[k]}\right] \prod_{i=2}^{L} \frac{D_i}{2}\cdot \mathbb{V}[W_i[k,j]]
+  \]
+
+  To make it stable, we can again simply assume that,
+  \[
+    \prod_{i=2}^{L} \frac{D_i}{2}\cdot \mathbb{V}[W_i[k,j]] = 1 \to \mathbb{V}\left[ W_i[k,j] \right] = \frac{2}{D_i}
+  \]
+
+  To compromise both goals from forward / backward pass,
+  $$\therefore \mathbb{V}[W_i[k,j]] = \frac{1}{\frac{\frac{D_i}{2} + \frac{D_{i-1}}{2}}{2}} = \frac{4}{D_i + D_{i-1}}$$
+
+  \end{solution}
 \end{document}
