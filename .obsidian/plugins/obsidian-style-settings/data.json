@@ -48,7 +48,7 @@
   "anuppuccin-theme-settings@@anp-hide-status-bar": false,
   "anuppuccin-theme-settings@@anp-tooltip-toggle": false,
   "anuppuccin-theme-settings@@anp-decoration-toggle": true,
-  "anuppuccin-theme-settings@@anp-bold-custom": "anp-bold-maroon",
+  "anuppuccin-theme-settings@@anp-bold-custom": "anp-bold-teal",
   "anuppuccin-theme-settings@@anp-highlight-custom": "anp-highlight-green",
   "anuppuccin-theme-settings@@anp-header-color-toggle": true,
   "anuppuccin-theme-settings@@anp-header-margin-toggle": false,
@@ -65,7 +65,9 @@
   "anuppuccin-theme-settings@@anp-list-toggle": true,
   "anuppuccin-theme-settings-extended@@anp-theme-ext-dark": true,
   "anuppuccin-theme-settings-extended@@catppuccin-theme-dark-extended": "ctp-thorns",
-  "anuppuccin-theme-settings-extended@@anp-theme-ext-amoled": false,
+  "anuppuccin-theme-settings-extended@@anp-theme-ext-amoled": true,
   "anuppuccin-theme-settings@@anp-h5-divider": true,
-  "anuppuccin-theme-settings@@anp-h6-divider": true
+  "anuppuccin-theme-settings@@anp-h6-divider": true,
+  "anuppuccin-theme-settings-extended@@catppuccin-theme-extended": "ctp-notion-light",
+  "anuppuccin-theme-settings-extended@@anp-theme-ext-light": true
 }

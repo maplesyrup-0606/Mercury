@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1738289534.64866 "assignment_1.tex" "assignment_1.pdf" "assignment_1" 1738289535.31617 0
+["pdflatex"] 1738291298.15366 "assignment_1.tex" "assignment_1.pdf" "assignment_1" 1738291298.85329 0
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -118,9 +118,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1731468380.92871 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1731468286 8221429 f889d73b6d9310a898885390e9a2fcc5 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "assignment_1.aux" 1738289535.25201 1660 2eb4458af359ea02ff20199644e4d82a "pdflatex"
-  "assignment_1.out" 1738289535.25239 817 e773b945f6645f3325872f3f0dc5c2ff "pdflatex"
-  "assignment_1.tex" 1738289532.83992 38644 71f9cb497751e52f356f8ef9c1752779 ""
+  "assignment_1.aux" 1738291298.78437 1660 2eb4458af359ea02ff20199644e4d82a "pdflatex"
+  "assignment_1.out" 1738291298.78475 817 e773b945f6645f3325872f3f0dc5c2ff "pdflatex"
+  "assignment_1.tex" 1738291296.85354 38783 5d761c33f93d5ba34d372fecca56b190 ""
   (generated)
   "assignment_1.aux"
   "assignment_1.log"

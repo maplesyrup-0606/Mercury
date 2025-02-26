@@ -121,3 +121,6 @@ It is $(m+n) - m$ since the dimension of $\mathbb{R}^{m+n}$ is $m+n$ and we have
 
 At a vertex, there meets $n$ linearly independent hyperplanes out of the $m+n$ hyper planes.
 $$x_{1}=0,x_{2}=0,\cdots,x_{m+n}=0$$
+
+#### Next Lecture [[Lecture 4 prev. cont’d.]]
+

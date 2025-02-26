@@ -1,12 +1,13 @@
 {
   "accentColor": "#451e9f",
   "cssTheme": "AnuPpuccin",
-  "theme": "obsidian",
+  "theme": "moonstone",
   "enabledCssSnippets": [
     "Table-centre",
     "small-settings",
     "extended-colorschemes",
     "custom-rainbow-colors"
   ],
-  "interfaceFontFamily": "Inter"
+  "interfaceFontFamily": "Inter",
+  "showRibbon": true
 }
