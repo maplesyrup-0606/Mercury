@@ -150,3 +150,4 @@ z&=x_{1}-2x_{2}+x_{3} \\
 
 and we get move on to get the optimal solution using the simplex method since we now have a feasible basic dictionary.
 
+#### Next Lecture [[Lecture 6 Degeneracy]]
